@@ -1,0 +1,1084 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>FOCUS — Product Strategy H2 2026</title>
+<link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&family=DM+Sans:wght@300;400;500;600&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --green: #2D6A4F;
+    --green-mid: #40916C;
+    --green-light: #D8EDDF;
+    --green-pale: #F0F7F2;
+    --dark: #1A1A1A;
+    --grey: #6B6B6B;
+    --grey-light: #F4F4F4;
+    --white: #FFFFFF;
+    --slide-w: 1280px;
+    --slide-h: 720px;
+  }
+
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+
+  body {
+    background: #1a1a1a;
+    font-family: 'DM Sans', sans-serif;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 24px;
+    padding: 40px 24px;
+  }
+
+  .slide-counter {
+    color: #666;
+    font-size: 11px;
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+    font-family: 'DM Sans', sans-serif;
+    align-self: flex-start;
+    margin-left: calc(50% - var(--slide-w)/2);
+  }
+
+  .slide {
+    width: var(--slide-w);
+    height: var(--slide-h);
+    position: relative;
+    overflow: hidden;
+    flex-shrink: 0;
+  }
+
+  /* ── SLIDE TYPES ── */
+
+  /* Cover */
+  .s-cover {
+    background: var(--green);
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    padding: 72px 80px;
+  }
+  .s-cover .eyebrow {
+    font-family: 'DM Sans', sans-serif;
+    font-size: 12px;
+    letter-spacing: 0.16em;
+    text-transform: uppercase;
+    color: rgba(255,255,255,0.55);
+    margin-bottom: 20px;
+  }
+  .s-cover h1 {
+    font-family: 'DM Serif Display', serif;
+    font-size: 108px;
+    color: var(--white);
+    line-height: 0.9;
+    letter-spacing: -2px;
+    margin-bottom: 28px;
+  }
+  .s-cover .subtitle {
+    font-size: 18px;
+    color: rgba(255,255,255,0.7);
+    font-weight: 300;
+    letter-spacing: 0.02em;
+  }
+  .s-cover .cover-dot {
+    position: absolute;
+    top: 0; right: 0;
+    width: 420px; height: 420px;
+    border-radius: 50%;
+    background: rgba(255,255,255,0.06);
+    transform: translate(30%, -30%);
+  }
+  .s-cover .cover-dot2 {
+    position: absolute;
+    bottom: 0; right: 160px;
+    width: 220px; height: 220px;
+    border-radius: 50%;
+    background: rgba(255,255,255,0.04);
+    transform: translateY(40%);
+  }
+  .s-cover .prepared {
+    position: absolute;
+    top: 48px; right: 80px;
+    font-size: 11px;
+    color: rgba(255,255,255,0.4);
+    text-align: right;
+    line-height: 1.6;
+  }
+
+  /* Section divider */
+  .s-divider {
+    background: var(--green-pale);
+    display: flex;
+    align-items: center;
+    padding: 0 80px;
+  }
+  .s-divider .section-num {
+    font-family: 'DM Serif Display', serif;
+    font-size: 160px;
+    color: rgba(45,106,79,0.12);
+    line-height: 1;
+    margin-right: 48px;
+    flex-shrink: 0;
+  }
+  .s-divider .section-content h2 {
+    font-family: 'DM Serif Display', serif;
+    font-size: 48px;
+    color: var(--green);
+    line-height: 1.15;
+    margin-bottom: 16px;
+  }
+  .s-divider .section-content p {
+    font-size: 15px;
+    color: var(--grey);
+    line-height: 1.7;
+    max-width: 560px;
+  }
+  .s-divider .green-bar {
+    position: absolute;
+    left: 0; top: 0;
+    width: 6px; height: 100%;
+    background: var(--green);
+  }
+
+  /* Standard content — light */
+  .s-content {
+    background: var(--white);
+    padding: 56px 80px 48px;
+    display: flex;
+    flex-direction: column;
+  }
+  .slide-label {
+    font-size: 10px;
+    letter-spacing: 0.18em;
+    text-transform: uppercase;
+    color: var(--green-mid);
+    font-weight: 600;
+    margin-bottom: 10px;
+  }
+  .slide-title {
+    font-family: 'DM Serif Display', serif;
+    font-size: 36px;
+    color: var(--dark);
+    line-height: 1.15;
+    margin-bottom: 36px;
+  }
+
+  /* ── STAT CARDS ── */
+  .stat-row {
+    display: flex;
+    gap: 20px;
+    margin-bottom: 28px;
+  }
+  .stat-card {
+    background: var(--green-pale);
+    border-left: 4px solid var(--green);
+    padding: 24px 28px;
+    flex: 1;
+  }
+  .stat-card .stat-val {
+    font-family: 'DM Serif Display', serif;
+    font-size: 52px;
+    color: var(--green);
+    line-height: 1;
+    margin-bottom: 6px;
+  }
+  .stat-card .stat-label {
+    font-size: 12px;
+    color: var(--grey);
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+  }
+  .stat-card.dark {
+    background: var(--green);
+  }
+  .stat-card.dark .stat-val { color: var(--white); }
+  .stat-card.dark .stat-label { color: rgba(255,255,255,0.65); }
+
+  /* ── TABLES ── */
+  .data-table {
+    width: 100%;
+    border-collapse: collapse;
+    font-size: 13.5px;
+  }
+  .data-table th {
+    background: var(--green);
+    color: var(--white);
+    padding: 10px 14px;
+    text-align: left;
+    font-weight: 500;
+    font-size: 12px;
+    letter-spacing: 0.04em;
+  }
+  .data-table td {
+    padding: 9px 14px;
+    color: var(--dark);
+    border-bottom: 1px solid #eee;
+    line-height: 1.4;
+  }
+  .data-table tr:nth-child(even) td { background: var(--green-pale); }
+  .data-table tr:last-child td { border-bottom: none; }
+  .data-table .highlight { color: var(--green); font-weight: 600; }
+
+  /* ── CALLOUT BOX ── */
+  .callout {
+    background: var(--green-light);
+    border-left: 5px solid var(--green);
+    padding: 20px 24px;
+    font-size: 14px;
+    line-height: 1.65;
+    color: var(--dark);
+    margin-top: auto;
+  }
+  .callout strong { color: var(--green); }
+
+  /* ── TWO-COL LAYOUT ── */
+  .two-col {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 32px;
+    flex: 1;
+  }
+  .two-col.w6040 { grid-template-columns: 3fr 2fr; }
+  .two-col.w4060 { grid-template-columns: 2fr 3fr; }
+
+  /* ── BODY TEXT ── */
+  .body-text {
+    font-size: 14.5px;
+    line-height: 1.7;
+    color: var(--dark);
+    margin-bottom: 16px;
+  }
+  .body-text.small { font-size: 13px; line-height: 1.65; }
+
+  /* ── BULLET LIST ── */
+  .bullet-list {
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+  }
+  .bullet-list li {
+    font-size: 13.5px;
+    line-height: 1.55;
+    color: var(--dark);
+    padding-left: 20px;
+    position: relative;
+  }
+  .bullet-list li::before {
+    content: '';
+    position: absolute;
+    left: 0; top: 8px;
+    width: 6px; height: 6px;
+    background: var(--green);
+    border-radius: 50%;
+  }
+  .bullet-list li strong { color: var(--green); }
+
+  /* ── SOURCE NOTE ── */
+  .source-note {
+    font-size: 10px;
+    color: #aaa;
+    margin-top: auto;
+    padding-top: 12px;
+    line-height: 1.5;
+  }
+
+  /* ── SECTION LABEL BAR ── */
+  .section-tag {
+    position: absolute;
+    top: 0; right: 0;
+    background: var(--green-light);
+    color: var(--green);
+    font-size: 10px;
+    font-weight: 600;
+    letter-spacing: 0.14em;
+    text-transform: uppercase;
+    padding: 8px 20px;
+  }
+
+  /* ── POSITIONING TABLE ── */
+  .pos-table { width: 100%; border-collapse: collapse; }
+  .pos-table tr { border-bottom: 1px solid #eee; }
+  .pos-table tr:last-child { border-bottom: none; }
+  .pos-table td { padding: 13px 16px; font-size: 13.5px; line-height: 1.5; vertical-align: top; }
+  .pos-table .pos-label {
+    width: 130px;
+    font-weight: 600;
+    font-size: 11px;
+    text-transform: uppercase;
+    letter-spacing: 0.08em;
+    color: var(--grey);
+    background: var(--grey-light);
+  }
+  .pos-table .pos-val { color: var(--dark); }
+  .pos-table tr:nth-child(1) .pos-label { color: var(--white); background: var(--green); }
+  .pos-table tr:nth-child(1) .pos-val { background: var(--green-light); color: var(--dark); font-weight: 500; }
+
+  /* ── PRIORITY CARDS ── */
+  .priority-cards {
+    display: flex;
+    flex-direction: column;
+    gap: 14px;
+    flex: 1;
+  }
+  .priority-card {
+    display: flex;
+    align-items: flex-start;
+    gap: 20px;
+    padding: 16px 20px;
+    background: var(--green-pale);
+  }
+  .priority-num {
+    font-family: 'DM Serif Display', serif;
+    font-size: 36px;
+    color: var(--green);
+    line-height: 1;
+    flex-shrink: 0;
+    width: 32px;
+  }
+  .priority-body h4 {
+    font-size: 14px;
+    font-weight: 600;
+    color: var(--dark);
+    margin-bottom: 4px;
+  }
+  .priority-body p {
+    font-size: 12.5px;
+    color: var(--grey);
+    line-height: 1.5;
+  }
+
+  /* ── UNKNOWNS TABLE ── */
+  .unknowns-table { width: 100%; border-collapse: collapse; flex: 1; }
+  .unknowns-table th {
+    background: var(--green);
+    color: white;
+    font-size: 11px;
+    font-weight: 500;
+    letter-spacing: 0.06em;
+    padding: 9px 14px;
+    text-align: left;
+  }
+  .unknowns-table td {
+    padding: 10px 14px;
+    font-size: 12.5px;
+    line-height: 1.45;
+    border-bottom: 1px solid #eee;
+    vertical-align: top;
+    color: var(--dark);
+  }
+  .unknowns-table tr:nth-child(even) td { background: var(--green-pale); }
+
+  /* ── NEXT STEPS ── */
+  .steps-table { width: 100%; border-collapse: collapse; }
+  .steps-table th {
+    background: var(--green);
+    color: white;
+    font-size: 11px;
+    font-weight: 500;
+    letter-spacing: 0.06em;
+    padding: 9px 14px;
+    text-align: left;
+  }
+  .steps-table td {
+    padding: 10px 14px;
+    font-size: 13px;
+    line-height: 1.45;
+    border-bottom: 1px solid #eee;
+    vertical-align: top;
+    color: var(--dark);
+  }
+  .steps-table tr:nth-child(even) td { background: var(--grey-light); }
+  .steps-table .step-num {
+    font-family: 'DM Serif Display', serif;
+    font-size: 20px;
+    color: var(--green);
+    font-weight: normal;
+    text-align: center;
+  }
+  .steps-table .timing-badge {
+    display: inline-block;
+    background: var(--green-light);
+    color: var(--green);
+    font-size: 10px;
+    font-weight: 600;
+    padding: 2px 8px;
+    border-radius: 2px;
+    white-space: nowrap;
+  }
+
+  /* ── CLOSING SLIDE ── */
+  .s-close {
+    background: var(--green);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 80px;
+  }
+  .s-close .close-tag {
+    font-size: 11px;
+    letter-spacing: 0.18em;
+    text-transform: uppercase;
+    color: rgba(255,255,255,0.45);
+    margin-bottom: 24px;
+  }
+  .s-close h2 {
+    font-family: 'DM Serif Display', serif;
+    font-size: 56px;
+    color: var(--white);
+    text-align: center;
+    line-height: 1.15;
+    margin-bottom: 32px;
+    max-width: 800px;
+  }
+  .s-close .close-detail {
+    font-size: 14px;
+    color: rgba(255,255,255,0.55);
+    text-align: center;
+    line-height: 1.7;
+  }
+  .s-close .green-strip {
+    width: 48px; height: 4px;
+    background: rgba(255,255,255,0.35);
+    margin: 0 auto 36px;
+  }
+
+  /* ── INGREDIENT CARDS ── */
+  .ingredient-cards {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 16px;
+    flex: 1;
+  }
+  .ingredient-card {
+    padding: 20px 22px;
+    background: var(--green-pale);
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+  }
+  .ingredient-card h4 {
+    font-family: 'DM Serif Display', serif;
+    font-size: 18px;
+    color: var(--green);
+  }
+  .ingredient-card .ing-role {
+    font-size: 10px;
+    text-transform: uppercase;
+    letter-spacing: 0.12em;
+    color: var(--green-mid);
+    font-weight: 600;
+  }
+  .ingredient-card p {
+    font-size: 12.5px;
+    line-height: 1.55;
+    color: var(--dark);
+  }
+  .ingredient-card .evidence {
+    font-size: 11px;
+    color: var(--grey);
+    margin-top: auto;
+    font-style: italic;
+  }
+
+  /* ── CUSTOMER CARDS ── */
+  .customer-cards {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 20px;
+    flex: 1;
+  }
+  .customer-card {
+    padding: 24px 26px;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+  }
+  .customer-card.group-a { background: var(--green); }
+  .customer-card.group-b { background: var(--dark); }
+  .customer-card .group-label {
+    font-size: 10px;
+    font-weight: 600;
+    letter-spacing: 0.16em;
+    text-transform: uppercase;
+  }
+  .customer-card.group-a .group-label { color: rgba(255,255,255,0.6); }
+  .customer-card.group-b .group-label { color: rgba(255,255,255,0.4); }
+  .customer-card h4 {
+    font-family: 'DM Serif Display', serif;
+    font-size: 22px;
+    color: var(--white);
+    line-height: 1.2;
+  }
+  .customer-card p {
+    font-size: 13px;
+    line-height: 1.6;
+    color: rgba(255,255,255,0.75);
+  }
+  .customer-card .card-flag {
+    margin-top: auto;
+    font-size: 11px;
+    font-weight: 600;
+    padding: 5px 10px;
+    display: inline-block;
+    align-self: flex-start;
+  }
+  .customer-card.group-a .card-flag { background: rgba(255,255,255,0.2); color: white; }
+  .customer-card.group-b .card-flag { background: var(--green); color: white; }
+
+  /* ── TIMING RESOLUTION ── */
+  .timing-row {
+    display: grid;
+    grid-template-columns: 1fr auto 1fr;
+    align-items: center;
+    gap: 16px;
+    margin: 20px 0;
+  }
+  .timing-box {
+    padding: 20px 24px;
+    text-align: center;
+  }
+  .timing-box.morning { background: #E8F5E9; }
+  .timing-box.evening { background: #EDE7F6; }
+  .timing-box h4 { font-size: 13px; font-weight: 600; margin-bottom: 6px; }
+  .timing-box h4.green { color: var(--green); }
+  .timing-box h4.purple { color: #5C3D99; }
+  .timing-box p { font-size: 12px; line-height: 1.5; color: var(--grey); }
+  .timing-arrow {
+    text-align: center;
+    font-size: 11px;
+    color: var(--grey);
+    font-weight: 500;
+    letter-spacing: 0.06em;
+    text-transform: uppercase;
+  }
+
+  /* ── VARIANT BAR CHART ── */
+  .bar-chart { display: flex; flex-direction: column; gap: 14px; }
+  .bar-row { display: flex; align-items: center; gap: 12px; }
+  .bar-row .bar-label { font-size: 12px; font-weight: 600; color: var(--dark); width: 90px; flex-shrink: 0; }
+  .bar-track { flex: 1; height: 32px; background: #eee; position: relative; }
+  .bar-fill { height: 100%; background: var(--green); display: flex; align-items: center; padding-left: 10px; }
+  .bar-fill.mid { background: var(--green-mid); }
+  .bar-fill.light { background: var(--green-light); }
+  .bar-val { font-size: 11px; font-weight: 600; color: var(--white); }
+  .bar-val.dark-text { color: var(--green); margin-left: 8px; }
+  .bar-meta { font-size: 11px; color: var(--grey); width: 140px; flex-shrink: 0; text-align: right; }
+
+  /* ── LTV COMPARISON ── */
+  .ltv-compare {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 20px;
+    margin-bottom: 20px;
+  }
+  .ltv-box { padding: 24px; text-align: center; }
+  .ltv-box.sub { background: var(--green); }
+  .ltv-box.nonsub { background: var(--grey-light); border: 2px solid #ddd; }
+  .ltv-box .ltv-type { font-size: 11px; font-weight: 600; letter-spacing: 0.12em; text-transform: uppercase; margin-bottom: 12px; }
+  .ltv-box.sub .ltv-type { color: rgba(255,255,255,0.6); }
+  .ltv-box.nonsub .ltv-type { color: var(--grey); }
+  .ltv-box .ltv-mean { font-family: 'DM Serif Display', serif; font-size: 48px; line-height: 1; margin-bottom: 4px; }
+  .ltv-box.sub .ltv-mean { color: var(--white); }
+  .ltv-box.nonsub .ltv-mean { color: var(--dark); }
+  .ltv-box .ltv-sublabel { font-size: 11px; }
+  .ltv-box.sub .ltv-sublabel { color: rgba(255,255,255,0.55); }
+  .ltv-box.nonsub .ltv-sublabel { color: var(--grey); }
+  .ltv-box .ltv-median { font-size: 13px; margin-top: 8px; }
+  .ltv-box.sub .ltv-median { color: rgba(255,255,255,0.7); }
+  .ltv-box.nonsub .ltv-median { color: var(--grey); }
+
+  /* ── PAGE NUMBER ── */
+  .page-num {
+    position: absolute;
+    bottom: 18px; right: 28px;
+    font-size: 10px;
+    color: #ccc;
+    letter-spacing: 0.08em;
+  }
+  .page-num.dark { color: var(--green-mid); }
+</style>
+</head>
+<body>
+
+<!-- ══ SLIDE 1 — COVER ══════════════════════════════════════════════════ -->
+<div class="slide-counter">Slide 1 of 17</div>
+<div class="slide s-cover">
+  <div class="cover-dot"></div>
+  <div class="cover-dot2"></div>
+  <div class="prepared">Prepared by Personaify for<br>Leapfrog Remedies · June 2026</div>
+  <div class="eyebrow">Leapfrog Remedies · Product Strategy</div>
+  <h1>FOCUS</h1>
+  <div class="subtitle">H2 2026 Commercial Strategy &nbsp;·&nbsp; Data: Growth Room · May 2025–Jun 2026</div>
+  <span class="page-num dark">01</span>
+</div>
+
+<!-- ══ SLIDE 2 — AGENDA ══════════════════════════════════════════════════ -->
+<div class="slide-counter">Slide 2 of 17</div>
+<div class="slide s-content">
+  <div class="section-tag">Contents</div>
+  <div class="slide-label">This deck</div>
+  <div class="slide-title">Six sections. One product with a clear path forward.</div>
+  <div class="two-col">
+    <div>
+      <ul class="bullet-list">
+        <li><strong>Section 1 — What the data shows.</strong> 13 months of Growth Room Shopify data. Volume, variant mix, subscription, repeat purchase, LTV.</li>
+        <li><strong>Section 2 — The market context.</strong> UK cognitive supplement category. Caffeine reduction trend. Why the timing is right.</li>
+        <li><strong>Section 3 — The ingredient case.</strong> What L-Theanine, Lactium, and Lactoferrin actually do, cited correctly.</li>
+      </ul>
+    </div>
+    <div>
+      <ul class="bullet-list">
+        <li><strong>Section 4 — Positioning and identity.</strong> The FOCUS vs SNOOZE tension resolved. Two customer groups. A clear positioning direction.</li>
+        <li><strong>Section 5 — Commercial priorities.</strong> Three parallel workstreams for H2 2026.</li>
+        <li><strong>Section 6 — What we don't know yet.</strong> Five open questions and how to answer them.</li>
+      </ul>
+    </div>
+  </div>
+  <div class="callout">
+    This deck draws on Growth Room data, cited market research, and published ingredient evidence. Where data is limited or inferential, that is stated.
+  </div>
+  <span class="page-num">02</span>
+</div>
+
+<!-- ══ SLIDE 3 — SECTION DIVIDER ══════════════════════════════════════════ -->
+<div class="slide-counter">Slide 3 of 17</div>
+<div class="slide s-divider">
+  <div class="green-bar"></div>
+  <div class="section-num">1</div>
+  <div class="section-content">
+    <h2>What the data shows</h2>
+    <p>13 months of Shopify order data via Growth Room. May 2025 to June 2026. Small sample, enough structure. The headline numbers tell a clear story.</p>
+  </div>
+  <span class="page-num dark">03</span>
+</div>
+
+<!-- ══ SLIDE 4 — HEADLINE NUMBERS ══════════════════════════════════════════ -->
+<div class="slide-counter">Slide 4 of 17</div>
+<div class="slide s-content">
+  <div class="section-tag">Section 1 — Data</div>
+  <div class="slide-label">The headline numbers</div>
+  <div class="slide-title">589 orders. £58,828 revenue. 423 customers.</div>
+  <div class="stat-row">
+    <div class="stat-card dark">
+      <div class="stat-val">589</div>
+      <div class="stat-label">Total orders</div>
+    </div>
+    <div class="stat-card dark">
+      <div class="stat-val">£58,828</div>
+      <div class="stat-label">Net revenue</div>
+    </div>
+    <div class="stat-card dark">
+      <div class="stat-val">423</div>
+      <div class="stat-label">Customers</div>
+    </div>
+    <div class="stat-card dark">
+      <div class="stat-val">£99</div>
+      <div class="stat-label">Avg order value</div>
+    </div>
+  </div>
+  <p class="body-text">Date range: 11 May 2025 – 4 June 2026. Product launched with limited standalone marketing. All figures from Shopify order data processed through Growth Room. </p>
+  <div class="bar-chart">
+    <div class="bar-row">
+      <span class="bar-label">FOC-015</span>
+      <div class="bar-track">
+        <div class="bar-fill light" style="width:16%"><span class="bar-val dark-text"></span></div>
+      </div>
+      <span class="bar-meta">93 orders · £3,079 · £33 AOV</span>
+    </div>
+    <div class="bar-row">
+      <span class="bar-label">FOC-030</span>
+      <div class="bar-track">
+        <div class="bar-fill mid" style="width:65%"><span class="bar-val">381 orders · 64.7%</span></div>
+      </div>
+      <span class="bar-meta">£28,545 · £75 AOV</span>
+    </div>
+    <div class="bar-row">
+      <span class="bar-label">FOC-090</span>
+      <div class="bar-track">
+        <div class="bar-fill" style="width:20%"><span class="bar-val">115 orders</span></div>
+      </div>
+      <span class="bar-meta">£27,204 · £237 AOV</span>
+    </div>
+  </div>
+  <div class="callout" style="margin-top:16px">
+    <strong>FOC-090 key finding:</strong> 19.5% of orders, 46.2% of revenue. Customers who commit to FOCUS spend properly.
+  </div>
+  <span class="page-num">04</span>
+</div>
+
+<!-- ══ SLIDE 5 — CROSS-SELL ══════════════════════════════════════════════ -->
+<div class="slide-counter">Slide 5 of 17</div>
+<div class="slide s-content">
+  <div class="section-tag">Section 1 — Data</div>
+  <div class="slide-label">Customer composition</div>
+  <div class="slide-title">88.4% of FOCUS buyers also purchased IMMUNE or SNOOZE.</div>
+  <div class="stat-row">
+    <div class="stat-card">
+      <div class="stat-val">374</div>
+      <div class="stat-label">Cross-product buyers</div>
+    </div>
+    <div class="stat-card">
+      <div class="stat-val">49</div>
+      <div class="stat-label">FOCUS-only customers</div>
+    </div>
+    <div class="stat-card">
+      <div class="stat-val">88.4%</div>
+      <div class="stat-label">Cross-sell dependency</div>
+    </div>
+  </div>
+  <p class="body-text">FOCUS is currently functioning as a cross-sell into an existing base, not an independent acquisition product. Only 49 customers have ever bought FOCUS without another Leapfrog product in their history.</p>
+  <div class="callout">
+    This is partly a product of how FOCUS has been marketed to date — it has not been positioned or pushed as a standalone proposition. The customer behaviour reflects the marketing, not the ceiling.
+  </div>
+  <span class="page-num">05</span>
+</div>
+
+<!-- ══ SLIDE 6 — SUBSCRIPTION ══════════════════════════════════════════════ -->
+<div class="slide-counter">Slide 6 of 17</div>
+<div class="slide s-content">
+  <div class="section-tag">Section 1 — Data</div>
+  <div class="slide-label">Subscription and repeat purchase</div>
+  <div class="slide-title">83% buy once. The 17% who return spend £454 on average.</div>
+  <div class="two-col">
+    <div>
+      <table class="data-table">
+        <thead>
+          <tr><th>Segment</th><th>Customers</th><th>Revenue</th><th>Avg AOV</th></tr>
+        </thead>
+        <tbody>
+          <tr><td>One-time</td><td>329</td><td>£36,183</td><td>£103</td></tr>
+          <tr><td>Subscriber</td><td>105</td><td>£22,645</td><td>£95</td></tr>
+        </tbody>
+      </table>
+      <p class="body-text" style="margin-top:16px;font-size:13px">Subscription rate: <strong class="highlight">24.8%</strong> of customers. Median reorder interval: <strong class="highlight">30 days</strong>. The product cadence is established among those who stick with it.</p>
+    </div>
+    <div>
+      <div class="ltv-compare">
+        <div class="ltv-box sub">
+          <div class="ltv-type">Subscribers</div>
+          <div class="ltv-mean">£226</div>
+          <div class="ltv-sublabel">Mean LTV</div>
+          <div class="ltv-median">Median: £133</div>
+        </div>
+        <div class="ltv-box nonsub">
+          <div class="ltv-type">Non-subscribers</div>
+          <div class="ltv-mean">£110</div>
+          <div class="ltv-sublabel">Mean LTV</div>
+          <div class="ltv-median">Median: £70</div>
+        </div>
+      </div>
+      <div class="callout">
+        <strong>2× LTV gap</strong> between subscribers and non-subscribers. Consistent with the IMMUNE and SNOOZE pattern. Converting one-time buyers to subscription is the single largest lever available.
+      </div>
+    </div>
+  </div>
+  <span class="page-num">06</span>
+</div>
+
+<!-- ══ SLIDE 7 — SECTION DIVIDER ══════════════════════════════════════════ -->
+<div class="slide-counter">Slide 7 of 17</div>
+<div class="slide s-divider">
+  <div class="green-bar"></div>
+  <div class="section-num">2</div>
+  <div class="section-content">
+    <h2>The market context</h2>
+    <p>The UK cognitive supplement category is growing fast — and the specific trends driving it map directly to FOCUS's formulation.</p>
+  </div>
+  <span class="page-num dark">07</span>
+</div>
+
+<!-- ══ SLIDE 8 — MARKET ══════════════════════════════════════════════════ -->
+<div class="slide-counter">Slide 8 of 17</div>
+<div class="slide s-content">
+  <div class="section-tag">Section 2 — Market</div>
+  <div class="slide-label">Category growth</div>
+  <div class="slide-title">UK brain health supplements: 14.7% CAGR to 2035. Driven by people who want to perform, not just recover.</div>
+  <div class="stat-row">
+    <div class="stat-card">
+      <div class="stat-val">14.7%</div>
+      <div class="stat-label">CAGR 2025–2035</div>
+    </div>
+    <div class="stat-card">
+      <div class="stat-val">£490m</div>
+      <div class="stat-label">UK market 2026</div>
+    </div>
+    <div class="stat-card">
+      <div class="stat-val">26%</div>
+      <div class="stat-label">UK adults avoiding caffeine</div>
+    </div>
+  </div>
+  <div class="two-col">
+    <ul class="bullet-list">
+      <li>Primary demand drivers: rising awareness of cognitive performance, stress and digital fatigue, and a growing segment of adults who are intentional about how they think — not just how they feel. <em>(SkyQuest, 2026)</em></li>
+      <li>Clean-label preference is the top consistent purchase driver: transparency, sourcing credibility, no dependency. Consumers want to know what they're taking and why it works. <em>(Future Market Insights, 2026)</em></li>
+      <li>Subscription formats are growing — cognitive support is increasingly treated as a daily practice, not a one-off purchase. <em>(Future Market Insights, 2025)</em></li>
+    </ul>
+    <div>
+      <div class="callout">
+        The proportion of UK adults avoiding caffeine for health reasons has grown from 18% in 2019 to 26% in 2025. These are not people cutting caffeine because it doesn't work — it's people who want sustained, clean mental performance and are choosing to get there differently. <em style="font-size:11px;display:block;margin-top:8px">(Counter Coffee, 2025; IndexBox, 2026)</em>
+      </div>
+    </div>
+  </div>
+  <span class="page-num">08</span>
+</div>
+
+<!-- ══ SLIDE 9 — SECTION DIVIDER ══════════════════════════════════════════ -->
+<div class="slide-counter">Slide 9 of 17</div>
+<div class="slide s-divider">
+  <div class="green-bar"></div>
+  <div class="section-num">3</div>
+  <div class="section-content">
+    <h2>The ingredient case</h2>
+    <p>FOCUS contains four active ingredients. The combination is clinically coherent. Evidence varies by ingredient — this section is precise about what can and cannot be claimed.</p>
+  </div>
+  <span class="page-num dark">09</span>
+</div>
+
+<!-- ══ SLIDE 10 — INGREDIENTS ══════════════════════════════════════════════ -->
+<div class="slide-counter">Slide 10 of 17</div>
+<div class="slide s-content">
+  <div class="section-tag">Section 3 — Ingredients</div>
+  <div class="slide-label">What the formulation does</div>
+  <div class="slide-title">Two mechanisms, one coherent outcome.</div>
+  <div class="ingredient-cards">
+    <div class="ingredient-card">
+      <div class="ing-role">Primary focus mechanism</div>
+      <h4>L-Theanine</h4>
+      <p>Increases alpha brainwave activity — the brain state associated with wakeful relaxation and sustained attention. Multiple EEG studies confirm the effect. Described as "calm focus": alert but not anxious.</p>
+      <p class="evidence">Evidence: double-blind RCT in 34 adults under cognitive stress. Alpha brainwave activity well-documented. Claims should be framed as "supports" not "improves." (ALZDISCOVERY; Frontiers in Nutrition, 2024)</p>
+    </div>
+    <div class="ingredient-card">
+      <div class="ing-role">Stress interference layer</div>
+      <h4>Lactium®</h4>
+      <p>Reduces cortisol levels in stressed adults. In a cognitive context, this matters because elevated cortisol degrades attention, working memory, and decision-making. Lactium creates the conditions for L-Theanine to work.</p>
+      <p class="evidence">Evidence: 9 clinical studies, 500+ healthy volunteers. FDA-authorised stress-reduction claims. 30-day intervention typical. (Ingredia, 2020; Scientific Wellness)</p>
+    </div>
+    <div class="ingredient-card">
+      <div class="ing-role">Quality foundation</div>
+      <h4>Lactoferrin (Proferrin®)</h4>
+      <p>Neuroprotective properties documented — iron regulation, anti-inflammatory effect at the blood-brain barrier. Long-term and preventive rather than acute. In FOCUS communications, positioned as the brand's signature ingredient and quality marker.</p>
+      <p class="evidence">Evidence base is for neuroprotection, not acute cognitive performance. Do not anchor the cognitive claim here.</p>
+    </div>
+    <div class="ingredient-card">
+      <div class="ing-role">Foundational support</div>
+      <h4>Vitamin B12</h4>
+      <p>Supports normal neurological function and energy metabolism. Credible but not differentiating — widely used in cognitive supplements. Its role in FOCUS is foundational support, not mechanism of action.</p>
+      <p class="evidence">Well-established. Completes the formulation. Not the claim anchor.</p>
+    </div>
+  </div>
+  <span class="page-num">10</span>
+</div>
+
+<!-- ══ SLIDE 11 — SECTION DIVIDER ══════════════════════════════════════════ -->
+<div class="slide-counter">Slide 11 of 17</div>
+<div class="slide s-divider">
+  <div class="green-bar"></div>
+  <div class="section-num">4</div>
+  <div class="section-content">
+    <h2>Positioning and identity</h2>
+    <p>FOCUS needs a standalone identity built around aspiration, not deficit. Not for people fixing a problem — for people maintaining a standard.</p>
+  </div>
+  <span class="page-num dark">11</span>
+</div>
+
+<!-- ══ SLIDE 12 — SNOOZE TENSION ══════════════════════════════════════════ -->
+<div class="slide-counter">Slide 12 of 17</div>
+<div class="slide s-content">
+  <div class="section-tag">Section 4 — Positioning</div>
+  <div class="slide-label">The FOCUS vs SNOOZE question</div>
+  <div class="slide-title">Same biology. Different application window. That's the resolution.</div>
+  <p class="body-text">Both FOCUS and SNOOZE contain Lactoferrin and Lactium. On the surface: a contradiction. One product for clarity, one for sleep, sharing core ingredients. The resolution is context and timing, not mechanism.</p>
+  <div class="timing-row">
+    <div class="timing-box morning">
+      <h4 class="green">FOCUS — Morning &amp; daytime</h4>
+      <p>Lactium reduces cortisol. Lower cortisol in the morning means less cognitive interference — you think more clearly. L-Theanine sustains the attentional state.</p>
+    </div>
+    <div class="timing-arrow">Same<br>biology<br>↕</div>
+    <div class="timing-box evening">
+      <h4 class="purple">SNOOZE — Evening</h4>
+      <p>Lactium reduces cortisol. Lower cortisol in the evening means easier transition to sleep. The mechanism is identical. The application window is different.</p>
+    </div>
+  </div>
+  <div class="callout">
+    This framing is honest, coherent, and defensible. It also opens a whole-day narrative: IMMUNE for resilience, FOCUS for the working day, SNOOZE for recovery. Not a product-by-product argument — a brand architecture story.
+  </div>
+  <span class="page-num">12</span>
+</div>
+
+<!-- ══ SLIDE 13 — CUSTOMERS ══════════════════════════════════════════════ -->
+<div class="slide-counter">Slide 13 of 17</div>
+<div class="slide s-content">
+  <div class="section-tag">Section 4 — Positioning</div>
+  <div class="slide-label">Who FOCUS is for</div>
+  <div class="slide-title">People who are already performing well and want to stay that way.</div>
+  <div class="customer-cards">
+    <div class="customer-card group-a">
+      <div class="group-label">Group A — Current base</div>
+      <h4>The Leapfrog loyalist</h4>
+      <p>Already using IMMUNE or SNOOZE. Understands the ingredient logic. Adds FOCUS as a deliberate extension of an existing health practice — not a fix, but a complement. High intent, high trust.</p>
+      <div class="card-flag">88% of current base · lower acquisition cost</div>
+    </div>
+    <div class="customer-card group-b">
+      <div class="group-label">Group B — Acquisition target</div>
+      <h4>The intentional performer</h4>
+      <p>High-functioning adults — professionals, parents, creatives — who are deliberate about their cognitive state. They're not struggling. They're paying attention to the quality of their thinking and they want to protect it. Clean ingredients, no dependency, sustained clarity.</p>
+      <div class="card-flag">H2 acquisition priority</div>
+    </div>
+  </div>
+  <div class="callout" style="margin-top:16px">
+    The FOC-090 data supports this framing. Customers who commit to FOCUS spend £454 on average across 5.4 orders. That is not a behaviour pattern from someone who bought out of desperation — it is a deliberate, sustained practice.
+  </div>
+  <span class="page-num">13</span>
+</div>
+
+<!-- ══ SLIDE 14 — POSITIONING TABLE ══════════════════════════════════════════ -->
+<div class="slide-counter">Slide 14 of 17</div>
+<div class="slide s-content">
+  <div class="section-tag">Section 4 — Positioning</div>
+  <div class="slide-label">Proposed positioning direction</div>
+  <div class="slide-title">Stay sharp. Not because the day demands it — because you do.</div>
+  <table class="pos-table">
+    <tr>
+      <td class="pos-label">The positioning</td>
+      <td class="pos-val">FOCUS is for people who are already performing well and want to maintain the quality of their thinking — through demanding days, without stimulants, without compromise.</td>
+    </tr>
+    <tr>
+      <td class="pos-label">The customer</td>
+      <td class="pos-val">High-functioning adults — 28–55 — who are deliberate about their health, pay attention to how they think, and choose ingredients they understand. They are not looking for a fix. They are protecting something they value.</td>
+    </tr>
+    <tr>
+      <td class="pos-label">The product</td>
+      <td class="pos-val">FOCUS supports calm, sustained cognitive performance. L-Theanine for attentional clarity. Lactium to keep cortisol from degrading that clarity under pressure. Leapfrog's signature lactoferrin as the quality foundation.</td>
+    </tr>
+    <tr>
+      <td class="pos-label">The claim</td>
+      <td class="pos-val">Stay sharp. Clean ingredients, clinically studied. No crash. No dependency. A daily practice, not a crutch.</td>
+    </tr>
+    <tr>
+      <td class="pos-label">What it is not</td>
+      <td class="pos-val">Not a nootropic stack. Not a productivity hack. Not a deficit solution. FOCUS does not promise to make you smarter — it supports maintaining your best thinking when the conditions make that harder.</td>
+    </tr>
+  </table>
+  <span class="page-num">14</span>
+</div>
+
+<!-- ══ SLIDE 15 — SECTION DIVIDER ══════════════════════════════════════════ -->
+<div class="slide-counter">Slide 15 of 17</div>
+<div class="slide s-divider">
+  <div class="green-bar"></div>
+  <div class="section-num">5</div>
+  <div class="section-content">
+    <h2>Commercial priorities</h2>
+    <p>Three parallel workstreams for H2 2026. Each addresses a different constraint. They run concurrently — but the order of resolution matters.</p>
+  </div>
+  <span class="page-num dark">15</span>
+</div>
+
+<!-- ══ SLIDE 16 — PRIORITIES ══════════════════════════════════════════════ -->
+<div class="slide-counter">Slide 16 of 17 — Part A</div>
+<div class="slide s-content">
+  <div class="section-tag">Section 5 — Commercial</div>
+  <div class="slide-label">Three workstreams</div>
+  <div class="slide-title">Subscription conversion, FOC-015 restructure, standalone acquisition.</div>
+  <div class="two-col w6040">
+    <div class="priority-cards">
+      <div class="priority-card">
+        <div class="priority-num">1</div>
+        <div class="priority-body">
+          <h4>Subscription conversion</h4>
+          <p>329 customers bought once and stopped. Subscribers spend 2× more. The reorder interval is 30 days — the cadence is there. Audit the post-purchase sequence. Introduce FOC-090 subscription as the primary upsell. Test a trial-to-subscribe path for FOC-030. Day-25 email timed to anticipated reorder.</p>
+        </div>
+      </div>
+      <div class="priority-card">
+        <div class="priority-num">2</div>
+        <div class="priority-body">
+          <h4>FOC-015 restructure</h4>
+          <p>93 orders, £33 AOV, minimum price of £0. No evidence FOC-015 buyers convert to larger variants. <strong>Option A:</strong> retire as standalone, use as gifting/seeding tool. <strong>Option B:</strong> redesign as an explicit trial SKU with a designed conversion path. Decision gates the acquisition approach.</p>
+        </div>
+      </div>
+      <div class="priority-card">
+        <div class="priority-num">3</div>
+        <div class="priority-body">
+          <h4>Standalone acquisition</h4>
+          <p>Paid search test on 2–3 high-intent queries around cognitive clarity and clean performance. One long-form ingredient article for search and AI citation. IMMUNE customer email — introduce FOCUS as the deliberate complement for the working day, to subscribers who haven't yet bought it.</p>
+        </div>
+      </div>
+    </div>
+    <div style="display:flex;flex-direction:column;gap:16px">
+      <div class="callout">
+        <strong>Priority order matters.</strong> Subscription conversion first — it works on the existing base with no new acquisition cost. FOC-015 decision second — it determines what the entry product is. Standalone acquisition third — don't point paid media at FOCUS until the entry product and conversion path are resolved.
+      </div>
+      <table class="data-table" style="font-size:12px">
+        <thead><tr><th>Workstream</th><th>Primary metric</th></tr></thead>
+        <tbody>
+          <tr><td>Subscription conversion</td><td>OTP→sub rate for FOCUS (baseline: 24.8%)</td></tr>
+          <tr><td>FOC-015 restructure</td><td>FOC-015→FOC-030/090 upgrade rate within 60 days</td></tr>
+          <tr><td>Standalone acquisition</td><td>FOCUS-only customer count (baseline: 49)</td></tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+  <span class="page-num">16</span>
+</div>
+
+<!-- ══ SLIDE 17 — UNKNOWNS + NEXT STEPS ══════════════════════════════════ -->
+<div class="slide-counter">Slide 17 of 17</div>
+<div class="slide s-content">
+  <div class="section-tag">Section 6 — Gaps &amp; Next Steps</div>
+  <div class="slide-label">What we don't know yet — and the six actions</div>
+  <div class="slide-title">Five open questions. Six next steps. Weeks 1–6.</div>
+  <div class="two-col">
+    <table class="unknowns-table" style="font-size:12px">
+      <thead><tr><th>Open question</th><th>How to answer it</th></tr></thead>
+      <tbody>
+        <tr><td>Where do the 49 standalone customers come from?</td><td>UTM/order source tags in Growth Room</td></tr>
+        <tr><td>What is the OTP→subscription conversion rate?</td><td>Appstle data cross-referenced with orders</td></tr>
+        <tr><td>When do cross-buyers add FOCUS in their journey?</td><td>Sequence analysis: first IMMUNE vs first FOCUS date</td></tr>
+        <tr><td>What is the FOC-015 upgrade rate?</td><td>Cohort: first FOCUS = FOC-015, track subsequent variant</td></tr>
+        <tr><td>Is FOCUS search demand seasonal?</td><td>Search Console — FOCUS queries over 12 months</td></tr>
+      </tbody>
+    </table>
+    <table class="steps-table" style="font-size:12px">
+      <thead><tr><th>#</th><th>Action</th><th>Timing</th></tr></thead>
+      <tbody>
+        <tr>
+          <td class="step-num">1</td>
+          <td>Pull Appstle data — establish OTP→subscription baseline</td>
+          <td><span class="timing-badge">Wk 1</span></td>
+        </tr>
+        <tr>
+          <td class="step-num">2</td>
+          <td>Audit FOCUS post-purchase email sequence</td>
+          <td><span class="timing-badge">Wk 1–2</span></td>
+        </tr>
+        <tr>
+          <td class="step-num">3</td>
+          <td>Decide FOC-015: Option A or Option B</td>
+          <td><span class="timing-badge">Wk 2</span></td>
+        </tr>
+        <tr>
+          <td class="step-num">4</td>
+          <td>IMMUNE customer email introducing FOCUS</td>
+          <td><span class="timing-badge">Wk 2–3</span></td>
+        </tr>
+        <tr>
+          <td class="step-num">5</td>
+          <td>Commission long-form FOCUS ingredient article</td>
+          <td><span class="timing-badge">Wk 3–4</span></td>
+        </tr>
+        <tr>
+          <td class="step-num">6</td>
+          <td>Paid search test — cognitive clarity and clean performance queries, £500–1k</td>
+          <td><span class="timing-badge">Wk 4–6</span></td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+  <span class="page-num">17</span>
+</div>
+
+</body>
+</html>
