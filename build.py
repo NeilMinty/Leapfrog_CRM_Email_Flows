@@ -1,11 +1,12 @@
 #!/usr/bin/env python3
 """
-Combines four Leapfrog HTML files into leapfrog-strategy.html.
-The SOSTAC hub embeds three decks as srcdoc iframes.
+Combines five Leapfrog HTML files into leapfrog-strategy.html.
+The SOSTAC hub embeds four docs as srcdoc iframes.
 """
 
 SRC = '/Users/neilminty/Downloads/'
-OUT = '/Users/neilminty/focus-strategy-deck/leapfrog-strategy.html'
+LOCAL = '/Users/neilminty/focus-strategy-deck/'
+OUT = LOCAL + 'leapfrog-strategy.html'
 
 # Read source files
 with open(SRC + 'leapfrog-sostac-v29.html', 'r', encoding='utf-8') as f:
@@ -16,6 +17,8 @@ with open(SRC + 'leapfrog-subscription-cro-v1.1.html', 'r', encoding='utf-8') as
     cro = f.read()
 with open(SRC + 'FOCUS_Strategy_Deck (1).html', 'r', encoding='utf-8') as f:
     focus = f.read()
+with open(LOCAL + 'klaviyo-brief.html', 'r', encoding='utf-8') as f:
+    klaviyo = f.read()
 
 # Back button — injected before </body> in each deck
 BACK_BTN = (
@@ -26,12 +29,10 @@ BACK_BTN = (
     '</div>'
 )
 
-for deck_name in ['retention', 'cro', 'focus']:
-    pass  # handled inline below
-
 retention = retention.replace('</body>', BACK_BTN + '\n</body>', 1)
 cro       = cro.replace('</body>', BACK_BTN + '\n</body>', 1)
 focus     = focus.replace('</body>', BACK_BTN + '\n</body>', 1)
+klaviyo   = klaviyo.replace('</body>', BACK_BTN + '\n</body>', 1)
 
 
 def to_srcdoc(html):
@@ -50,6 +51,7 @@ def overlay(id_, srcdoc_content):
 overlay_retention = overlay('overlay-retention', retention)
 overlay_cro       = overlay('overlay-cro', cro)
 overlay_focus     = overlay('overlay-focus', focus)
+overlay_klaviyo   = overlay('overlay-klaviyo', klaviyo)
 
 # CSS additions (inserted before </style>)
 CSS = """
@@ -102,6 +104,7 @@ NAV_LINKS = (
     '    <a href="#" onclick="openDeck(\'overlay-retention\'); return false;">Retention &amp; Win-Back</a>\n'
     '    <a href="#" onclick="openDeck(\'overlay-cro\'); return false;">Subscription CRO</a>\n'
     '    <a href="#" onclick="openDeck(\'overlay-focus\'); return false;">FOCUS Strategy</a>\n'
+    '    <a href="#" onclick="openDeck(\'overlay-klaviyo\'); return false;">Klaviyo &amp; Content Brief</a>\n'
     '  </nav>'
 )
 
@@ -155,7 +158,7 @@ sostac = sostac.replace(
 assert '</body>' in sostac
 sostac = sostac.replace(
     '</body>',
-    '\n' + overlay_retention + '\n' + overlay_cro + '\n' + overlay_focus + '\n' + JS + '\n</body>',
+    '\n' + overlay_retention + '\n' + overlay_cro + '\n' + overlay_focus + '\n' + overlay_klaviyo + '\n' + JS + '\n</body>',
     1
 )
 

@@ -1,0 +1,648 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Klaviyo & Content Brief — Priority Flows</title>
+<link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&family=DM+Sans:opsz,wght@9..40,300;9..40,400;9..40,500;9..40,600&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --green: #2D6A4F;
+    --green-mid: #40916C;
+    --green-light: #D8EDDF;
+    --green-pale: #F0F7F2;
+    --dark: #1A1A1A;
+    --grey: #6B6B6B;
+    --grey-light: #F4F4F4;
+    --white: #FFFFFF;
+    --sidebar-w: 240px;
+  }
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+  html { scroll-behavior: smooth; }
+  body {
+    font-family: 'DM Sans', sans-serif;
+    background: var(--grey-light);
+    color: var(--dark);
+    display: flex;
+    min-height: 100vh;
+  }
+
+  /* ── SIDEBAR ── */
+  #sidebar {
+    width: var(--sidebar-w);
+    background: var(--green);
+    position: fixed;
+    top: 0; left: 0; bottom: 0;
+    overflow-y: auto;
+    z-index: 100;
+    display: flex;
+    flex-direction: column;
+  }
+  #sidebar .sidebar-header {
+    padding: 28px 20px 20px;
+    border-bottom: 1px solid rgba(255,255,255,0.12);
+  }
+  #sidebar .sidebar-header .sidebar-eyebrow {
+    font-size: 9px;
+    letter-spacing: 0.18em;
+    text-transform: uppercase;
+    color: rgba(255,255,255,0.45);
+    margin-bottom: 8px;
+  }
+  #sidebar .sidebar-header h2 {
+    font-family: 'DM Serif Display', serif;
+    font-size: 17px;
+    color: var(--white);
+    line-height: 1.3;
+  }
+  #sidebar nav { padding: 16px 0 32px; flex: 1; }
+  #sidebar nav .nav-section {
+    font-size: 9px;
+    font-weight: 700;
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+    color: rgba(255,255,255,0.4);
+    padding: 14px 20px 4px;
+  }
+  #sidebar nav a {
+    display: block;
+    padding: 7px 20px;
+    font-size: 12.5px;
+    color: rgba(255,255,255,0.75);
+    text-decoration: none;
+    line-height: 1.4;
+    transition: background 0.15s;
+  }
+  #sidebar nav a:hover { background: rgba(255,255,255,0.08); color: #fff; }
+  #sidebar nav a.active { background: rgba(255,255,255,0.12); color: #fff; font-weight: 600; }
+
+  /* ── MAIN ── */
+  #main {
+    margin-left: var(--sidebar-w);
+    flex: 1;
+    padding: 0 0 80px;
+    max-width: 900px;
+  }
+
+  /* ── DOC HEADER ── */
+  .doc-header {
+    background: var(--green);
+    padding: 48px 52px 40px;
+    margin-bottom: 0;
+  }
+  .doc-header .eyebrow {
+    font-size: 10px;
+    letter-spacing: 0.18em;
+    text-transform: uppercase;
+    color: rgba(255,255,255,0.5);
+    margin-bottom: 14px;
+  }
+  .doc-header h1 {
+    font-family: 'DM Serif Display', serif;
+    font-size: 34px;
+    color: var(--white);
+    line-height: 1.2;
+    margin-bottom: 12px;
+  }
+  .doc-header .doc-meta {
+    font-size: 13px;
+    color: rgba(255,255,255,0.6);
+    line-height: 1.6;
+  }
+  .doc-header .doc-meta strong { color: rgba(255,255,255,0.85); }
+
+  /* ── SECTIONS ── */
+  .doc-section {
+    background: var(--white);
+    margin: 20px 24px 0;
+    padding: 32px 36px;
+    border-top: 3px solid var(--green);
+  }
+  .doc-section h2 {
+    font-family: 'DM Serif Display', serif;
+    font-size: 24px;
+    color: var(--green);
+    margin-bottom: 6px;
+    line-height: 1.2;
+  }
+  .doc-section .section-meta {
+    font-size: 11px;
+    color: var(--grey);
+    letter-spacing: 0.06em;
+    text-transform: uppercase;
+    font-weight: 600;
+    margin-bottom: 20px;
+  }
+  .doc-section h3 {
+    font-size: 14px;
+    font-weight: 700;
+    color: var(--dark);
+    margin: 22px 0 8px;
+    text-transform: uppercase;
+    letter-spacing: 0.06em;
+    font-size: 11px;
+    color: var(--green-mid);
+  }
+  .doc-section p {
+    font-size: 13.5px;
+    line-height: 1.7;
+    color: var(--dark);
+    margin-bottom: 12px;
+  }
+  .doc-section ul, .doc-section ol {
+    margin: 8px 0 14px 18px;
+  }
+  .doc-section li {
+    font-size: 13.5px;
+    line-height: 1.65;
+    color: var(--dark);
+    margin-bottom: 5px;
+  }
+  .doc-section li strong { color: var(--green); }
+
+  /* ── KPIS / META ROW ── */
+  .kpi-row {
+    display: flex;
+    gap: 12px;
+    flex-wrap: wrap;
+    margin-bottom: 20px;
+  }
+  .kpi-pill {
+    background: var(--green-pale);
+    border-left: 3px solid var(--green);
+    padding: 8px 14px;
+    font-size: 12px;
+    line-height: 1.4;
+  }
+  .kpi-pill .kpi-label {
+    font-size: 9px;
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+    color: var(--grey);
+    font-weight: 600;
+    display: block;
+    margin-bottom: 2px;
+  }
+  .kpi-pill .kpi-val { font-weight: 600; color: var(--dark); }
+
+  /* ── CALLOUT ── */
+  .callout {
+    background: var(--green-light);
+    border-left: 4px solid var(--green);
+    padding: 14px 18px;
+    font-size: 13px;
+    line-height: 1.65;
+    color: var(--dark);
+    margin: 16px 0;
+  }
+  .callout strong { color: var(--green); }
+  .callout.warning {
+    background: #FFF8E7;
+    border-left-color: #B8860B;
+  }
+  .callout.warning strong { color: #8B6914; }
+
+  /* ── TABLES ── */
+  .flow-table {
+    width: 100%;
+    border-collapse: collapse;
+    font-size: 12.5px;
+    margin: 16px 0 20px;
+  }
+  .flow-table th {
+    background: var(--green);
+    color: var(--white);
+    padding: 9px 12px;
+    text-align: left;
+    font-size: 11px;
+    font-weight: 600;
+    letter-spacing: 0.04em;
+    vertical-align: top;
+  }
+  .flow-table td {
+    padding: 10px 12px;
+    border-bottom: 1px solid #eee;
+    vertical-align: top;
+    line-height: 1.55;
+    color: var(--dark);
+  }
+  .flow-table tr:nth-child(even) td { background: var(--green-pale); }
+  .flow-table tr:last-child td { border-bottom: none; }
+  .flow-table td:first-child { font-weight: 600; color: var(--green); white-space: nowrap; }
+  .flow-table td strong { color: var(--green); }
+
+  .dep-table {
+    width: 100%;
+    border-collapse: collapse;
+    font-size: 13px;
+    margin: 12px 0;
+  }
+  .dep-table th {
+    background: var(--green);
+    color: var(--white);
+    padding: 8px 14px;
+    text-align: left;
+    font-size: 11px;
+    font-weight: 600;
+    letter-spacing: 0.04em;
+  }
+  .dep-table td {
+    padding: 10px 14px;
+    border-bottom: 1px solid #eee;
+    line-height: 1.55;
+    vertical-align: top;
+  }
+  .dep-table tr:nth-child(even) td { background: var(--green-pale); }
+  .dep-table tr:last-child td { border-bottom: none; }
+  .dep-table td:first-child { font-weight: 500; color: var(--dark); }
+  .dep-table td:last-child { color: var(--grey); font-size: 12.5px; }
+
+  /* ── BUILD REQUIREMENTS ── */
+  .build-req {
+    background: var(--grey-light);
+    border: 1px solid #ddd;
+    padding: 14px 18px;
+    margin: 14px 0;
+    font-size: 12.5px;
+  }
+  .build-req .build-req-title {
+    font-size: 10px;
+    text-transform: uppercase;
+    letter-spacing: 0.12em;
+    font-weight: 700;
+    color: var(--grey);
+    margin-bottom: 8px;
+  }
+  .build-req ul { margin: 0 0 0 16px; }
+  .build-req li { margin-bottom: 4px; line-height: 1.55; color: var(--dark); }
+  .build-req li strong { color: var(--green); }
+
+  /* ── BADGE ── */
+  .badge {
+    display: inline-block;
+    font-size: 10px;
+    font-weight: 700;
+    padding: 2px 8px;
+    border-radius: 10px;
+    letter-spacing: 0.06em;
+    text-transform: uppercase;
+    vertical-align: middle;
+    margin-left: 6px;
+  }
+  .badge.priority { background: var(--green); color: #fff; }
+  .badge.sms { background: #E8F5E9; color: var(--green); border: 1px solid var(--green-light); }
+  .badge.pending { background: #FFF3CD; color: #856404; }
+</style>
+</head>
+<body>
+
+<aside id="sidebar">
+  <div class="sidebar-header">
+    <div class="sidebar-eyebrow">Leapfrog Remedies</div>
+    <h2>Klaviyo &amp; Content Brief</h2>
+  </div>
+  <nav>
+    <div class="nav-section">Overview</div>
+    <a href="#blockers">Pre-Build Blockers</a>
+    <a href="#source">Source Material</a>
+    <div class="nav-section">Priority Flows</div>
+    <a href="#flow1">Flow 1 — Subscriber Onboarding</a>
+    <a href="#flow3">Flow 3 — M1 Early Intervention <span class="badge priority">Priority</span></a>
+    <a href="#flow4">Flow 4 — 60-Day At-Risk</a>
+    <a href="#flows56">Flows 5+6 — OTP Win-Back</a>
+    <div class="nav-section">Reference</div>
+    <a href="#dependencies">Cross-Flow Dependencies</a>
+  </nav>
+</aside>
+
+<main id="main">
+
+  <div class="doc-header">
+    <div class="eyebrow">Leapfrog Remedies · Klaviyo &amp; Content Brief</div>
+    <h1>Priority Flows</h1>
+    <div class="doc-meta">
+      <strong>Scope:</strong> Flow 3 (M1 Early Intervention), Flow 4 (60-Day At-Risk), Flow 1 (Subscriber Onboarding), Flows 5+6 (OTP Win-Back, IMMUNE + SNOOZE)<br>
+      <strong>Source:</strong> Retention &amp; Win-Back Strategy v1.7
+    </div>
+  </div>
+
+  <div class="doc-section" style="border-top-color: var(--green-mid); margin-top: 20px;">
+    <p style="font-size:13px; color:var(--grey); line-height:1.7;"><strong style="color:var(--dark);">Sequencing note:</strong> Flow 3 is the highest-priority new build (M1 retention 22.1% → 35%+). Flow 1 launches alongside it (shared onboarding window, days 1–28 vs 20–35, with suppress logic between them). Flow 4 follows for the 60–90 day window. Flows 5+6 (OTP win-back) replace the existing Relo Winback flow entirely — see Flows 5+6 for the migration rationale.</p>
+  </div>
+
+  <!-- PRE-BUILD BLOCKERS -->
+  <div class="doc-section" id="blockers">
+    <h2>Pre-Build Blockers</h2>
+    <div class="section-meta">Applies to all flows below</div>
+    <ul>
+      <li>Content below draws on claims, dosing guidance and clinical references already published on leapfrogremedies.com — see Source Material. These aren't placeholder or invented, but reusing them in a retention/urgency context (rather than the sales context they currently appear in) still needs a <strong>brand sign-off pass before send</strong>.</li>
+      <li>The day-7 post-purchase email currently runs through Relo only — it isn't a native Klaviyo flow. If Relo is retired per the Flows 5+6 migration proposal, this email needs rebuilding as part of Flow 1's scope, not just the OTP win-back content. Flow 1's day-1 and day-5 emails should be checked against whatever this Relo email currently covers, to avoid either a content gap or duplication during the transition.</li>
+      <li><strong>Confirm</strong> flow exit/suppression conditions can check live subscription status + order count at send time (critical for Flow 3).</li>
+      <li><strong>Agree</strong> deprecation point for Relo Winback once Flows 5+6 are live (no audit needed beforehand — see Flows 5+6 section).</li>
+    </ul>
+  </div>
+
+  <!-- SOURCE MATERIAL -->
+  <div class="doc-section" id="source">
+    <h2>Source Material</h2>
+    <div class="section-meta">leapfrogremedies.com — published claims</div>
+    <p>Content briefs below are grounded in claims and copy already published on leapfrogremedies.com (homepage, IMMUNE and SNOOZE product pages, Lactoferrin and Lactium® science pages) — not invented or placeholder content. Because these claims are already live on the brand's own site, there's no need to develop or separately validate new efficacy claims. Final email-specific copy and tone should still get a brand sign-off pass before send, particularly anywhere a claim is reframed for a retention/urgency context rather than the sales context it currently sits in.</p>
+    <h3>Key facts established from the site</h3>
+    <ul>
+      <li><strong>Subscription offer:</strong> 20% off first three subscription orders, then 10% thereafter, plus "exclusive gifts on your subscription journey." This is the standing incentive referenced throughout Flows 5+6 — no separate one-off discount needed.</li>
+      <li><strong>Free shipping:</strong> standard on all orders over £50 (not subscription-specific) — confirms it has no value as a win-back lever.</li>
+      <li><strong>IMMUNE dosing:</strong> Emergency SOS (2 tablets/day, morning + evening, at first signs of a bug, for 1–5 days) vs Pulse Method™ (1 tablet/day, one month on/one month off, or two weeks on/two weeks off, for ongoing seasonal support). 250mg lactoferrin per tablet, plus zinc and vitamin C.</li>
+      <li><strong>SNOOZE dosing:</strong> 1–2 tablets one hour before bed, or 1–2 tablets during night wake-ups. 150mg Lactium® per tablet, plus lactoferrin and vitamin B6 (P5P).</li>
+      <li><strong>Lactium® clinical data:</strong> a 2022 study (300 subjects, 4 weeks) found sleep disorders improved for 77% of consumers and stress improved for 78% after 30 days of supplementation. A separate randomised crossover trial found increased total sleep time and sleep efficiency, with possible cumulative benefit with longer-term use.</li>
+      <li><strong>Lactoferrin clinical data:</strong> 50+ clinical trials; described as anti-viral, anti-bacterial, anti-inflammatory, and immunomodulatory. A meta-analysis of 25 studies found 200mg/day reduces systemic inflammation and may reduce respiratory tract infection incidence.</li>
+    </ul>
+  </div>
+
+  <!-- FLOW 1 -->
+  <div class="doc-section" id="flow1">
+    <h2>Flow 1 — Subscriber Onboarding</h2>
+    <div class="section-meta">Subscription Post-Purchase</div>
+    <div class="kpi-row">
+      <div class="kpi-pill"><span class="kpi-label">Trigger</span><span class="kpi-val">First subscription order confirmed</span></div>
+      <div class="kpi-pill"><span class="kpi-label">Window</span><span class="kpi-val">Days 1–28</span></div>
+      <div class="kpi-pill"><span class="kpi-label">Primary KPI</span><span class="kpi-val">O1→O2 retention 80% → 85%</span></div>
+      <div class="kpi-pill"><span class="kpi-label">Variants</span><span class="kpi-val">IMMUNE, SNOOZE</span></div>
+    </div>
+    <div class="callout">
+      <strong>Suppression note:</strong> No exit condition — sequential flow. Coordinate with Flow 3: since Flow 1's day-25 email always sends before Flow 3's day-33 email chronologically, the suppression check sits on Flow 3's side.
+    </div>
+    <div class="build-req">
+      <div class="build-req-title">Klaviyo Build Requirements</div>
+      <ul>
+        <li>Flow trigger: Klaviyo flow filter on Shopify order event tagged <strong>appstle_subscription_first_order</strong></li>
+        <li>Segment split: IMMUNE vs SNOOZE based on line item / product tag</li>
+        <li>SMS test on Day 10 email (SMS badge flagged) — requires SMS consent check</li>
+        <li>Suppression flag/property to coordinate with Flow 3 (avoid duplicate day-25/day-33 sends)</li>
+      </ul>
+    </div>
+    <h3>Email Sequence</h3>
+    <table class="flow-table">
+      <thead>
+        <tr>
+          <th style="width:70px">Day</th>
+          <th style="width:220px">Subject</th>
+          <th>Content brief</th>
+          <th style="width:170px">Goal</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>1</td>
+          <td>Your first order is on its way</td>
+          <td>Warm confirmation, delivery timing. Usage guidance grounded in product pages: IMMUNE — two ways to take it, Emergency SOS (2 tablets/day at first signs of a bug) vs Pulse Method™ (1 tablet/day, one month on/one month off, for ongoing support); ask which applies to them so future emails can be tailored. SNOOZE — 1–2 tablets one hour before bed, or during night wake-ups. No upsell, no discount.</td>
+          <td>First impression. Reduce buyer's remorse. Build credibility.</td>
+        </tr>
+        <tr>
+          <td>5</td>
+          <td>How to get the most from [IMMUNE/SNOOZE]</td>
+          <td>IMMUNE: introduce Pulse Method™ properly — one tablet a day, one month on/one month off for continued seasonal immune support, framed around lactoferrin's role as a protein the body already produces. Link to lactoferrin science page (50+ clinical trials). SNOOZE: set expectations using Lactium® clinical data — a 2022 study found sleep and stress improved for ~77–78% of users after 30 days, with sleep efficiency improvements "particularly after 4 weeks." Frame week 1–4 honestly: don't expect overnight change. Link to Lactium® science page.</td>
+          <td>Expectation setting. Reduce early cancellation from unmet expectations.</td>
+        </tr>
+        <tr>
+          <td>10 <span class="badge sms">SMS</span></td>
+          <td>What our subscribers told us after 30 days</td>
+          <td>Social proof. Pull 2–3 Loox reviews that reference the 2–4 week timeline specifically (requires a Loox review export — not yet sourced for this brief). For SNOOZE, anchor framing to the published stat: most people in the clinical study saw improvement by week 4, so "around 30 days in" is exactly the point the data predicts a shift.</td>
+          <td>Normalise the habit. Reduce cancellation from impatience.</td>
+        </tr>
+        <tr>
+          <td>18</td>
+          <td>Your next delivery is coming in about 12 days</td>
+          <td>Pre-delivery nudge. Surface skip/delay/swap cadence options proactively — not buried. "Pause, skip, cancel anytime" is already a stated subscription benefit on-site, so this email is consistent with existing brand promise, not a new concession.</td>
+          <td>Reduce cancel-instead-of-pause behaviour. Build trust via transparency.</td>
+        </tr>
+        <tr>
+          <td>25</td>
+          <td>Still going strong — here's what's coming next</td>
+          <td>Light brand content, soft cross-sell. IMMUNE subscribers → DAILY ("Your Daily Dose of Resilience" — world-first daily formula, positioned as staying ahead rather than reacting). SNOOZE subscribers → IMMUNE (reactive complement) or FOCUS (calm/clarity positioning, shares the stress-support theme with SNOOZE). Not a hard push.</td>
+          <td>Brand deepening. Soft cross-sell. Reduce single-product fragility.</td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+
+  <!-- FLOW 3 -->
+  <div class="doc-section" id="flow3">
+    <h2>Flow 3 — M1 Early Intervention <span class="badge priority">Highest Priority</span></h2>
+    <div class="section-meta">New Build</div>
+    <div class="kpi-row">
+      <div class="kpi-pill"><span class="kpi-label">Trigger</span><span class="kpi-val">Day 20 post first subscription order, active</span></div>
+      <div class="kpi-pill"><span class="kpi-label">Window</span><span class="kpi-val">Days 20–35</span></div>
+      <div class="kpi-pill"><span class="kpi-label">Primary KPI</span><span class="kpi-val">M1 22.1% → 35%+</span></div>
+      <div class="kpi-pill"><span class="kpi-label">Variants</span><span class="kpi-val">IMMUNE, SNOOZE</span></div>
+    </div>
+    <div class="callout warning">
+      <strong>Critical exit logic:</strong> Suppress immediately if order 2 already placed. Subscription status + order count must be checked at every send, not just entry. Any subscriber placing order 2 before day 33 must exit immediately — sending "delivery is on its way" post-renewal reads as a system error.
+    </div>
+    <h3>Why this sits outside Relo</h3>
+    <p>Relo's predictive model runs on Shopify order history — it identifies patterns from prior reorder behaviour to time replenishment and subscription prompts. At M1, a subscriber has only one order on file, so there's no reorder history for the model to pattern-match against. Relo's value is structurally weakest at exactly the point Flow 3 targets.</p>
+    <p>What's more useful at M1 is broader cohort-level trend data already sitting in Growth Room — how similar subscribers have historically behaved between day 20 and day 35, combined with individual engagement signal (email opens, science page visits) from Klaviyo. Both data sources sit outside Relo's integration, which is the underlying reason Flow 3 needs to be built natively rather than layered on Relo.</p>
+    <div class="build-req">
+      <div class="build-req-title">Klaviyo Build Requirements</div>
+      <ul>
+        <li>Trigger condition: time-since-order = 20 days <strong>AND</strong> subscription status = active <strong>AND</strong> order count = 1</li>
+        <li><strong>Critical:</strong> subscription status + order count must be checked at every send, not just entry</li>
+        <li>Coordinate suppression with Flow 1 (avoid duplicate day-25/day-33 content to the same subscriber)</li>
+        <li>Confirm Klaviyo flow exit conditions support live re-evaluation before build starts</li>
+      </ul>
+    </div>
+    <h3>Email Sequence</h3>
+    <table class="flow-table">
+      <thead>
+        <tr>
+          <th style="width:60px">Day</th>
+          <th style="width:210px">Subject</th>
+          <th>Content brief</th>
+          <th style="width:165px">Goal</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>20</td>
+          <td>How's it going so far?</td>
+          <td>Personal, low-pressure check-in. IMMUNE: if on Pulse Method™ (1 tablet/day), day 20 sits mid-cycle — frame as "your immune support is building, this is the foundation lactoferrin works on." If on Emergency SOS use, day 20 likely means the tablets weren't needed for illness — reframe positively. SNOOZE: ground in Lactium® data — the 2022 study found sleep efficiency improvements "particularly after 4 weeks," so day 20 is where things should be starting to shift. One soft CTA to the relevant science page. No upsell, no urgency.</td>
+          <td>Reduce cancellation from unmet expectations. Confirm product working as expected.</td>
+        </tr>
+        <tr>
+          <td>27</td>
+          <td>What consistent use actually does — the evidence</td>
+          <td>Deeper efficacy content. IMMUNE: lactoferrin is described as anti-viral, anti-bacterial, anti-inflammatory and immunomodulatory, with a meta-analysis of 25 studies showing 200mg/day reduces systemic inflammation and may reduce respiratory tract infection incidence. SNOOZE: cite the Lactium® crossover trial — increased total sleep time and sleep efficiency, decreased sleep latency, with possible cumulative benefit from longer-term use. Two short customer quotes on sustained results (source from Loox — not yet pulled). Proactively surface skip/delay/pause for upcoming delivery — not in footer.</td>
+          <td>Reinforce commitment with science before second charge. Convert cancel intent to pause/skip.</td>
+        </tr>
+        <tr>
+          <td>33</td>
+          <td>Your second delivery is on its way</td>
+          <td>Delivery confirmation framing (even if sent before dispatch). Positive milestone — "into your second month." IMMUNE: position Pulse Method™ continuity — staying ahead of cold and flu season rather than reacting to it. SNOOZE: "two months of consistent use is exactly the window the Lactium® research points to for sleep efficiency gains." Single CTA: manage subscription (skip/pause/change frequency) — <strong>no cancellation language</strong>. Suppress if Flow 1 day-25 already received.</td>
+          <td>Mark second cycle as progress, not renewal. Reduce reflexive cancellation at first charge.</td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+
+  <!-- FLOW 4 -->
+  <div class="doc-section" id="flow4">
+    <h2>Flow 4 — 60-Day At-Risk Subscriber</h2>
+    <div class="section-meta">90-Day Retention</div>
+    <div class="kpi-row">
+      <div class="kpi-pill"><span class="kpi-label">Trigger</span><span class="kpi-val">Day 60, subscription active, order count &lt; 4</span></div>
+      <div class="kpi-pill"><span class="kpi-label">Window</span><span class="kpi-val">Days 60–75</span></div>
+      <div class="kpi-pill"><span class="kpi-label">Primary KPI</span><span class="kpi-val">Reduction in M3 churn</span></div>
+      <div class="kpi-pill"><span class="kpi-label">Variants</span><span class="kpi-val">IMMUNE, SNOOZE</span></div>
+    </div>
+    <div class="callout">
+      <strong>Order 4 activation threshold:</strong> Subscribers reaching order 4 churn at 22% vs 27% at orders 2–3. Exit/suppress immediately once order count reaches 4 — goal reached.
+    </div>
+    <div class="build-req">
+      <div class="build-req-title">Klaviyo Build Requirements</div>
+      <ul>
+        <li>Trigger condition: time-since-first-order = 60 days <strong>AND</strong> subscription status = active <strong>AND</strong> order count &lt; 4</li>
+        <li>Exit/suppress condition: order count reaches 4 at any point during the flow</li>
+      </ul>
+    </div>
+    <h3>Email Sequence</h3>
+    <table class="flow-table">
+      <thead>
+        <tr>
+          <th style="width:60px">Day</th>
+          <th style="width:210px">Subject</th>
+          <th>Content brief</th>
+          <th style="width:165px">Goal</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>60</td>
+          <td>Two months in — here's what that means for you</td>
+          <td>Milestone acknowledgement. IMMUNE: position as sustained lactoferrin replenishment — the body produces and uses lactoferrin continuously, and consistent supplementation keeps levels topped up rather than only responding to depletion. SNOOZE: the Lactium® clinical literature notes possible cumulative benefit with longer-term administration — month 3 is where that compounding starts to matter. One strong outcome quote (source from Loox — not yet pulled). No sell, no urgency.</td>
+          <td>Reframe continued subscription as investment already working. Reduce "I'll stop for a bit and see" reasoning.</td>
+        </tr>
+        <tr>
+          <td>67</td>
+          <td>You're in control of how this works</td>
+          <td>Proactive cadence management — surface skip/pause/frequency change positively: "your subscription works around you, not the other way round." This is consistent with the existing on-site promise, so framing should reinforce an existing commitment rather than introduce a new one. Direct link to Appstle customer portal. No product content, no guilt language.</td>
+          <td>Convert cancel intent to pause/cadence adjustment. Demonstrate flexibility.</td>
+        </tr>
+        <tr>
+          <td>75</td>
+          <td>What subscribers who reach month 3 tell us</td>
+          <td>Social proof anchored to 3-month milestone. IMMUNE: quotes on getting through winter without the usual colds. SNOOZE: quotes on sleep quality becoming consistent. <strong>Source 2–3 quotes from Loox reviews — not yet pulled for this brief.</strong> Soft CTA to reviews/case studies page. No offer, no discount. <strong>Suppress from further at-risk flows if order 4 placed before send.</strong></td>
+          <td>Peer confirmation at the critical window. Make reaching order 4 feel like a widely shared experience.</td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+
+  <!-- FLOWS 5+6 -->
+  <div class="doc-section" id="flows56">
+    <h2>Flows 5+6 — OTP Win-Back</h2>
+    <div class="section-meta">IMMUNE priority · SNOOZE secondary · Relo migration</div>
+    <div class="kpi-row">
+      <div class="kpi-pill"><span class="kpi-label">Flow 5 — IMMUNE</span><span class="kpi-val">Day 20 (IMM-015) / Day 32 (IMM-030)</span></div>
+      <div class="kpi-pill"><span class="kpi-label">Flow 6 — SNOOZE</span><span class="kpi-val">Day 32</span></div>
+      <div class="kpi-pill"><span class="kpi-label">IMMUNE Priority</span><span class="kpi-val">n=3,913 IMM-015 buyers</span></div>
+    </div>
+    <div class="callout">
+      <strong>Relo migration status:</strong> Flows 5+6 replace the existing Relo Winback flow with fixed, day-based triggers built natively in Klaviyo — fully transparent, fully owned, editable by the team without vendor dependency. Once Flows 5+6 are live and stable, Relo can be switched off. No audit of Relo's current rules is needed beforehand.
+    </div>
+    <p>Relo's per-customer predictive timing is being traded for simpler, auditable logic. The current Relo setup is effectively a black box — no one on the Leapfrog team can confirm what the trigger rules are or how they're calculated, which makes debugging why a flow fires too early impossible without vendor involvement.</p>
+    <div class="build-req">
+      <div class="build-req-title">Klaviyo Build Requirements</div>
+      <ul>
+        <li>Trigger: time-since-last-OTP-order ≥ trigger day <strong>AND</strong> no reorder/subscription event</li>
+        <li>Discount logic: <strong>pending confirmation</strong> — see discount discipline note below</li>
+        <li>Exit/suppress: after final email send, suppress from win-back flows for 90 days</li>
+        <li>IMMUNE and SNOOZE run as separate flows (different triggers, different content)</li>
+        <li>SMS test on day 20/32 email — requires SMS consent check</li>
+      </ul>
+    </div>
+    <h3>Email Sequence — Shared Architecture, Separate Content</h3>
+    <table class="flow-table">
+      <thead>
+        <tr>
+          <th style="width:100px">Day (IMM/SNZ)</th>
+          <th style="width:190px">Subject</th>
+          <th>Content brief</th>
+          <th style="width:155px">Goal</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>20 / 32 <span class="badge sms">SMS</span></td>
+          <td>Running low?</td>
+          <td>Practical, supply-cycle logic. Reorder CTA prominent, subscribe option present but secondary. IMMUNE: "Never Run Out" is the exact phrase used as a subscription benefit on the IMMUNE product page — use it directly. Subscribe framing should reference the actual offer: 20% off your first three subscription orders, then 10% thereafter, plus subscription-only gifts. SNOOZE: "Never run out of sleep support when you need it most" is the exact CTA copy from the SNOOZE product page — reuse it.</td>
+          <td>Catch customer before habit breaks. Reorder before lapse window opens.</td>
+        </tr>
+        <tr>
+          <td>28 / 40</td>
+          <td>Don't lose the progress you've made</td>
+          <td>Outcome/efficacy framing. IMMUNE: lactoferrin is a protein the body uses continuously — supplementation tops up levels that would otherwise deplete. SNOOZE: ground in the actual Lactium® study data — after 30 days, 77% reported improved sleep and 78% reported improved stress; if it's been a month since their last order, frame the gap honestly as "you were right at the point the data says things improve — don't lose that." Reorder CTA.</td>
+          <td>Create consequence for not reordering. Urgency through science, not scarcity.</td>
+        </tr>
+        <tr>
+          <td>38 / 50</td>
+          <td>Come back — here's something for you</td>
+          <td>Final email. Reorder/subscribe CTA, with the existing subscribe-and-save offer (20% off first three orders, then 10%, plus subscription gifts) framed as the standing incentive — this is already the on-site subscription pitch, not a new concession. Clear expiry on the prompt itself (not a discount). <strong>No additional one-off discount or free-shipping offer until confirmed. Exit flow after send, suppress 90 days.</strong></td>
+          <td>Last-chance reactivation. Convert to subscriber where possible.</td>
+        </tr>
+      </tbody>
+    </table>
+    <div class="callout warning">
+      <strong>Discount discipline — pending decision: <span class="badge pending">Sign-off needed</span></strong><br><br>
+      Free shipping to UK addresses is already standard on orders over £50, so it has no incentive value as a win-back lever — this option is removed. The standing subscription offer (20% off first three orders, then 10% thereafter, plus subscription gifts) already exceeds a one-off 10% discount, so there's a reasonable case that no <em>additional</em> incentive is needed at email 3 — the existing offer just needs to be communicated clearly. Whether a separate one-off discount on top is introduced at email 3 is <strong>unconfirmed and needs sign-off before build</strong>. Until confirmed, all three emails convert on the standard subscribe-and-save offer, reorder logic, and outcome/value framing. If a discount is approved later, it slots into email 3 only — emails 1–2 must convert on value and outcome alone.
+    </div>
+    <h3>SNOOZE-Specific Content Note</h3>
+    <p>Day 28/40 email must acknowledge sleep outcomes vary and take time — do not imply guaranteed results. Honest framing ("some feel it week 2, most by week 6") reduces cancellation from unrealistic expectations more effectively than overclaiming. Consistent with SOSTAC finding: SNOOZE carries a higher education burden at a higher price point.</p>
+  </div>
+
+  <!-- CROSS-FLOW DEPENDENCIES -->
+  <div class="doc-section" id="dependencies">
+    <h2>Cross-Flow Dependencies</h2>
+    <div class="section-meta">Summary</div>
+    <table class="dep-table">
+      <thead>
+        <tr>
+          <th>Dependency</th>
+          <th>Affects</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>Day-7 Relo-only post-purchase email — content audit and migration</td>
+          <td>Flow 1 (Days 1–5 scope)</td>
+        </tr>
+        <tr>
+          <td>Final copy/tone brand sign-off — claims sourced from leapfrogremedies.com, reused in a retention context</td>
+          <td>Flow 1 (Day 5), Flow 3 (Days 20, 27, 33), Flow 4 (Day 60), Flows 5+6 (Day 28/40)</td>
+        </tr>
+        <tr>
+          <td>Loox review export — customer quotes not retrievable via website fetch</td>
+          <td>Flow 1 (Day 10), Flow 3 (Day 27), Flow 4 (Days 60, 75)</td>
+        </tr>
+        <tr>
+          <td>Flow exit/suppression logic confirmed in Klaviyo</td>
+          <td>Flow 3 (critical), Flow 4, Flow 1</td>
+        </tr>
+        <tr>
+          <td>SNOOZE efficacy content</td>
+          <td>Flow 6 — largely covered by Lactium® clinical data now sourced; confirm whether further detail is needed</td>
+        </tr>
+        <tr>
+          <td>Win-back discount decision</td>
+          <td>Flows 5+6 email 3 — whether to add a one-off incentive on top of the standing subscribe-and-save offer</td>
+        </tr>
+        <tr>
+          <td>Relo Winback deprecation timing (post-launch)</td>
+          <td>Flows 5+6 — switch off once new flows are live and stable</td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+
+</main>
+
+</body>
+</html>
