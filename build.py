@@ -29,10 +29,16 @@ BACK_BTN = (
     '</div>'
 )
 
-retention = retention.replace('</body>', BACK_BTN + '\n</body>', 1)
-cro       = cro.replace('</body>', BACK_BTN + '\n</body>', 1)
-focus     = focus.replace('</body>', BACK_BTN + '\n</body>', 1)
-klaviyo   = klaviyo.replace('</body>', BACK_BTN + '\n</body>', 1)
+def inject_back(html):
+    """Inject floating back button unless the file already has its own closeAllDecks button."""
+    if 'closeAllDecks' in html:
+        return html
+    return html.replace('</body>', BACK_BTN + '\n</body>', 1)
+
+retention = inject_back(retention)
+cro       = inject_back(cro)
+focus     = inject_back(focus)
+klaviyo   = inject_back(klaviyo)
 
 
 def to_srcdoc(html):
