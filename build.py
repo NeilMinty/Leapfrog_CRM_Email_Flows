@@ -1,7 +1,7 @@
 #!/usr/bin/env python3
 """
-Combines five Leapfrog HTML files into leapfrog-strategy.html.
-The SOSTAC hub embeds four docs as srcdoc iframes.
+Combines six Leapfrog HTML files into leapfrog-strategy.html.
+The SOSTAC hub embeds five docs as srcdoc iframes.
 """
 
 SRC = '/Users/neilminty/Downloads/'
@@ -17,8 +17,8 @@ with open(SRC + 'leapfrog-subscription-cro-v1.1.html', 'r', encoding='utf-8') as
     cro = f.read()
 with open(SRC + 'FOCUS_Strategy_Deck (1).html', 'r', encoding='utf-8') as f:
     focus = f.read()
-with open(LOCAL + 'klaviyo-brief.html', 'r', encoding='utf-8') as f:
-    klaviyo = f.read()
+with open(LOCAL + 'leapfrog-briefs.html', 'r', encoding='utf-8') as f:
+    briefs = f.read()
 
 # Back button — injected before </body> in each deck
 BACK_BTN = (
@@ -38,7 +38,7 @@ def inject_back(html):
 retention = inject_back(retention)
 cro       = inject_back(cro)
 focus     = inject_back(focus)
-klaviyo   = inject_back(klaviyo)
+briefs    = inject_back(briefs)
 
 
 def to_srcdoc(html):
@@ -57,7 +57,7 @@ def overlay(id_, srcdoc_content):
 overlay_retention = overlay('overlay-retention', retention)
 overlay_cro       = overlay('overlay-cro', cro)
 overlay_focus     = overlay('overlay-focus', focus)
-overlay_klaviyo   = overlay('overlay-klaviyo', klaviyo)
+overlay_briefs    = overlay('overlay-briefs', briefs)
 
 # CSS additions (inserted before </style>)
 CSS = """
@@ -110,7 +110,7 @@ NAV_LINKS = (
     '    <a href="#" onclick="openDeck(\'overlay-retention\'); return false;">Retention &amp; Win-Back</a>\n'
     '    <a href="#" onclick="openDeck(\'overlay-cro\'); return false;">Subscription CRO</a>\n'
     '    <a href="#" onclick="openDeck(\'overlay-focus\'); return false;">FOCUS Strategy</a>\n'
-    '    <a href="#" onclick="openDeck(\'overlay-klaviyo\'); return false;">Klaviyo &amp; Content Brief</a>\n'
+    '    <a href="#" onclick="openDeck(\'overlay-briefs\'); return false;">Klaviyo &amp; Content Briefs</a>\n'
     '  </nav>'
 )
 
@@ -164,7 +164,7 @@ sostac = sostac.replace(
 assert '</body>' in sostac
 sostac = sostac.replace(
     '</body>',
-    '\n' + overlay_retention + '\n' + overlay_cro + '\n' + overlay_focus + '\n' + overlay_klaviyo + '\n' + JS + '\n</body>',
+    '\n' + overlay_retention + '\n' + overlay_cro + '\n' + overlay_focus + '\n' + overlay_briefs + '\n' + JS + '\n</body>',
     1
 )
 
