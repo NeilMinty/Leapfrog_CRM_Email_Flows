@@ -1,0 +1,2510 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Leapfrog Remedies — Retention & Klaviyo Briefs</title>
+<style>
+  @import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,600;0,700;1,400&family=DM+Sans:wght@300;400;500;600;700&display=swap');
+
+  :root {
+    --green: #2d5a3d;
+    --green-mid: #4a7c59;
+    --green-light: #e4ede7;
+    --cream: #f7f5f0;
+    --white: #ffffff;
+    --black: #1a1f1a;
+    --grey: #6b6b5f;
+    --grey-light: #e8e5de;
+    --rule: #d4d0c8;
+  }
+
+  * { margin:0; padding:0; box-sizing:border-box; }
+  html, body { height:100%; }
+
+  body {
+    font-family:'DM Sans', sans-serif;
+    background:var(--cream);
+    color:var(--black);
+    min-height:100vh;
+    display:flex;
+    flex-direction:column;
+  }
+
+  h1,h2,h3 { font-family:'Cormorant Garamond', serif; font-weight:700; }
+
+  /* ── Header ── */
+  .hub-header {
+    background:var(--green);
+    padding:52px 64px 44px;
+  }
+  .hub-header .eyebrow {
+    font-size:0.68rem; letter-spacing:0.2em; text-transform:uppercase;
+    color:rgba(255,255,255,0.5); font-weight:700; margin-bottom:14px;
+  }
+  .hub-header h1 {
+    font-size:2.8rem; color:#fff; line-height:1.1; margin-bottom:12px;
+  }
+  .hub-header .sub {
+    font-size:0.92rem; color:rgba(255,255,255,0.65); line-height:1.7;
+  }
+  .hub-header .sub strong { color:rgba(255,255,255,0.9); }
+  .hub-meta {
+    display:flex; gap:32px; margin-top:24px; padding-top:24px;
+    border-top:1px solid rgba(255,255,255,0.18); flex-wrap:wrap;
+  }
+  .hub-meta-item { font-size:0.78rem; color:rgba(255,255,255,0.5); }
+  .hub-meta-item strong {
+    display:block; color:rgba(255,255,255,0.85);
+    font-size:0.84rem; margin-bottom:2px;
+  }
+
+  /* ── Cards ── */
+  .hub-content {
+    padding:48px 64px 80px; flex:1;
+  }
+  .card-grid {
+    display:grid; grid-template-columns:1fr 1fr; gap:28px;
+    max-width:960px;
+  }
+  .doc-card {
+    background:var(--white); border:1px solid var(--rule);
+    border-top:4px solid var(--green-mid); border-radius:3px;
+    padding:32px 36px; cursor:pointer;
+    transition:box-shadow 0.2s, transform 0.2s;
+    display:flex; flex-direction:column; gap:14px;
+  }
+  .doc-card:hover {
+    box-shadow:0 6px 24px rgba(45,90,61,0.12);
+    transform:translateY(-2px);
+  }
+  .doc-card .card-num {
+    font-family:'Cormorant Garamond', serif;
+    font-size:3rem; font-weight:700; color:var(--rule); line-height:1;
+  }
+  .doc-card h2 { font-size:1.6rem; color:var(--black); line-height:1.2; }
+  .doc-card .card-tag {
+    font-size:0.6rem; font-weight:700; letter-spacing:0.16em;
+    text-transform:uppercase; color:var(--green-mid);
+  }
+  .doc-card p {
+    font-size:0.88rem; color:var(--grey); line-height:1.65; flex:1;
+  }
+  .doc-card .open-btn {
+    display:inline-flex; align-items:center; gap:8px;
+    margin-top:8px; font-size:0.78rem; font-weight:700;
+    letter-spacing:0.1em; text-transform:uppercase;
+    color:var(--green); border:1px solid var(--green);
+    padding:8px 18px; border-radius:20px; width:fit-content;
+    transition:background 0.15s, color 0.15s;
+  }
+  .doc-card:hover .open-btn {
+    background:var(--green); color:#fff;
+  }
+
+  /* ── Overlays ── */
+  .overlay {
+    display:none; position:fixed; inset:0; z-index:999;
+    background:#fff;
+  }
+  .overlay iframe {
+    width:100%; height:100%; border:none; display:block;
+  }
+</style>
+</head>
+<body>
+
+<header class="hub-header">
+  <div class="eyebrow">Leapfrog Remedies &middot; Personaify &middot; June 2026</div>
+  <h1>Retention &amp; Briefs</h1>
+  <p class="sub"><strong>Two documents.</strong> Retention &amp; Win-Back Architecture (nine-flow deck) and the Klaviyo &amp; Content Briefs synthesised from SOSTAC v29.</p>
+  <div class="hub-meta">
+    <div class="hub-meta-item"><strong>Source</strong>SOSTAC v29 — Working Draft, June 2026</div>
+    <div class="hub-meta-item"><strong>Prepared by</strong>Personaify for Leapfrog Remedies</div>
+    <div class="hub-meta-item"><strong>Status</strong>For review — not for circulation</div>
+  </div>
+</header>
+
+<div class="hub-content">
+  <div class="card-grid">
+
+    <div class="doc-card" onclick="openOverlay('overlay-retention')">
+      <div class="card-num">1</div>
+      <div class="card-tag">Strategy deck</div>
+      <h2>Retention &amp; Win-Back Architecture</h2>
+      <p>Nine-flow Klaviyo retention system. Subscriber onboarding, churn prevention, win-back, pre-cancel save, December 2025 cohort re-engagement, and SMS test channel. Trigger logic, email sequences, and build prerequisites.</p>
+      <div class="open-btn">Open document &rarr;</div>
+    </div>
+
+    <div class="doc-card" onclick="openOverlay('overlay-briefs')">
+      <div class="card-num">2</div>
+      <div class="card-tag">Strategic brief</div>
+      <h2>Klaviyo &amp; Content Briefs</h2>
+      <p>Audience segments, flow architecture, segmentation rules, suppression logic, tone and messaging principles, email KPIs. Content pillars, formats by pillar, audience-to-content mapping, GEO requirements, and open gaps.</p>
+      <div class="open-btn">Open document &rarr;</div>
+    </div>
+
+  </div>
+</div>
+
+<div id="overlay-retention" class="overlay">
+  <iframe srcdoc="<!DOCTYPE html>
+<html lang=&quot;en&quot;>
+<head>
+<meta charset=&quot;UTF-8&quot;>
+<meta name=&quot;viewport&quot; content=&quot;width=device-width, initial-scale=1.0&quot;>
+<title>Leapfrog Remedies — Retention &amp; Win-Back Strategy</title>
+<style>
+  @import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;600;700&amp;family=DM+Sans:wght@300;400;500;600;700&amp;display=swap');
+
+  :root {
+    --black: #1a1f1a;
+    --white: #f0ede6;
+    --green: #2d5a3d;
+    --green-mid: #4a7c59;
+    --green-light: #e4ede7;
+    --cream: #f0ede6;
+    --grey: #6b6b5f;
+    --grey-light: #e8e5de;
+    --rule: #d4d0c8;
+    --warn: #8b3a1a;
+    --warn-light: #faeae3;
+  }
+
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+  html, body { width:100%; height:100%; overflow:hidden; font-family:'DM Sans',sans-serif; background:#111; color:var(--black); }
+
+  #deck { position:relative; width:100vw; height:100vh; display:flex; align-items:center; justify-content:center; }
+
+  #slide-container {
+    aspect-ratio: 16/9;
+    width: min(100vw, 177.78vh);
+    height: min(100vh, 56.25vw);
+    overflow:hidden; background:var(--cream); position:relative;
+  }
+
+  .slide {
+    position:absolute; inset:0; display:flex; flex-direction:column; justify-content:center;
+    padding:4.5% 5.5%; opacity:0; pointer-events:none; transition:opacity 0.35s ease; overflow:hidden;
+  }
+  .slide.active { opacity:1; pointer-events:all; }
+
+  #nav {
+    position:fixed; bottom:16px; left:50%; transform:translateX(-50%);
+    display:flex; align-items:center; gap:12px; z-index:100;
+    background:rgba(0,0,0,0.72); padding:6px 16px; border-radius:40px;
+  }
+  #nav button {
+    background:none; border:1px solid rgba(255,255,255,0.35); color:white;
+    width:28px; height:28px; border-radius:50%; cursor:pointer; font-size:12px;
+    display:flex; align-items:center; justify-content:center; transition:all 0.2s;
+  }
+  #nav button:hover { background:rgba(255,255,255,0.12); border-color:white; }
+  #nav button:disabled { opacity:0.25; cursor:default; }
+  #slide-counter { font-size:11px; color:rgba(255,255,255,0.55); letter-spacing:0.1em; min-width:52px; text-align:center; }
+
+  .slide-label { font-size:0.68vw; letter-spacing:0.2em; text-transform:uppercase; font-weight:700; color:var(--green); margin-bottom:0.8%; }
+  h2 { font-family:'Cormorant Garamond',serif; font-size:2.7vw; line-height:1.1; font-weight:700; letter-spacing:-0.01em; margin-bottom:1%; }
+  p { font-size:0.85vw; color:#3a3a32; line-height:1.6; margin-bottom:0.6%; }
+  p.lead { font-size:1.05vw; line-height:1.5; color:#2a2a22; font-weight:300; }
+  .slide-num { position:absolute; top:3%; right:4.5%; font-size:0.62vw; letter-spacing:0.12em; text-transform:uppercase; color:var(--grey); font-weight:500; }
+  hr { border:none; border-top:1px solid var(--rule); margin:1% 0; }
+
+  .slide-cover { background:var(--green); }
+  .slide-cover .slide-num { color:rgba(255,255,255,0.25); }
+  .slide-divider { background:var(--black); }
+  .slide-divider h2 { color:var(--white); font-size:3.4vw; }
+  .slide-divider .slide-label { color:rgba(255,255,255,0.4); }
+  .slide-divider .slide-num { color:rgba(255,255,255,0.2); }
+  .slide-divider p { color:rgba(255,255,255,0.55); max-width:55%; }
+  .slide-section { background:var(--green-mid); }
+  .slide-section h2 { color:var(--white); font-size:3vw; }
+  .slide-section .slide-label { color:rgba(255,255,255,0.45); }
+  .slide-section .slide-num { color:rgba(255,255,255,0.2); }
+  .slide-section p { color:rgba(255,255,255,0.6); }
+
+  .stat-grid { display:grid; grid-template-columns:repeat(4,1fr); gap:1.2%; margin-top:0.5%; }
+  .stat-grid-3 { display:grid; grid-template-columns:repeat(3,1fr); gap:1.4%; margin-top:0.5%; }
+  .stat-grid-2 { display:grid; grid-template-columns:repeat(2,1fr); gap:1.4%; margin-top:0.5%; }
+  .stat-card { background:var(--grey-light); padding:1.8% 1.6%; border-left:3px solid var(--black); }
+  .stat-card.green { border-left-color:var(--green); background:var(--green-light); }
+  .stat-card.warn { border-left-color:var(--warn); background:var(--warn-light); }
+  .stat-card .stat { font-family:'Cormorant Garamond',serif; font-size:2.8vw; font-weight:700; line-height:1; margin-bottom:0.3%; }
+  .stat-card .stat-label { font-size:0.72vw; color:var(--grey); line-height:1.4; }
+
+  table { width:100%; border-collapse:collapse; margin-top:0.4%; }
+  thead tr { background:var(--black); color:var(--white); }
+  thead th { padding:0.65% 0.9%; text-align:left; font-size:0.62vw; font-weight:700; letter-spacing:0.1em; text-transform:uppercase; }
+  tbody tr { border-bottom:1px solid var(--rule); }
+  tbody tr:nth-child(even) { background:var(--grey-light); }
+  tbody td { padding:0.65% 0.9%; font-size:0.76vw; vertical-align:top; line-height:1.4; }
+  .td-label { font-weight:700; }
+  .td-green { color:var(--green); font-weight:700; }
+  .td-warn { color:var(--warn); font-weight:700; }
+  .td-grey { color:var(--grey); font-size:0.7vw; }
+
+  .callout { background:var(--grey-light); border-left:3px solid var(--green); padding:0.8% 1.2%; margin-top:0.8%; }
+  .callout p { margin:0; font-size:0.75vw; }
+  .callout.warn { border-left-color:var(--warn); background:var(--warn-light); }
+  .callout.black { border-left-color:var(--black); }
+
+  .two-col { display:grid; grid-template-columns:1fr 1fr; gap:3%; align-items:start; }
+  .two-col-wide { display:grid; grid-template-columns:3fr 2fr; gap:3%; align-items:start; }
+  .three-col { display:grid; grid-template-columns:repeat(3,1fr); gap:2%; align-items:start; }
+
+  .flow-grid { display:grid; grid-template-columns:repeat(4,1fr); gap:1.2%; margin-top:0.5%; }
+  .flow-grid-3 { display:grid; grid-template-columns:repeat(3,1fr); gap:1.4%; margin-top:0.5%; }
+  .flow-card { border:1px solid var(--rule); padding:1.8% 1.6%; position:relative; background:white; }
+  .flow-num { font-family:'Cormorant Garamond',serif; font-size:3.2vw; font-weight:700; line-height:1; color:var(--rule); position:absolute; top:2%; right:3%; }
+  .flow-tag { display:inline-block; font-size:0.55vw; font-weight:700; letter-spacing:0.1em; text-transform:uppercase; padding:0.18% 0.5%; margin-bottom:0.6%; }
+  .tag-primary { background:var(--green); color:white; }
+  .tag-secondary { background:var(--grey); color:white; }
+  .tag-test { background:var(--warn); color:white; }
+  .tag-fix { background:var(--black); color:white; }
+  .flow-card .flow-title { font-family:'Cormorant Garamond',serif; font-size:1.2vw; font-weight:700; line-height:1.2; margin-bottom:0.7%; max-width:85%; }
+  .flow-card ul { list-style:none; padding:0; }
+  .flow-card ul li { font-size:0.68vw; padding:0.32% 0; border-bottom:1px solid var(--rule); color:#3a3a32; padding-left:0.7%; position:relative; line-height:1.4; }
+  .flow-card ul li::before { content:'—'; position:absolute; left:0; color:var(--grey); font-size:0.6vw; }
+  .flow-card ul li:last-child { border-bottom:none; }
+
+  .email-sequence { margin-top:0.4%; }
+  .email-row { display:grid; grid-template-columns:0.7fr 1fr 2.4fr 1fr; gap:0.8%; padding:0.6% 0; border-bottom:1px solid var(--rule); align-items:start; font-size:0.74vw; }
+  .email-row.header { background:var(--black); color:white; padding:0.45% 0.7%; font-size:0.6vw; font-weight:700; letter-spacing:0.1em; text-transform:uppercase; border-bottom:none; }
+  .email-row.header div { color:white; }
+  .email-row:nth-child(even) { background:var(--grey-light); }
+  .email-day { font-weight:700; color:var(--green); }
+  .email-subject { font-weight:600; color:var(--black); line-height:1.35; }
+  .email-brief { color:#3a3a32; line-height:1.4; font-size:0.72vw; }
+  .email-goal { font-size:0.65vw; color:var(--grey); line-height:1.35; }
+  .sms-badge { display:inline-block; background:var(--warn-light); color:var(--warn); font-size:0.52vw; font-weight:700; letter-spacing:0.08em; text-transform:uppercase; padding:0.08% 0.35%; margin-left:0.2%; vertical-align:middle; }
+
+  .retention-bars { margin-top:0.6%; }
+  .bar-row { display:flex; align-items:center; gap:0.8%; margin-bottom:0.5%; }
+  .bar-label { font-size:0.68vw; font-weight:600; width:8%; text-align:right; color:var(--black); }
+  .bar-track { flex:1; height:1.6vw; background:var(--grey-light); position:relative; }
+  .bar-fill { height:100%; position:absolute; left:0; top:0; display:flex; align-items:center; padding-left:0.4%; }
+  .bar-fill span { font-size:0.65vw; font-weight:700; color:white; }
+  .bar-fill.immune { background:var(--green); }
+  .bar-churn { font-size:0.65vw; color:var(--warn); width:11%; font-weight:600; }
+
+  .anno-list { list-style:none; padding:0; margin-top:0.4%; }
+  .anno-list li { padding:0.6% 0; border-bottom:1px solid var(--rule); font-size:0.74vw; line-height:1.45; color:#3a3a32; }
+  .anno-list li:last-child { border-bottom:none; }
+  .anno-label { font-size:0.56vw; font-weight:700; letter-spacing:0.1em; text-transform:uppercase; margin-bottom:0.12%; }
+  .anno-key { color:var(--green); }
+  .anno-risk { color:var(--warn); }
+  .anno-action { color:var(--black); }
+
+  .meta-row { display:flex; gap:1.5%; margin-top:1.2%; }
+  .meta-block { background:rgba(255,255,255,0.1); padding:1% 1.4%; flex:1; }
+  .meta-block .meta-label { font-size:0.6vw; font-weight:700; letter-spacing:0.12em; text-transform:uppercase; color:rgba(255,255,255,0.45); margin-bottom:0.3%; }
+  .meta-block .meta-val { font-size:0.85vw; color:white; }
+
+  .priority-badge { display:inline-block; font-size:0.58vw; font-weight:700; letter-spacing:0.08em; text-transform:uppercase; padding:0.15% 0.5%; margin-right:0.4%; }
+  .p-high { background:var(--warn); color:white; }
+  .p-med { background:var(--green); color:white; }
+  .p-low { background:var(--grey); color:white; }
+</style>
+</head>
+<body>
+<div id=&quot;deck&quot;><div id=&quot;slide-container&quot;>
+
+<!-- ===== SLIDE 1: COVER ===== -->
+<div class=&quot;slide slide-cover active&quot;>
+  <div class=&quot;slide-num&quot; style=&quot;color:rgba(255,255,255,0.25);&quot;>01 / 22</div>
+  <div style=&quot;position:absolute;inset:0;overflow:hidden;pointer-events:none;&quot;>
+    <svg style=&quot;position:absolute;inset:0;width:100%;height:100%;opacity:0.04;&quot; xmlns=&quot;http://www.w3.org/2000/svg&quot;>
+      <defs><pattern id=&quot;g&quot; width=&quot;60&quot; height=&quot;60&quot; patternUnits=&quot;userSpaceOnUse&quot;><path d=&quot;M60 0L0 0 0 60&quot; fill=&quot;none&quot; stroke=&quot;white&quot; stroke-width=&quot;0.5&quot;/></pattern></defs>
+      <rect width=&quot;100%&quot; height=&quot;100%&quot; fill=&quot;url(#g)&quot;/>
+    </svg>
+  </div>
+  <div style=&quot;position:absolute;top:5%;left:5.5%;&quot;>
+    <div style=&quot;font-size:0.68vw;font-weight:700;letter-spacing:0.22em;text-transform:uppercase;color:rgba(255,255,255,0.9);&quot;>Leapfrog Remedies</div>
+    <div style=&quot;width:2.5vw;height:1px;background:rgba(255,255,255,0.3);margin-top:0.4vw;&quot;></div>
+  </div>
+  <div style=&quot;display:flex;flex-direction:column;justify-content:center;height:100%;padding-top:3%;&quot;>
+    <div style=&quot;font-size:0.68vw;font-weight:600;letter-spacing:0.2em;text-transform:uppercase;color:rgba(255,255,255,0.45);margin-bottom:1.8%;&quot;>Retention &amp; Win-Back Strategy</div>
+    <h1 style=&quot;font-family:'Cormorant Garamond',serif;font-size:5vw;font-weight:600;line-height:1.05;color:white;margin-bottom:1.8%;max-width:72%;&quot;>Subscriber Retention,<br>Win-Back &amp;amp; Flow<br>Architecture</h1>
+    <div style=&quot;width:3vw;height:2px;background:rgba(255,255,255,0.35);margin-bottom:1.8%;&quot;></div>
+    <p style=&quot;font-size:1vw;line-height:1.6;color:rgba(255,255,255,0.6);max-width:48%;font-weight:300;margin:0;&quot;>Seven flows informed by Growth Room cohort analysis and SOSTAC strategy. IMMUNE and SNOOZE variants throughout. Klaviyo primary channel.</p>
+  </div>
+  <div style=&quot;position:absolute;bottom:0;left:0;right:0;background:rgba(0,0,0,0.22);padding:1.6% 5.5%;display:flex;justify-content:space-between;align-items:center;border-top:1px solid rgba(255,255,255,0.08);&quot;>
+    <span style=&quot;font-size:0.62vw;letter-spacing:0.14em;text-transform:uppercase;color:rgba(255,255,255,0.35);&quot;>Prepared by Personaify</span>
+    <span style=&quot;font-size:0.62vw;letter-spacing:0.14em;text-transform:uppercase;color:rgba(255,255,255,0.35);&quot;>June 2026 · v1.7 · Commercial in Confidence</span>
+  </div>
+</div>
+
+<!-- ===== SLIDE 2: THE COMMERCIAL CASE ===== -->
+<div class=&quot;slide&quot;>
+  <div class=&quot;slide-num&quot;>02 / 22</div>
+  <div class=&quot;slide-label&quot;>Commercial Context</div>
+  <h2>The retention problem is confirmed.<br>The data now tells us where to intervene.</h2>
+  <p>Three data sources converge on the same diagnosis. Subscriber cohort M1 — the rate at which new subscribers place a second subscription order the following month — has fallen from 52.6% (Jun 2025) to 22.1% (Apr 2026). MoM all-buyer retention has held above 30% throughout, but 77% of active buyers are now returning customers. The business is increasingly dependent on its existing subscriber base to sustain that figure. 5,132 customers bought once and never returned. The win-back window is 60 days — current flows trigger at 90.</p>
+  <hr>
+  <div class=&quot;stat-grid&quot;>
+    <div class=&quot;stat-card warn&quot;>
+      <div class=&quot;stat&quot;>22.1%</div>
+      <div class=&quot;stat-label&quot;>Subscriber cohort M1 in Apr 2026 — down from 52.6% in Jun 2025. Measures new subscribers placing a second subscription order the following month. Primary commercial risk in the business.</div>
+    </div>
+    <div class=&quot;stat-card warn&quot;>
+      <div class=&quot;stat&quot;>6,104</div>
+      <div class=&quot;stat-label&quot;>confirmed one-time buyers across IMMUNE (3,732) and SNOOZE (2,372) — the true addressable CRM base after removing already-repeat buyers.</div>
+    </div>
+    <div class=&quot;stat-card green&quot;>
+      <div class=&quot;stat&quot;>Order 4</div>
+      <div class=&quot;stat-label&quot;>is the activation threshold. Subscribers who reach order 4 churn at 22% — materially lower than 27% at orders 2–3.</div>
+    </div>
+    <div class=&quot;stat-card&quot;>
+      <div class=&quot;stat&quot;>60d</div>
+      <div class=&quot;stat-label&quot;>win-back window before re-engagement drops sharply. Current Klaviyo flows trigger at 90 days — outside the window entirely.</div>
+    </div>
+  </div>
+  <div class=&quot;callout warn&quot; style=&quot;margin-top:1%;&quot;>
+    <p><strong>Flow audit required first:</strong> The full post-purchase flow architecture needs mapping before any new builds begin. Relo Winback appears to fire too early — before the customer has run out of product. The 90-day flow fires too late — outside the re-engagement window entirely. Neither can be confirmed without auditing all flows against the customer lifecycle. Brief James at Giant Leap to map all post-purchase and win-back flows, confirm trigger timing for each, and identify the gaps before building anything new.</p>
+  </div>
+</div>
+
+<!-- ===== SLIDE 3: RETENTION WATERFALL ===== -->
+<div class=&quot;slide&quot;>
+  <div class=&quot;slide-num&quot;>03 / 22</div>
+  <div class=&quot;slide-label&quot;>Growth Room Data — Order-Number Retention</div>
+  <h2>IMMUNE and SNOOZE share the same<br>retention curve. Order 4 is the threshold.</h2>
+  <p>Both products track within 1pp from order 3 onwards. The challenge is identical: get subscribers to order 4. The O2→O3 transition is the highest single-step churn point at 27%.</p>
+  <div class=&quot;two-col&quot; style=&quot;margin-top:0.8%;&quot;>
+    <div>
+      <div style=&quot;font-size:0.62vw;font-weight:700;letter-spacing:0.12em;text-transform:uppercase;color:var(--grey);margin-bottom:0.5%;&quot;>Retention waterfall — % of original subscriber base (IMMUNE n=2,622)</div>
+      <div class=&quot;retention-bars&quot;>
+        <div class=&quot;bar-row&quot;><div class=&quot;bar-label&quot;>Order 1</div><div class=&quot;bar-track&quot;><div class=&quot;bar-fill immune&quot; style=&quot;width:100%;&quot;><span>100%</span></div></div><div class=&quot;bar-churn&quot;></div></div>
+        <div class=&quot;bar-row&quot;><div class=&quot;bar-label&quot;>Order 2</div><div class=&quot;bar-track&quot;><div class=&quot;bar-fill immune&quot; style=&quot;width:74.7%;&quot;><span>74.7%</span></div></div><div class=&quot;bar-churn&quot;>↓ 25% churn</div></div>
+        <div class=&quot;bar-row&quot;><div class=&quot;bar-label&quot;>Order 3</div><div class=&quot;bar-track&quot;><div class=&quot;bar-fill immune&quot; style=&quot;width:54.4%;&quot;><span>54.4%</span></div></div><div class=&quot;bar-churn&quot;>↓ 27% churn ⚑</div></div>
+        <div class=&quot;bar-row&quot;><div class=&quot;bar-label&quot;>Order 4</div><div class=&quot;bar-track&quot;><div class=&quot;bar-fill immune&quot; style=&quot;width:40%;&quot;><span>40%</span></div></div><div class=&quot;bar-churn&quot;>↓ 22% churn</div></div>
+        <div class=&quot;bar-row&quot;><div class=&quot;bar-label&quot;>Order 5+</div><div class=&quot;bar-track&quot;><div class=&quot;bar-fill immune&quot; style=&quot;width:31%;&quot;><span>31%</span></div></div><div class=&quot;bar-churn&quot;>↓ 24% churn</div></div>
+      </div>
+      <div style=&quot;font-size:0.6vw;color:var(--grey);margin-top:0.5%;&quot;>SNOOZE tracks within 1pp from O3 onwards · Source: Growth Room May 2024–Jun 2026</div>
+    </div>
+    <div>
+      <table>
+        <thead><tr><th>Metric</th><th>IMMUNE</th><th>SNOOZE</th><th>Delta</th></tr></thead>
+        <tbody>
+          <tr><td class=&quot;td-label&quot;>Subscribers</td><td>2,622</td><td>533</td><td class=&quot;td-warn&quot;>IMMUNE 5×</td></tr>
+          <tr><td class=&quot;td-label&quot;>True O1→O2 churn</td><td>19.9%</td><td class=&quot;td-warn&quot;>22.9%</td><td class=&quot;td-warn&quot;>–3pp SNOOZE</td></tr>
+          <tr><td class=&quot;td-label&quot;>O2→O3 churn</td><td class=&quot;td-warn&quot;>27.2%</td><td class=&quot;td-warn&quot;>26.1%</td><td>–1.1pp</td></tr>
+          <tr><td class=&quot;td-label&quot;>Retention at O3</td><td>54.4%</td><td class=&quot;td-green&quot;>54.4%</td><td class=&quot;td-green&quot;>Identical</td></tr>
+          <tr><td class=&quot;td-label&quot;>Retention at O4</td><td>40.0%</td><td>39.2%</td><td>Within noise</td></tr>
+          <tr><td class=&quot;td-label&quot;>Median cadence</td><td>30–33d</td><td class=&quot;td-green&quot;>30d flat</td><td>SNOOZE cleaner</td></tr>
+        </tbody>
+      </table>
+      <div class=&quot;callout&quot; style=&quot;margin-top:0.8%;&quot;>
+        <p><strong>SNOOZE O1→O2 gap:</strong> 3pp higher churn than IMMUNE at the first transition — consistent with outcome-failure in the first 30 days. Onboarding content must set realistic timelines and address efficacy proactively.</p>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- ===== SLIDE 4: M1 COHORT COMPRESSION ===== -->
+<div class=&quot;slide&quot;>
+  <div class=&quot;slide-num&quot;>04 / 22</div>
+  <div class=&quot;slide-label&quot;>SOSTAC Data — Subscriber Cohort Retention</div>
+  <h2>Subscriber cohort M1 has fallen from 52.6% to 22.1%.<br>March 2026 is the sharpest single-month drop.</h2>
+  <p>This is subscriber cohort M1: the proportion of new subscribers acquired in a given month who placed a second subscription order the following month. It is distinct from MoM all-buyer retention (which has held above 30% throughout) and from new customer M1 across all buyers (which has never broken 30%). The cohort table identifies a specific inflection point in March 2026 that the order-number waterfall cannot.</p>
+  <div class=&quot;two-col&quot; style=&quot;margin-top:0.8%;&quot;>
+    <div>
+      <table>
+        <thead><tr><th>Cohort</th><th>Size</th><th>M1</th><th>M2</th><th>M3</th><th>M4</th><th>M5</th></tr></thead>
+        <tbody>
+          <tr><td class=&quot;td-label&quot;>Jun 25</td><td>38</td><td class=&quot;td-green&quot;>52.6%</td><td>50.0%</td><td>47.4%</td><td>42.1%</td><td>42.1%</td></tr>
+          <tr><td class=&quot;td-label&quot;>Sep 25</td><td>225</td><td>37.3%</td><td>49.8%</td><td>44.0%</td><td>41.3%</td><td>27.1%</td></tr>
+          <tr><td class=&quot;td-label&quot;>Nov 25</td><td>288</td><td>50.7%</td><td>49.0%</td><td>39.6%</td><td>34.4%</td><td>23.3%</td></tr>
+          <tr><td class=&quot;td-label&quot;>Dec 25</td><td class=&quot;td-warn&quot;>652</td><td>40.6%</td><td>36.7%</td><td>32.1%</td><td>23.8%</td><td class=&quot;td-warn&quot;>9.8%</td></tr>
+          <tr><td class=&quot;td-label&quot;>Jan 26</td><td>386</td><td>40.7%</td><td>47.7%</td><td>36.8%</td><td class=&quot;td-warn&quot;>17.6%</td><td>—</td></tr>
+          <tr><td class=&quot;td-label&quot;>Mar 26</td><td>158</td><td class=&quot;td-warn&quot;>51.3% ⚑</td><td>—</td><td>—</td><td>—</td><td>—</td></tr>
+          <tr><td class=&quot;td-label&quot;>Apr 26</td><td>195</td><td class=&quot;td-warn&quot;>22.1%</td><td>—</td><td>—</td><td>—</td><td>—</td></tr>
+        </tbody>
+      </table>
+    </div>
+    <div>
+      <ul class=&quot;anno-list&quot;>
+        <li>
+          <div class=&quot;anno-label anno-risk&quot;>Dec 2025 cohort — specific risk</div>
+          652 subscribers at 9.8% M5. Largest cohort ever acquired. Accelerated decay consistent with seasonal/promotional acquisition — lower intent buyers. Not recoverable via onboarding. Requires a dedicated re-engagement campaign (Flow 7).
+        </li>
+        <li>
+          <div class=&quot;anno-label anno-risk&quot;>March 2026 — undiagnosed step-change</div>
+          M1 dropped 14–20pp in a single month. Cohort has had 50+ days for renewals to appear — not a data recency issue. Possible causes: Appstle config change, onboarding flow change, acquisition channel mix shift. Must be investigated before attribution to any flow can be claimed.
+        </li>
+        <li>
+          <div class=&quot;anno-label anno-action&quot;>Two separate interventions required</div>
+          The order-number flows (Flows 1–6) address structural churn. The Dec 2025 cohort (Flow 7) is a one-time campaign for a specific group. Do not conflate the two.
+        </li>
+        <li>
+          <div class=&quot;anno-label anno-key&quot;>Target floor</div>
+          Jun–Jul 2025 cohorts stabilise at 35–42% by M6. That is the sustainable floor to aim for — not a modelled improvement, a return to observed performance.
+        </li>
+      </ul>
+    </div>
+  </div>
+</div>
+
+<!-- ===== SLIDE 5: ONE-TIME BUYER DATA ===== -->
+<div class=&quot;slide&quot;>
+  <div class=&quot;slide-num&quot;>05 / 22</div>
+  <div class=&quot;slide-label&quot;>SOSTAC Data — Transactional Customer Base</div>
+  <h2>6,104 confirmed one-time buyers. £110,590 combined opportunity.<br>The win-back window closes at 60 days.</h2>
+  <div class=&quot;two-col&quot; style=&quot;margin-top:0.8%;&quot;>
+    <div>
+      <table>
+        <thead><tr><th>Metric</th><th>Value</th></tr></thead>
+        <tbody>
+          <tr><td class=&quot;td-label&quot;>IMMUNE one-time buyer base</td><td>3,732 customers (confirmed, excl. already-repeat)</td></tr>
+          <tr><td class=&quot;td-label&quot;>SNOOZE one-time buyer base</td><td>2,372 customers (confirmed, excl. already-repeat)</td></tr>
+          <tr><td class=&quot;td-label&quot;>IMMUNE median repeat LTV</td><td>£157.98 · LTV gap £181.91</td></tr>
+          <tr><td class=&quot;td-label&quot;>SNOOZE 180-day median LTV</td><td>£137.96 (conservative — lower O2→O3 rate of 36.2%)</td></tr>
+          <tr><td class=&quot;td-label&quot;>Blended conversion rate</td><td>11% (3% Q3 / 8% Q4)</td></tr>
+          <tr><td class=&quot;td-label&quot;>Win-back window</td><td class=&quot;td-warn&quot;>~60 days — drops sharply after. Median reorder day 45.</td></tr>
+          <tr><td class=&quot;td-label&quot;>IMMUNE CRM opportunity</td><td class=&quot;td-green&quot;>£74,583 (restated — one-time buyers only)</td></tr>
+          <tr><td class=&quot;td-label&quot;>SNOOZE CRM opportunity</td><td class=&quot;td-green&quot;>£36,007 (restated — 180-day LTV, conservative)</td></tr>
+          <tr><td class=&quot;td-label&quot;>Combined CRM opportunity</td><td class=&quot;td-green&quot;>£110,590 (vs model original £124,150)</td></tr>
+        </tbody>
+      </table>
+      <div class=&quot;callout warn&quot; style=&quot;margin-top:0.8%;&quot;>
+        <p><strong>Post-purchase flow audit required.</strong> Two timing problems are visible from the data: Relo Winback appears to fire before the customer has run out of product — too early, generating noise before purchase intent exists. The 90-day flow fires well outside the re-engagement window — too late, after the habit has broken. The full picture requires auditing all post-purchase flows against trigger timing before any fixes or new builds are scoped.</p>
+      </div>
+    </div>
+    <div>
+      <div class=&quot;stat-grid-2&quot;>
+        <div class=&quot;stat-card green&quot;>
+          <div class=&quot;stat&quot;>£74k</div>
+          <div class=&quot;stat-label&quot;>IMMUNE CRM opportunity — 3,732 one-time buyers × 11% × £181.91 median LTV gap</div>
+        </div>
+        <div class=&quot;stat-card green&quot;>
+          <div class=&quot;stat&quot;>£36k</div>
+          <div class=&quot;stat-label&quot;>SNOOZE CRM opportunity — 2,372 one-time buyers × 11% × £137.96 (180-day median LTV, conservative)</div>
+        </div>
+        <div class=&quot;stat-card&quot;>
+          <div class=&quot;stat&quot;>45d</div>
+          <div class=&quot;stat-label&quot;>Median time to second order among buyers who return — this is the target window for intervention</div>
+        </div>
+      </div>
+      <div class=&quot;callout&quot; style=&quot;margin-top:0.8%;&quot;>
+        <p><strong>Methodology note:</strong> Original model figures (IMMUNE £92,163 / SNOOZE £31,987) used inconsistent methodologies and included already-repeat buyers in the addressable base. Restated figures use confirmed one-time buyers only and a consistent LTV basis. SNOOZE uses 180-day median LTV (£137.96) rather than full median to reflect its lower O2→O3 rate (36.2% vs IMMUNE 47.3%). FOCUS excluded — insufficient base for reliable modelling.</p>
+      </div>
+      <div class=&quot;callout black&quot; style=&quot;margin-top:0.6%;&quot;>
+        <p><strong>SOSTAC reference:</strong> &quot;Win-back window ~60 days, after which re-engagement drops sharply without intervention. Current win-back flows trigger at 90 days or beyond, well outside the window. The practical fix is a post-purchase sequence targeting days 20–45.&quot;</p>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- ===== SLIDE 6: FLOW ARCHITECTURE ===== -->
+<div class=&quot;slide&quot;>
+  <div class=&quot;slide-num&quot;>06 / 22</div>
+  <div class=&quot;slide-label&quot;>Flow Architecture</div>
+  <h2>Seven flows. One fix. One campaign.<br>Priority sequenced by commercial impact.</h2>
+  <p>Flows 1–3 address structural acquisition-to-retention. Flows 4–5 are win-back. Flow 6 is pre-cancel save. Flow 7 is a one-time cohort recovery campaign. All require two product content variants: IMMUNE and SNOOZE.</p>
+  <div class=&quot;flow-grid&quot; style=&quot;margin-top:0.8%;&quot;>
+    <div class=&quot;flow-card&quot;>
+      <div class=&quot;flow-num&quot;>1</div>
+      <span class=&quot;flow-tag tag-primary&quot;>Launch first</span>
+      <div class=&quot;flow-title&quot;>Subscriber Onboarding</div>
+      <ul>
+        <li>Trigger: first sub order confirmed</li>
+        <li>Window: days 1–28</li>
+        <li>5 emails + SMS test</li>
+        <li>Goal: O1→O2 churn 20% → 15%</li>
+      </ul>
+    </div>
+    <div class=&quot;flow-card&quot;>
+      <div class=&quot;flow-num&quot;>2</div>
+      <span class=&quot;flow-tag tag-primary&quot;>Launch with Flow 1</span>
+      <div class=&quot;flow-title&quot;>O2→O3 Churn Prevention</div>
+      <ul>
+        <li>Trigger: order 2 confirmed</li>
+        <li>Window: days 1–25 post O2</li>
+        <li>3 emails + SMS test</li>
+        <li>Goal: O2→O3 churn 27% → 22%</li>
+      </ul>
+    </div>
+    <div class=&quot;flow-card&quot;>
+      <div class=&quot;flow-num&quot;>3</div>
+      <span class=&quot;flow-tag tag-primary&quot;>Launch with Flow 1</span>
+      <div class=&quot;flow-title&quot;>Win-Back: Lapsed OTP — IMMUNE</div>
+      <ul>
+        <li>Trigger: day 20, no reorder</li>
+        <li>Window: days 20–38</li>
+        <li>3 emails + SMS test</li>
+        <li>IMM-015 priority (n=3,913)</li>
+      </ul>
+    </div>
+    <div class=&quot;flow-card&quot;>
+      <div class=&quot;flow-num&quot;>4</div>
+      <span class=&quot;flow-tag tag-secondary&quot;>After Flow 3 stable</span>
+      <div class=&quot;flow-title&quot;>Win-Back: Lapsed OTP — SNOOZE</div>
+      <ul>
+        <li>Trigger: day 32, no reorder</li>
+        <li>Window: days 32–50</li>
+        <li>3 emails</li>
+        <li>Efficacy/outcome brief required</li>
+      </ul>
+    </div>
+  </div>
+  <div class=&quot;flow-grid-3&quot; style=&quot;margin-top:1%;&quot;>
+    <div class=&quot;flow-card&quot;>
+      <div class=&quot;flow-num&quot;>5</div>
+      <span class=&quot;flow-tag tag-secondary&quot;>After Appstle webhook</span>
+      <div class=&quot;flow-title&quot;>Win-Back: Cancelled Subscribers</div>
+      <ul>
+        <li>Trigger: Appstle cancel webhook</li>
+        <li>3 emails · post-O1 and post-O2 variants</li>
+        <li>Cancel reason survey at day 7</li>
+        <li>Requires appstle-cancellation-sync build</li>
+      </ul>
+    </div>
+    <div class=&quot;flow-card&quot;>
+      <div class=&quot;flow-num&quot;>6</div>
+      <span class=&quot;flow-tag tag-primary&quot;>Build in Appstle</span>
+      <div class=&quot;flow-title&quot;>Pre-Cancel Save</div>
+      <ul>
+        <li>Trigger: cancel intent within Appstle</li>
+        <li>Single intervention — pause offer</li>
+        <li>No email needed if Appstle supports</li>
+        <li>Highest leverage, lowest build effort</li>
+      </ul>
+    </div>
+    <div class=&quot;flow-card&quot;>
+      <div class=&quot;flow-num&quot;>7</div>
+      <span class=&quot;flow-tag tag-fix&quot;>One-time campaign</span>
+      <div class=&quot;flow-title&quot;>Dec 2025 Cohort Re-engagement</div>
+      <ul>
+        <li>Target: 652 Dec 2025 subscribers at 9.8% M5</li>
+        <li>2-email campaign, not evergreen flow</li>
+        <li>Appstle status check before send</li>
+        <li>Separate brief from standard win-back</li>
+      </ul>
+    </div>
+  </div>
+</div>
+
+<!-- ===== SLIDE 7: EXISTING FLOW FIX ===== -->
+<div class=&quot;slide&quot;>
+  <div class=&quot;slide-num&quot;>07 / 22</div>
+  <div class=&quot;slide-label&quot;>Immediate Action — Before Any New Build</div>
+  <h2>Audit all post-purchase flows first.<br>Two timing problems visible. Full picture needed before any build.</h2>
+  <div class=&quot;two-col&quot; style=&quot;margin-top:1%;&quot;>
+    <div>
+      <div class=&quot;callout warn&quot; style=&quot;margin-top:0;&quot;>
+        <p><strong>Brief for James at Giant Leap — immediate action required:</strong></p>
+      </div>
+      <ul class=&quot;anno-list&quot; style=&quot;margin-top:0.8%;&quot;>
+        <li>
+          <div class=&quot;anno-label anno-risk&quot;>Step 1 — Audit all 27 existing Klaviyo flows</div>
+          Map every flow against the customer lifecycle. Identify which flows currently address win-back and post-purchase. Document trigger timing, audience conditions, and send frequency for each.
+        </li>
+        <li>
+          <div class=&quot;anno-label anno-risk&quot;>Step 2 — Audit Relo Winback trigger timing</div>
+          Relo Winback is active and generating revenue (£385.91 in 7 days) but the data suggests it fires too early — before the customer has run out of product. Confirm the exact trigger day. If firing before day 20, adjust the entry point. Do not rebuild unless the content is also wrong.
+        </li>
+        <li>
+          <div class=&quot;anno-label anno-action&quot;>Step 3 — Adjust trigger if firing before day 20</div>
+          Flow 3 (IMMUNE OTP win-back) should be the replacement. Day 20 first contact. Day 28 outcome content. Day 38 time-limited offer. Trigger based on supply cycle, not a generic date — IMM-015 at day 20, IMM-030 at day 32.
+        </li>
+        <li>
+          <div class=&quot;anno-label anno-action&quot;>Step 4 — Check post-purchase onboarding trigger</div>
+          Confirm whether any post-purchase sequence exists for new subscribers. If the day 7 education email is not live, this is a gap that Flow 1 fills. Do not rebuild if it exists — audit first.
+        </li>
+        <li>
+          <div class=&quot;anno-label anno-key&quot;>Klaviyo data requirement</div>
+          This brief requires Klaviyo metrics:read API access to be live in Growth Room before a full 27-flow audit can be completed. Stephanie to confirm API key status — flagged as a blocker in the SOSTAC actions.
+        </li>
+      </ul>
+    </div>
+    <div>
+      <div style=&quot;border:1px solid var(--rule);padding:2% 1.8%;background:white;&quot;>
+        <div style=&quot;font-size:0.62vw;font-weight:700;letter-spacing:0.12em;text-transform:uppercase;color:var(--grey);margin-bottom:0.8%;&quot;>Win-back timing comparison</div>
+        <table>
+          <thead><tr><th>Scenario</th><th>Trigger day</th><th>vs window</th><th>Expected outcome</th></tr></thead>
+          <tbody>
+            <tr><td class=&quot;td-label&quot;>Relo Winback (suspected)</td><td class=&quot;td-warn&quot;>Too early</td><td class=&quot;td-warn&quot;>Before supply runs out</td><td class=&quot;td-grey&quot;>Firing before purchase intent exists. Confirm trigger day.</td></tr>
+            <tr><td class=&quot;td-label&quot;>90-day flow (suspected)</td><td class=&quot;td-warn&quot;>~Day 90</td><td class=&quot;td-warn&quot;>30d+ after window closes</td><td class=&quot;td-grey&quot;>Firing after habit has broken. Confirm trigger day.</td></tr>
+            <tr><td class=&quot;td-label&quot;>Target — IMM-015</td><td class=&quot;td-green&quot;>Day 20</td><td class=&quot;td-green&quot;>Within lapse window</td><td class=&quot;td-grey&quot;>Customer has run out. High intent to reorder.</td></tr><tr><td class=&quot;td-label&quot;>Target — IMM-030</td><td class=&quot;td-green&quot;>Day 32</td><td class=&quot;td-green&quot;>Just past supply end</td><td class=&quot;td-grey&quot;>Reorder prompt at the natural decision moment.</td></tr>
+          </tbody>
+        </table>
+        <div class=&quot;callout&quot; style=&quot;margin-top:0.8%;&quot;>
+          <p><strong>What the audit needs to confirm:</strong> Exact trigger day for Relo Winback. Exact trigger day for the 90-day flow. What sits between them — is there a gap in days 20–45 where no flow fires at all? Map all post-purchase flows before scoping any fixes or new builds.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- ===== SLIDE 8: DIVIDER FLOW 1 ===== -->
+<div class=&quot;slide slide-section&quot;>
+  <div class=&quot;slide-num&quot; style=&quot;color:rgba(255,255,255,0.2);&quot;>08 / 22</div>
+  <div class=&quot;slide-label&quot; style=&quot;color:rgba(255,255,255,0.45);&quot;>Flow 1 of 7</div>
+  <h2>Subscriber Onboarding</h2>
+  <p>Triggered at first subscription order. Goal is habit formation — not product education. Subscribers already know what IMMUNE or SNOOZE does. The job is to make taking it daily feel automatic before the second delivery arrives.</p>
+  <div class=&quot;meta-row&quot;>
+    <div class=&quot;meta-block&quot;><div class=&quot;meta-label&quot;>Target</div><div class=&quot;meta-val&quot;>All new IMMUNE and SNOOZE subscribers</div></div>
+    <div class=&quot;meta-block&quot;><div class=&quot;meta-label&quot;>Trigger</div><div class=&quot;meta-val&quot;>First subscription order confirmed</div></div>
+    <div class=&quot;meta-block&quot;><div class=&quot;meta-label&quot;>Primary KPI</div><div class=&quot;meta-val&quot;>O1→O2 retention: 80% → 85%</div></div>
+    <div class=&quot;meta-block&quot;><div class=&quot;meta-label&quot;>Window</div><div class=&quot;meta-val&quot;>Days 1–28</div></div>
+  </div>
+</div>
+
+<!-- ===== SLIDE 9: FLOW 1 SEQUENCE ===== -->
+<div class=&quot;slide&quot;>
+  <div class=&quot;slide-num&quot;>09 / 22</div>
+  <div class=&quot;slide-label&quot;>Flow 1 — Subscriber Onboarding</div>
+  <h2>5 emails + SMS test. Habit before the second box arrives.</h2>
+  <div class=&quot;email-sequence&quot;>
+    <div class=&quot;email-row header&quot;><div>Day</div><div>Subject line</div><div>Content brief</div><div>Goal</div></div>
+    <div class=&quot;email-row&quot;>
+      <div class=&quot;email-day&quot;>Day 1</div>
+      <div class=&quot;email-subject&quot;>Your first order is on its way</div>
+      <div class=&quot;email-brief&quot;>Warm confirmation. Delivery timing expectation. One practical tip: when and how to take for best effect. <em>[IMMUNE: morning or at first symptom. SNOOZE: 30 mins before bed.]</em> No upsell. No discount.</div>
+      <div class=&quot;email-goal&quot;>First impression. Reduce buyer's remorse. Establish credibility.</div>
+    </div>
+    <div class=&quot;email-row&quot;>
+      <div class=&quot;email-day&quot;>Day 5</div>
+      <div class=&quot;email-subject&quot;>How to get the most from [IMMUNE/SNOOZE]</div>
+      <div class=&quot;email-brief&quot;>Outcome/efficacy content. <em>[IMMUNE: Pulse Method™ — reactive vs preventative use. SNOOZE: sleep hygiene context, what to expect week 1 vs week 4. Placeholder — Stephanie to approve claims.]</em> Link to science page.</div>
+      <div class=&quot;email-goal&quot;>Expectation setting. Reduce early cancellation from unmet expectations.</div>
+    </div>
+    <div class=&quot;email-row&quot;>
+      <div class=&quot;email-day&quot;>Day 10</div>
+      <div class=&quot;email-subject&quot;>What our subscribers told us after 30 days <span class=&quot;sms-badge&quot;>SMS</span></div>
+      <div class=&quot;email-brief&quot;>Social proof. 2–3 customer quotes focused on outcome. <em>[SNOOZE: &quot;I didn't notice much in week 1 — by week 3 I was sleeping through.&quot; Set the timeline honestly.]</em> Reinforce that results take consistent use.</div>
+      <div class=&quot;email-goal&quot;>Normalise the habit. Reduce cancellation from impatience.</div>
+    </div>
+    <div class=&quot;email-row&quot;>
+      <div class=&quot;email-day&quot;>Day 18</div>
+      <div class=&quot;email-subject&quot;>Your next delivery is coming in about 12 days</div>
+      <div class=&quot;email-brief&quot;>Pre-delivery nudge. Easy CTA to skip, delay, or swap cadence — surfaced proactively, not buried. <em>Showing this before they need to cancel it builds trust.</em></div>
+      <div class=&quot;email-goal&quot;>Reduce cancel-instead-of-pause behaviour. Build trust through transparency.</div>
+    </div>
+    <div class=&quot;email-row&quot;>
+      <div class=&quot;email-day&quot;>Day 25</div>
+      <div class=&quot;email-subject&quot;>Still going strong — here's what's coming next</div>
+      <div class=&quot;email-brief&quot;>Light brand content. Soft cross-sell. <em>[IMMUNE subscribers: DAILY as complementary daily habit. SNOOZE subscribers: IMMUNE as reactive complement.]</em> Not a push — brand deepening.</div>
+      <div class=&quot;email-goal&quot;>Brand deepening. Soft cross-sell. Reduce single-product fragility.</div>
+    </div>
+  </div>
+</div>
+
+<!-- ===== SLIDE 10: DIVIDER FLOW 2 ===== -->
+<div class=&quot;slide slide-section&quot;>
+  <div class=&quot;slide-num&quot; style=&quot;color:rgba(255,255,255,0.2);&quot;>10 / 22</div>
+  <div class=&quot;slide-label&quot; style=&quot;color:rgba(255,255,255,0.45);&quot;>Flow 2 of 7</div>
+  <h2>Order 2–3 Churn Prevention</h2>
+  <p>The O2→O3 transition is the highest churn point in the lifecycle at 27%. Triggered at second order confirmation. The job is value reinforcement — reminding subscribers why they committed before doubt sets in at the highest-risk window.</p>
+  <div class=&quot;meta-row&quot;>
+    <div class=&quot;meta-block&quot;><div class=&quot;meta-label&quot;>Target</div><div class=&quot;meta-val&quot;>Subscribers confirmed at order 2</div></div>
+    <div class=&quot;meta-block&quot;><div class=&quot;meta-label&quot;>Trigger</div><div class=&quot;meta-val&quot;>Second subscription order confirmed</div></div>
+    <div class=&quot;meta-block&quot;><div class=&quot;meta-label&quot;>Primary KPI</div><div class=&quot;meta-val&quot;>O2→O3 retention: 73% → 78%</div></div>
+    <div class=&quot;meta-block&quot;><div class=&quot;meta-label&quot;>Window</div><div class=&quot;meta-val&quot;>Days 1–25 post order 2</div></div>
+  </div>
+</div>
+
+<!-- ===== SLIDE 11: FLOW 2 SEQUENCE ===== -->
+<div class=&quot;slide&quot;>
+  <div class=&quot;slide-num&quot;>11 / 22</div>
+  <div class=&quot;slide-label&quot;>Flow 2 — O2→O3 Churn Prevention</div>
+  <h2>3 emails + SMS test. Bridge the highest-risk window.<br>Flow 2 is the highest-leverage build in this deck.</h2>
+  <div class=&quot;email-sequence&quot;>
+    <div class=&quot;email-row header&quot;><div>Day</div><div>Subject line</div><div>Content brief</div><div>Goal</div></div>
+    <div class=&quot;email-row&quot;>
+      <div class=&quot;email-day&quot;>Day 3</div>
+      <div class=&quot;email-subject&quot;>Two months in — here's what that means</div>
+      <div class=&quot;email-brief&quot;>Milestone acknowledgement. <em>[IMMUNE: two months of immune support, Pulse Method™ in action. SNOOZE: 60 days of sleep foundation building.]</em> Frame continued use as an investment already made. 1–2 outcome quotes. Placeholder efficacy content.</div>
+      <div class=&quot;email-goal&quot;>Reinforce sunk-cost positively. Make continued use the obvious choice.</div>
+    </div>
+    <div class=&quot;email-row&quot;>
+      <div class=&quot;email-day&quot;>Day 12</div>
+      <div class=&quot;email-subject&quot;>The science behind why month 2 matters <span class=&quot;sms-badge&quot;>SMS</span></div>
+      <div class=&quot;email-brief&quot;>Deeper efficacy content. <em>[IMMUNE: lactoferrin levels and cumulative immune resilience. SNOOZE: Lactium and cortisol regulation — benefits compound with consistent use. Placeholder — Stephanie to approve.]</em> Link to science page. No buy CTA.</div>
+      <div class=&quot;email-goal&quot;>Justify commitment with science. Reduce &quot;I'm not sure it's working&quot; cancellations.</div>
+    </div>
+    <div class=&quot;email-row&quot;>
+      <div class=&quot;email-day&quot;>Day 22</div>
+      <div class=&quot;email-subject&quot;>Your third delivery is almost here — need to adjust?</div>
+      <div class=&quot;email-brief&quot;>Pre-delivery cadence management. Proactively surface skip, delay, swap options. <em>&quot;Most people who pause come back — cancelling means starting the new customer discount clock again.&quot;</em> Transparent, not manipulative.</div>
+      <div class=&quot;email-goal&quot;>Convert cancel intent to pause/skip. Retain the subscriber contract.</div>
+    </div>
+  </div>
+  <div class=&quot;callout warn&quot; style=&quot;margin-top:0.8%;&quot;>
+    <p><strong>Moving O2→O3 retention from 73% to 78% across 1,959 active order-2 subscribers recovers approximately 98 additional subscribers per cohort cycle.</strong> At IMMUNE average LTV this is the single most commercially significant flow in this document. Build it first alongside Flow 1.</p>
+  </div>
+</div>
+
+<!-- ===== SLIDE 12: DIVIDER FLOWS 3 &amp; 4 ===== -->
+<div class=&quot;slide slide-section&quot;>
+  <div class=&quot;slide-num&quot; style=&quot;color:rgba(255,255,255,0.2);&quot;>12 / 22</div>
+  <div class=&quot;slide-label&quot; style=&quot;color:rgba(255,255,255,0.45);&quot;>Flows 3 &amp; 4 of 7</div>
+  <h2>Win-Back:<br>Lapsed OTP Buyers</h2>
+  <p>Two separate flows — IMMUNE and SNOOZE — with different trigger timing, different re-engagement messaging, and different conversion goals. IMMUNE is the priority (n=3,913 IMM-015 buyers). SNOOZE requires an outcome/efficacy brief before it can be built.</p>
+  <div class=&quot;meta-row&quot;>
+    <div class=&quot;meta-block&quot;><div class=&quot;meta-label&quot;>Flow 3 — IMMUNE trigger</div><div class=&quot;meta-val&quot;>Day 20 (IMM-015) · Day 32 (IMM-030)</div></div>
+    <div class=&quot;meta-block&quot;><div class=&quot;meta-label&quot;>Flow 4 — SNOOZE trigger</div><div class=&quot;meta-val&quot;>Day 32 post first SNOOZE OTP purchase</div></div>
+    <div class=&quot;meta-block&quot;><div class=&quot;meta-label&quot;>Primary KPI</div><div class=&quot;meta-val&quot;>Reorder rate. Subscribe conversion secondary.</div></div>
+    <div class=&quot;meta-block&quot;><div class=&quot;meta-label&quot;>Window</div><div class=&quot;meta-val&quot;>Days 20–38 (IMMUNE) · Days 32–50 (SNOOZE)</div></div>
+  </div>
+</div>
+
+<!-- ===== SLIDE 13: FLOWS 3 &amp; 4 SEQUENCE ===== -->
+<div class=&quot;slide&quot;>
+  <div class=&quot;slide-num&quot;>13 / 22</div>
+  <div class=&quot;slide-label&quot;>Flows 3 &amp; 4 — Win-Back: Lapsed OTP Buyers</div>
+  <h2>Same architecture. Different briefs.<br>SNOOZE must address why it may not have worked.</h2>
+  <div class=&quot;email-sequence&quot;>
+    <div class=&quot;email-row header&quot;><div>Day</div><div>Subject line</div><div>Content brief</div><div>Goal</div></div>
+    <div class=&quot;email-row&quot;>
+      <div class=&quot;email-day&quot;>Day 20/32</div>
+      <div class=&quot;email-subject&quot;>Running low? <span class=&quot;sms-badge&quot;>SMS</span></div>
+      <div class=&quot;email-brief&quot;>Practical, not pushy. Supply-cycle logic. Reorder CTA prominent. Subscribe option present but not leading. <em>[IMMUNE: &quot;Never run out — subscribe and save 20%.&quot; SNOOZE: &quot;Sleep shouldn't be interrupted by running out.&quot;]</em> No discount yet.</div>
+      <div class=&quot;email-goal&quot;>Catch the customer before the habit breaks. Reorder before the lapse window opens.</div>
+    </div>
+    <div class=&quot;email-row&quot;>
+      <div class=&quot;email-day&quot;>Day 28/40</div>
+      <div class=&quot;email-subject&quot;>Don't lose the progress you've made</div>
+      <div class=&quot;email-brief&quot;>Outcome/efficacy framing. <em>[IMMUNE: lactoferrin levels deplete when supplementation stops. SNOOZE: &quot;One month isn't always enough — sleep architecture takes time to rebuild. A gap sets the clock back.&quot; Placeholder — Stephanie to approve.]</em> Reorder CTA. Still no discount.</div>
+      <div class=&quot;email-goal&quot;>Create consequence for not reordering. Urgency through science, not scarcity.</div>
+    </div>
+    <div class=&quot;email-row&quot;>
+      <div class=&quot;email-day&quot;>Day 38/50</div>
+      <div class=&quot;email-subject&quot;>Come back — here's something for you</div>
+      <div class=&quot;email-brief&quot;>Final email. Time-limited incentive. <em>Suggest 10% or free shipping — not a deep discount that trains price sensitivity.</em> Subscribe option leads. Clear expiry. Exit flow after this send — suppress from win-back for 90 days.</div>
+      <div class=&quot;email-goal&quot;>Last-chance reactivation. Convert to subscriber where possible.</div>
+    </div>
+  </div>
+  <div class=&quot;two-col&quot; style=&quot;margin-top:0.8%;&quot;>
+    <div class=&quot;callout&quot;>
+      <p><strong>SNOOZE variant:</strong> The day 28/40 email must acknowledge that sleep outcomes vary and take time. Do not imply guaranteed results. The honest framing (&quot;some people feel it in week 2, most by week 6&quot;) reduces cancellation from unrealistic expectations more effectively than overclaiming. Consistent with SOSTAC finding: SNOOZE faces a higher education burden at a higher price point.</p>
+    </div>
+    <div class=&quot;callout warn&quot;>
+      <p><strong>Discount discipline:</strong> Discount introduced only at the final email. Days 20 and 28 emails must convert on value and outcome alone. Introducing a discount early trains customers to wait for an offer before reordering.</p>
+    </div>
+  </div>
+</div>
+
+<!-- ===== SLIDE 14: DIVIDER FLOW 5 ===== -->
+<div class=&quot;slide slide-section&quot;>
+  <div class=&quot;slide-num&quot; style=&quot;color:rgba(255,255,255,0.2);&quot;>14 / 22</div>
+  <div class=&quot;slide-label&quot; style=&quot;color:rgba(255,255,255,0.45);&quot;>Flow 5 of 7</div>
+  <h2>Win-Back:<br>Cancelled Subscribers</h2>
+  <p>Subscribers who cancel after order 1 or order 2 represent the highest-value win-back opportunity. They committed once. The job is to make re-subscribing feel like a fresh start, not a climbdown. Requires Appstle cancellation webhook to be connected first.</p>
+  <div class=&quot;meta-row&quot;>
+    <div class=&quot;meta-block&quot;><div class=&quot;meta-label&quot;>Target</div><div class=&quot;meta-val&quot;>Subscribers who cancelled after O1 or O2</div></div>
+    <div class=&quot;meta-block&quot;><div class=&quot;meta-label&quot;>Trigger</div><div class=&quot;meta-val&quot;>Appstle subscription_cancelled webhook → Klaviyo</div></div>
+    <div class=&quot;meta-block&quot;><div class=&quot;meta-label&quot;>Primary KPI</div><div class=&quot;meta-val&quot;>Re-subscribe rate. OTP reorder secondary win.</div></div>
+    <div class=&quot;meta-block&quot;><div class=&quot;meta-label&quot;>Dependency</div><div class=&quot;meta-val&quot;>appstle-cancellation-sync edge function — not yet built</div></div>
+  </div>
+</div>
+
+<!-- ===== SLIDE 15: FLOW 5 SEQUENCE ===== -->
+<div class=&quot;slide&quot;>
+  <div class=&quot;slide-num&quot;>15 / 22</div>
+  <div class=&quot;slide-label&quot;>Flow 5 — Win-Back: Cancelled Subscribers</div>
+  <h2>3 emails. Two variants by cancel point.<br>Cancel reason survey feeds product and CRO intelligence.</h2>
+  <div class=&quot;email-sequence&quot;>
+    <div class=&quot;email-row header&quot;><div>Day</div><div>Subject line</div><div>Content brief</div><div>Goal</div></div>
+    <div class=&quot;email-row&quot;>
+      <div class=&quot;email-day&quot;>Day 7</div>
+      <div class=&quot;email-subject&quot;>We noticed you cancelled — can we help?</div>
+      <div class=&quot;email-brief&quot;>Honest, no pressure. Three options: re-subscribe, buy once, or tell us why. <em>Link to 1-question survey: &quot;What made you cancel?&quot; — feeds back into product and CRO intelligence loop.</em> No discount. Post-O1 variant: gentler. Post-O2 variant: slightly warmer — they had two months.</div>
+      <div class=&quot;email-goal&quot;>Gather cancellation reason data. Low-pressure re-engagement door left open.</div>
+    </div>
+    <div class=&quot;email-row&quot;>
+      <div class=&quot;email-day&quot;>Day 21</div>
+      <div class=&quot;email-subject&quot;>Still thinking about [IMMUNE/SNOOZE]?</div>
+      <div class=&quot;email-brief&quot;>Outcome re-engagement. <em>[IMMUNE: &quot;Cold season is coming — your immune system could use the support.&quot; SNOOZE: &quot;A month without better sleep — here's what consistent use actually does.&quot; Placeholder — Stephanie to approve.]</em> Re-subscribe CTA leads. No discount.</div>
+      <div class=&quot;email-goal&quot;>Re-engage on outcome. Make the case for returning without bribing.</div>
+    </div>
+    <div class=&quot;email-row&quot;>
+      <div class=&quot;email-day&quot;>Day 45</div>
+      <div class=&quot;email-subject&quot;>A reason to come back</div>
+      <div class=&quot;email-brief&quot;>Final win-back. Re-subscribe and receive new customer discount rate for first order back. <em>&quot;We'll treat your return like a fresh start&quot; — not a generic discount. Match the 20% first-three-orders offer. Clear expiry.</em> Suppress from further win-back for 90 days after.</div>
+      <div class=&quot;email-goal&quot;>Final conversion attempt. Discount as last resort only.</div>
+    </div>
+  </div>
+  <div class=&quot;callout warn&quot; style=&quot;margin-top:0.8%;&quot;>
+    <p><strong>Technical dependency:</strong> This flow requires the Appstle subscription_cancelled webhook → Klaviyo. Not currently connected. Growth Room build required: appstle-cancellation-sync edge function. This also surfaces cancellation reason data — the single most important intelligence gap in the current dataset.</p>
+  </div>
+</div>
+
+<!-- ===== SLIDE 16: FLOW 6 PRE-CANCEL ===== -->
+<div class=&quot;slide&quot;>
+  <div class=&quot;slide-num&quot;>16 / 22</div>
+  <div class=&quot;slide-label&quot;>Flow 6 of 7 — Highest Leverage, Lowest Effort</div>
+  <h2>Pre-Cancel Save.<br>Intercept churn before it becomes a cancel.</h2>
+  <p>The SOSTAC testing playbook identifies &quot;subscription cancellation flow: pause offer vs cancel confirmation&quot; as a priority test. This is a different intervention from Flow 5 — it operates within Appstle at the point of cancellation intent, before the subscriber actually cancels.</p>
+  <div class=&quot;two-col&quot; style=&quot;margin-top:1%;&quot;>
+    <div>
+      <ul class=&quot;anno-list&quot;>
+        <li>
+          <div class=&quot;anno-label anno-action&quot;>What it is</div>
+          A single intervention served within the Appstle customer portal at the moment a subscriber clicks to cancel. Offers a pause option before confirming the cancellation. No email required if Appstle's native cancel flow supports it.
+        </li>
+        <li>
+          <div class=&quot;anno-label anno-key&quot;>Why it's high leverage</div>
+          Converts cancel intent to pause at the moment of highest intent to leave. A subscriber who pauses is still a subscriber. A subscriber who cancels becomes a win-back problem. Prevention is cheaper than recovery.
+        </li>
+        <li>
+          <div class=&quot;anno-label anno-action&quot;>The intervention</div>
+          &quot;Before you go — pause for a month instead. No commitment. Resume when you're ready.&quot; Single CTA. No discount. No emotional guilt. If pause is declined, cancel proceeds. If accepted, subscriber is paused and re-entered into the onboarding flow at resume.
+        </li>
+        <li>
+          <div class=&quot;anno-label anno-action&quot;>Implementation</div>
+          Check Appstle's cancel flow configuration. Most Appstle setups support a cancellation reason screen and a retention offer at that point. If supported natively, this is a configuration task — no dev required. If not, a lightweight Appstle webhook + Klaviyo SMS/email at cancel initiation is the fallback.
+        </li>
+        <li>
+          <div class=&quot;anno-label anno-risk&quot;>Test design</div>
+          SOSTAC testing playbook: &quot;Pause offer vs cancel confirmation.&quot; Test the pause offer against a straight cancel confirmation. Primary metric: net cancellation rate. This is a high-ease, high-confidence test — prioritise within the ICE framework.
+        </li>
+      </ul>
+    </div>
+    <div>
+      <div style=&quot;border:1px solid var(--rule);padding:2% 1.8%;background:white;margin-bottom:1%;&quot;>
+        <div style=&quot;font-family:'Cormorant Garamond',serif;font-size:1.3vw;font-weight:700;margin-bottom:0.8%;color:var(--black);&quot;>Pause offer copy — draft</div>
+        <div style=&quot;background:var(--grey-light);padding:1% 1.2%;font-size:0.78vw;line-height:1.6;color:var(--black);border-left:3px solid var(--green);&quot;>
+          <strong>Before you cancel</strong><br><br>
+          Life gets in the way. We get it.<br><br>
+          You can pause your subscription for up to 3 months — no charge, no obligation. Resume whenever you're ready.<br><br>
+          <em style=&quot;color:var(--green);&quot;>[Pause my subscription]</em> &amp;nbsp;·&amp;nbsp; <em style=&quot;color:var(--grey);&quot;>Cancel anyway</em>
+        </div>
+      </div>
+      <div class=&quot;callout&quot;>
+        <p><strong>Note:</strong> Do not offer a discount at the cancel screen. Discounting at cancellation trains subscribers to cancel in order to receive a retention offer. Pause only — no price reduction.</p>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- ===== SLIDE 17: FLOW 7 DEC COHORT ===== -->
+<div class=&quot;slide&quot;>
+  <div class=&quot;slide-num&quot;>17 / 22</div>
+  <div class=&quot;slide-label&quot;>Flow 7 of 7 — One-Time Campaign</div>
+  <h2>Dec 2025 Cohort Re-engagement.<br>652 subscribers. 9.8% M5 retention. Different brief.</h2>
+  <p>This is not an evergreen flow — it is a one-time campaign targeting a specific cohort that has already lapsed. Different brief, different tone, different goal from the standard win-back flows.</p>
+  <div class=&quot;two-col&quot; style=&quot;margin-top:0.8%;&quot;>
+    <div>
+      <ul class=&quot;anno-list&quot;>
+        <li>
+          <div class=&quot;anno-label anno-action&quot;>Step 1 — Appstle status check first</div>
+          Before sending anything, pull Appstle subscription status for all 652 Dec 2025 subscribers. Segment into: still active (do not contact via this flow — they are in the normal lifecycle), paused (re-engagement appropriate), and cancelled (win-back appropriate). Do not send win-back content to active subscribers.
+        </li>
+        <li>
+          <div class=&quot;anno-label anno-risk&quot;>Step 2 — Understand the cohort before messaging</div>
+          The SOSTAC flags this cohort as likely seasonal/promotional acquisition — lower intent buyers. The messaging should acknowledge the gap directly rather than ignoring it. &quot;It's been a while&quot; is more honest than pretending no time has passed.
+        </li>
+        <li>
+          <div class=&quot;anno-label anno-action&quot;>Email 1 — Reintroduce (send to cancelled/lapsed only)</div>
+          Subject: &quot;It's been a while — we wanted to check in.&quot; Honest acknowledgement of the gap. Single CTA: try again at a preferential rate. Frame as a fresh start, not a reactivation offer. Stephanie's founder voice appropriate here.
+        </li>
+        <li>
+          <div class=&quot;anno-label anno-action&quot;>Email 2 — Final (14 days later, no response)</div>
+          Subject: &quot;Last chance — your offer expires [date].&quot; Time-limited incentive. Match new customer discount rate. After this send, exit the cohort from all win-back suppression — they are no longer recoverable via email alone.
+        </li>
+        <li>
+          <div class=&quot;anno-label anno-key&quot;>What this tells us</div>
+          The response rate from this campaign is a data point on whether promotional/seasonal acquisition cohorts are recoverable at all. If response is below 2%, the channel and creative investment in Dec 2025 acquisition was structurally lower quality than other cohorts. Important input to the paid media brief.
+        </li>
+      </ul>
+    </div>
+    <div>
+      <div class=&quot;stat-grid-2&quot; style=&quot;margin-top:0;&quot;>
+        <div class=&quot;stat-card warn&quot;>
+          <div class=&quot;stat&quot;>652</div>
+          <div class=&quot;stat-label&quot;>Dec 2025 subscribers — largest cohort ever acquired</div>
+        </div>
+        <div class=&quot;stat-card warn&quot;>
+          <div class=&quot;stat&quot;>9.8%</div>
+          <div class=&quot;stat-label&quot;>M5 retention — the lowest of any cohort in the dataset</div>
+        </div>
+      </div>
+      <div class=&quot;callout warn&quot; style=&quot;margin-top:0.8%;&quot;>
+        <p><strong>SOSTAC note:</strong> &quot;The December peak coincides with holiday-period promotional activity, though the precise cause has not been isolated.&quot; Do not attribute entirely to promotional acquisition until the March 2026 step-change diagnosis is complete — there may be a shared cause.</p>
+      </div>
+      <div class=&quot;callout&quot; style=&quot;margin-top:0.6%;&quot;>
+        <p><strong>Founder voice:</strong> The SOSTAC strategy document identifies Stephanie's founder voice as a performance asset. A personal re-engagement email from Stephanie — not a branded template — is likely to outperform standard brand content for a lapsed cohort. Test this as the Email 1 variant.</p>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- ===== SLIDE 18: SMS STRATEGY ===== -->
+<div class=&quot;slide&quot;>
+  <div class=&quot;slide-num&quot;>18 / 22</div>
+  <div class=&quot;slide-label&quot;>SMS Channel</div>
+  <h2>SMS as a test channel.<br>Four trigger points. One prerequisite.</h2>
+  <div class=&quot;three-col&quot; style=&quot;margin-top:0.8%;&quot;>
+    <div style=&quot;border:1px solid var(--rule);padding:1.8% 1.6%;background:white;&quot;>
+      <span class=&quot;flow-tag tag-test&quot;>Flow 3 · Day 20</span>
+      <div style=&quot;font-family:'Cormorant Garamond',serif;font-size:1.3vw;font-weight:700;margin:0.6% 0;line-height:1.2;&quot;>Lapse Nudge</div>
+      <p style=&quot;font-size:0.74vw;margin-bottom:0.6%;&quot;>IMM-015 customer has likely run out. High intent window. Single message, single link.</p>
+      <div style=&quot;background:var(--grey-light);padding:0.7% 0.9%;font-size:0.68vw;font-style:italic;line-height:1.5;&quot;>&quot;Running low on IMMUNE? Don't let your immune support lapse — reorder in 30 seconds: [link]&quot;</div>
+    </div>
+    <div style=&quot;border:1px solid var(--rule);padding:1.8% 1.6%;background:white;&quot;>
+      <span class=&quot;flow-tag tag-primary&quot;>Flows 1 &amp; 2 · Day 10/12</span>
+      <div style=&quot;font-family:'Cormorant Garamond',serif;font-size:1.3vw;font-weight:700;margin:0.6% 0;line-height:1.2;&quot;>Habit Reinforcement</div>
+      <p style=&quot;font-size:0.74vw;margin-bottom:0.6%;&quot;>Mid-onboarding check-in. Science content link. Short, personal, non-commercial.</p>
+      <div style=&quot;background:var(--grey-light);padding:0.7% 0.9%;font-size:0.68vw;font-style:italic;line-height:1.5;&quot;>&quot;How are you getting on with SNOOZE? Here's what to expect in the first month: [link]&quot;</div>
+    </div>
+    <div style=&quot;border:1px solid var(--rule);padding:1.8% 1.6%;background:white;&quot;>
+      <span class=&quot;flow-tag tag-secondary&quot;>Flow 5 · Day 7</span>
+      <div style=&quot;font-family:'Cormorant Garamond',serif;font-size:1.3vw;font-weight:700;margin:0.6% 0;line-height:1.2;&quot;>Cancel Recovery</div>
+      <p style=&quot;font-size:0.74vw;margin-bottom:0.6%;&quot;>Immediate post-cancel. One question only — no hard sell. Opens a dialogue.</p>
+      <div style=&quot;background:var(--grey-light);padding:0.7% 0.9%;font-size:0.68vw;font-style:italic;line-height:1.5;&quot;>&quot;Sorry to see you go. Can we ask — what made you cancel? One tap: [link]&quot;</div>
+    </div>
+  </div>
+  <div class=&quot;callout warn&quot; style=&quot;margin-top:1%;&quot;>
+    <p><strong>Prerequisite before building:</strong> Audit SMS-consented profiles in Klaviyo. If consented list is below ~500 active profiles, SMS testing will not produce statistically reliable results. Recommend a consent capture campaign (post-purchase, account creation) before launching SMS flows. Do not build SMS infrastructure until consent data is confirmed.</p>
+  </div>
+</div>
+
+<!-- ===== SLIDE 19: TECHNICAL DEPENDENCIES ===== -->
+<div class=&quot;slide&quot;>
+  <div class=&quot;slide-num&quot;>19 / 22</div>
+  <div class=&quot;slide-label&quot;>Technical Dependencies</div>
+  <h2>What needs to be built or connected<br>before the full architecture is live.</h2>
+  <table style=&quot;margin-top:0.8%;&quot;>
+    <thead><tr><th>Dependency</th><th>Required for</th><th>What it does</th><th>Status</th><th>Priority</th></tr></thead>
+    <tbody>
+      <tr>
+        <td class=&quot;td-label&quot;>Audit all post-purchase and win-back flow trigger timing</td>
+        <td>All win-back flows</td>
+        <td>Current flow fires outside the re-engagement window. Must be paused before day 20–45 flows go live or contacts will receive duplicate outreach.</td>
+        <td class=&quot;td-warn&quot;>Active — needs pausing</td>
+        <td class=&quot;td-warn&quot;>Immediate</td>
+      </tr>
+      <tr>
+        <td class=&quot;td-label&quot;>Klaviyo metrics:read API key</td>
+        <td>Flow audit + all builds</td>
+        <td>Required for 27-flow audit and to confirm which post-purchase flows currently exist before building new ones. SOSTAC flags as a blocker.</td>
+        <td class=&quot;td-warn&quot;>Pending Stephanie</td>
+        <td class=&quot;td-warn&quot;>Immediate</td>
+      </tr>
+      <tr>
+        <td class=&quot;td-label&quot;>Appstle cancellation webhook → Klaviyo</td>
+        <td>Flow 5 (cancelled sub win-back)</td>
+        <td>Fires Klaviyo event when subscriber cancels. Required to trigger Flow 5.</td>
+        <td class=&quot;td-warn&quot;>Not connected</td>
+        <td class=&quot;td-warn&quot;>High</td>
+      </tr>
+      <tr>
+        <td class=&quot;td-label&quot;>appstle-cancellation-sync edge function</td>
+        <td>Flow 5 + Growth Room dashboard</td>
+        <td>Surfaces cancellation reasons into Growth Room. The biggest intelligence gap in the current dataset.</td>
+        <td class=&quot;td-warn&quot;>Not built</td>
+        <td class=&quot;td-warn&quot;>High</td>
+      </tr>
+      <tr>
+        <td class=&quot;td-label&quot;>Pre-cancel pause offer in Appstle</td>
+        <td>Flow 6</td>
+        <td>Native Appstle config change at cancel screen. Check if supported in current Appstle plan before building alternative.</td>
+        <td class=&quot;td-grey&quot;>Config check needed</td>
+        <td class=&quot;td-green&quot;>Medium — low effort</td>
+      </tr>
+      <tr>
+        <td class=&quot;td-label&quot;>Pack-size variant tag on Klaviyo profiles</td>
+        <td>Flow 3 trigger timing</td>
+        <td>Tags OTP buyers by variant (IMM-015/030/090) so lapse trigger fires at day 20 vs day 32. Check Shopify→Klaviyo sync.</td>
+        <td class=&quot;td-grey&quot;>Check required</td>
+        <td class=&quot;td-green&quot;>Medium</td>
+      </tr>
+      <tr>
+        <td class=&quot;td-label&quot;>Efficacy/outcome content sign-off</td>
+        <td>All flows — placeholder content</td>
+        <td>Specific product claims in day 5, 12, 28 emails marked as placeholder. Stephanie to approve before flows go live. Blocks launch.</td>
+        <td class=&quot;td-warn&quot;>Pending</td>
+        <td class=&quot;td-warn&quot;>High — launch blocker</td>
+      </tr>
+      <tr>
+        <td class=&quot;td-label&quot;>SMS consent audit</td>
+        <td>All SMS test messages</td>
+        <td>Count of active SMS-consented profiles. Determines whether SMS testing is viable.</td>
+        <td class=&quot;td-grey&quot;>Unknown</td>
+        <td class=&quot;td-green&quot;>Medium</td>
+      </tr>
+    </tbody>
+  </table>
+</div>
+
+<!-- ===== SLIDE 20: MEASUREMENT ===== -->
+<div class=&quot;slide&quot;>
+  <div class=&quot;slide-num&quot;>20 / 22</div>
+  <div class=&quot;slide-label&quot;>Measurement Framework</div>
+  <h2>What to measure, when to call it working,<br>and what not to optimise too early.</h2>
+  <div class=&quot;two-col&quot; style=&quot;margin-top:0.8%;&quot;>
+    <div>
+      <table>
+        <thead><tr><th>Flow</th><th>Primary KPI</th><th>Baseline</th><th>Target</th></tr></thead>
+        <tbody>
+          <tr><td class=&quot;td-label&quot;>Flow 1 — Onboarding</td><td>O1→O2 retention</td><td>80.1%</td><td class=&quot;td-green&quot;>85%</td></tr>
+          <tr><td class=&quot;td-label&quot;>Flow 2 — O2→O3 save</td><td>O2→O3 retention</td><td>72.8%</td><td class=&quot;td-green&quot;>78%</td></tr>
+          <tr><td class=&quot;td-label&quot;>Flow 3 — IMMUNE OTP</td><td>Reorder rate by day 45</td><td>44.9% lifetime</td><td class=&quot;td-green&quot;>50%+</td></tr>
+          <tr><td class=&quot;td-label&quot;>Flow 4 — SNOOZE OTP</td><td>Reorder rate by day 50</td><td>Not isolated</td><td class=&quot;td-grey&quot;>Establish baseline</td></tr>
+          <tr><td class=&quot;td-label&quot;>Flow 5 — Sub win-back</td><td>Re-subscribe rate</td><td>Not measured</td><td class=&quot;td-grey&quot;>Establish baseline</td></tr>
+          <tr><td class=&quot;td-label&quot;>Flow 6 — Pre-cancel</td><td>Net cancellation rate</td><td>Not measured</td><td class=&quot;td-grey&quot;>Test: pause vs cancel</td></tr>
+          <tr><td class=&quot;td-label&quot;>Flow 7 — Dec cohort</td><td>Reactivation rate</td><td>9.8% M5</td><td class=&quot;td-grey&quot;>Inform paid media brief</td></tr>
+          <tr><td class=&quot;td-label&quot;>M1 retention (subscriber cohort)</td><td>New subscribers placing a 2nd sub order in M+1</td><td>22.1% (Apr 26)</td><td class=&quot;td-green&quot;>40%+ within 3 months</td></tr>
+        </tbody>
+      </table>
+    </div>
+    <div>
+      <ul class=&quot;anno-list&quot;>
+        <li>
+          <div class=&quot;anno-label anno-action&quot;>Minimum measurement window</div>
+          90 days post-launch for Flows 1 and 2. The 30-day subscription cadence means 3 order cycles are needed for reliable retention data. Do not optimise before the 90-day window closes.
+        </li>
+        <li>
+          <div class=&quot;anno-label anno-risk&quot;>What not to optimise early</div>
+          Do not A/B test subject lines in the first 90 days. Sample sizes will be too small for reliable results. Establish the baseline first. One variable at a time — SOSTAC testing playbook principle.
+        </li>
+        <li>
+          <div class=&quot;anno-label anno-key&quot;>Cancellation reason data</div>
+          Once Appstle webhook is connected, track cancel reasons monthly. Top reason should directly inform flow content — &quot;too expensive&quot; requires different O2→O3 email than &quot;didn't notice a difference.&quot;
+        </li>
+        <li>
+          <div class=&quot;anno-label anno-action&quot;>Growth Room integration</div>
+          Pull O1→O2 and O2→O3 retention into Retention Specialist as tracked metrics. Monthly cohort view. Flag any month where churn rises more than 2pp above baseline.
+        </li>
+        <li>
+          <div class=&quot;anno-label anno-action&quot;>Unsubscribe rate threshold</div>
+          Flag any flow with unsubscribe rate above 0.3% — content is too aggressive or poorly timed. SMS opt-out above 2% means timing or content is wrong — stop and revise before scaling.
+        </li>
+      </ul>
+    </div>
+  </div>
+</div>
+
+<!-- ===== SLIDE 21: JAMES BRIEF ===== -->
+<div class=&quot;slide&quot;>
+  <div class=&quot;slide-num&quot;>21 / 22</div>
+  <div class=&quot;slide-label&quot;>Klaviyo Brief — James at Giant Leap</div>
+  <h2>Scoped brief for email execution.<br>Sequence and priority order.</h2>
+  <p>The SOSTAC identifies James as a single-person resource doing email execution. The win-back programme and post-purchase onboarding are additional scope. This brief defines the build sequence and what is needed before each flow can go live.</p>
+  <table style=&quot;margin-top:0.8%;&quot;>
+    <thead><tr><th>Priority</th><th>Action</th><th>Dependency</th><!-- build effort removed --></tr></thead>
+    <tbody>
+      <tr>
+        <td><span class=&quot;priority-badge p-high&quot;>P1</span></td>
+        <td class=&quot;td-label&quot;>Audit all post-purchase and win-back flow trigger timing</td>
+        <td>None — do immediately</td>
+        
+      </tr>
+      <tr>
+        <td><span class=&quot;priority-badge p-high&quot;>P1</span></td>
+        <td class=&quot;td-label&quot;>Audit all 27 existing flows against lifecycle</td>
+        <td>Klaviyo metrics:read API live in Growth Room</td>
+        
+      </tr>
+      <tr>
+        <td><span class=&quot;priority-badge p-high&quot;>P1</span></td>
+        <td class=&quot;td-label&quot;>Build Flow 1 — subscriber onboarding (IMMUNE + SNOOZE variants)</td>
+        <td>Efficacy content sign-off from Stephanie</td>
+        
+      </tr>
+      <tr>
+        <td><span class=&quot;priority-badge p-high&quot;>P1</span></td>
+        <td class=&quot;td-label&quot;>Build Flow 2 — O2→O3 churn prevention (IMMUNE + SNOOZE)</td>
+        <td>Efficacy content sign-off. Highest commercial leverage.</td>
+        
+      </tr>
+      <tr>
+        <td><span class=&quot;priority-badge p-high&quot;>P1</span></td>
+        <td class=&quot;td-label&quot;>Build Flow 3 — IMMUNE OTP win-back (day 20/32 trigger by variant)</td>
+        <td>Pack-size variant tag on Klaviyo profiles confirmed</td>
+        
+      </tr>
+      <tr>
+        <td><span class=&quot;priority-badge p-med&quot;>P2</span></td>
+        <td class=&quot;td-label&quot;>Build Flow 4 — SNOOZE OTP win-back</td>
+        <td>SNOOZE efficacy brief approved. After Flow 3 stable.</td>
+        
+      </tr>
+      <tr>
+        <td><span class=&quot;priority-badge p-med&quot;>P2</span></td>
+        <td class=&quot;td-label&quot;>Build Flow 5 — cancelled subscriber win-back</td>
+        <td>Appstle cancellation webhook connected</td>
+        
+      </tr>
+      <tr>
+        <td><span class=&quot;priority-badge p-med&quot;>P2</span></td>
+        <td class=&quot;td-label&quot;>Run Flow 7 — Dec 2025 cohort re-engagement (one-time campaign)</td>
+        <td>Appstle status check on 652 subscribers complete</td>
+        
+      </tr>
+      <tr>
+        <td><span class=&quot;priority-badge p-low&quot;>P3</span></td>
+        <td class=&quot;td-label&quot;>SMS flows at Flow 1/2/3 trigger points</td>
+        <td>SMS consent audit confirms viable list size</td>
+        
+      </tr>
+    </tbody>
+  </table>
+</div>
+
+<!-- ===== SLIDE 22: SUMMARY ===== -->
+<div class=&quot;slide&quot;>
+  <div class=&quot;slide-num&quot;>22 / 22</div>
+  <div class=&quot;slide-label&quot;>Summary</div>
+  <h2>Seven flows. One principle:<br>get subscribers to order 4.</h2>
+  <div class=&quot;flow-grid&quot; style=&quot;margin-top:0.6%;&quot;>
+    <div class=&quot;flow-card&quot;>
+      <div class=&quot;flow-num&quot;>1</div>
+      <span class=&quot;flow-tag tag-primary&quot;>Launch first</span>
+      <div class=&quot;flow-title&quot;>Subscriber Onboarding</div>
+      <ul>
+        <li>5 emails + SMS · days 1–28</li>
+        <li>Target: O1→O2 80% → 85%</li>
+        <li>Habit formation before 2nd delivery</li>
+        <li>IMMUNE + SNOOZE variants</li>
+      </ul>
+    </div>
+    <div class=&quot;flow-card&quot;>
+      <div class=&quot;flow-num&quot;>2</div>
+      <span class=&quot;flow-tag tag-primary&quot;>Highest leverage</span>
+      <div class=&quot;flow-title&quot;>O2→O3 Prevention</div>
+      <ul>
+        <li>3 emails + SMS · days 1–25 post O2</li>
+        <li>Target: O2→O3 73% → 78%</li>
+        <li>Recovers ~98 subscribers/cycle</li>
+        <li>Proactive cadence management</li>
+      </ul>
+    </div>
+    <div class=&quot;flow-card&quot;>
+      <div class=&quot;flow-num&quot;>3+4</div>
+      <span class=&quot;flow-tag tag-primary&quot;>Win-back OTP</span>
+      <div class=&quot;flow-title&quot;>Lapsed OTP Buyers</div>
+      <ul>
+        <li>IMMUNE: day 20/32 trigger</li>
+        <li>SNOOZE: day 32 trigger</li>
+        <li>3 emails · discount at day 38 only</li>
+        <li>Relo Winback trigger audit required first</li>
+      </ul>
+    </div>
+    <div class=&quot;flow-card&quot;>
+      <div class=&quot;flow-num&quot;>5</div>
+      <span class=&quot;flow-tag tag-secondary&quot;>After Appstle webhook</span>
+      <div class=&quot;flow-title&quot;>Cancelled Sub Win-Back</div>
+      <ul>
+        <li>3 emails · post-O1 and O2 variants</li>
+        <li>Cancel survey at day 7</li>
+        <li>Fresh-start framing at day 45</li>
+        <li>Requires cancellation webhook</li>
+      </ul>
+    </div>
+  </div>
+  <div class=&quot;flow-grid-3&quot; style=&quot;margin-top:0.8%;&quot;>
+    <div class=&quot;flow-card&quot;>
+      <div class=&quot;flow-num&quot;>6</div>
+      <span class=&quot;flow-tag tag-primary&quot;>Config check first</span>
+      <div class=&quot;flow-title&quot;>Pre-Cancel Save</div>
+      <ul>
+        <li>Appstle cancel screen intervention</li>
+        <li>Pause offer only — no discount</li>
+        <li>Possibly no dev required</li>
+        <li>Highest leverage, lowest effort</li>
+      </ul>
+    </div>
+    <div class=&quot;flow-card&quot;>
+      <div class=&quot;flow-num&quot;>7</div>
+      <span class=&quot;flow-tag tag-fix&quot;>One-time campaign</span>
+      <div class=&quot;flow-title&quot;>Dec 2025 Cohort</div>
+      <ul>
+        <li>652 subscribers · 9.8% M5</li>
+        <li>Appstle status check before send</li>
+        <li>Founder voice for Email 1</li>
+        <li>Response rate informs paid media brief</li>
+      </ul>
+    </div>
+    <div class=&quot;flow-card&quot; style=&quot;background:var(--warn-light);border-color:var(--warn);&quot;>
+      <div style=&quot;font-family:'Cormorant Garamond',serif;font-size:1.2vw;font-weight:700;margin-bottom:0.8%;color:var(--warn);&quot;>Do first</div>
+      <ul>
+        <li style=&quot;font-size:0.72vw;padding:0.4% 0 0.4% 0.8%;border-bottom:1px solid var(--rule);position:relative;&quot;><span style=&quot;position:absolute;left:0;color:var(--warn);&quot;>⚑</span>Audit all post-purchase flow trigger timing</li>
+        <li style=&quot;font-size:0.72vw;padding:0.4% 0 0.4% 0.8%;border-bottom:1px solid var(--rule);position:relative;&quot;><span style=&quot;position:absolute;left:0;color:var(--warn);&quot;>⚑</span>Confirm Klaviyo API key with Stephanie</li>
+        <li style=&quot;font-size:0.72vw;padding:0.4% 0 0.4% 0.8%;border-bottom:1px solid var(--rule);position:relative;&quot;><span style=&quot;position:absolute;left:0;color:var(--warn);&quot;>⚑</span>Get efficacy content sign-off (launch blocker)</li>
+        <li style=&quot;font-size:0.72vw;padding:0.4% 0 0.4% 0.8%;border-bottom:1px solid var(--rule);position:relative;&quot;><span style=&quot;position:absolute;left:0;color:var(--warn);&quot;>⚑</span>Build Appstle cancellation-sync edge function</li>
+        <li style=&quot;font-size:0.72vw;padding:0.4% 0 0.4% 0.8%;position:relative;&quot;><span style=&quot;position:absolute;left:0;color:var(--warn);&quot;>⚑</span>Investigate March 2026 M1 step-change</li>
+      </ul>
+    </div>
+  </div>
+</div>
+
+</div></div>
+
+<div id=&quot;nav&quot;>
+  <button id=&quot;prev&quot; onclick=&quot;changeSlide(-1)&quot; disabled>&amp;#8592;</button>
+  <span id=&quot;slide-counter&quot;>1 / 22</span>
+  <button id=&quot;next&quot; onclick=&quot;changeSlide(1)&quot;>&amp;#8594;</button>
+</div>
+
+<script>
+  const slides = document.querySelectorAll('.slide');
+  let current = 0;
+  const total = slides.length;
+  function changeSlide(dir) {
+    slides[current].classList.remove('active');
+    current = Math.max(0, Math.min(total-1, current+dir));
+    slides[current].classList.add('active');
+    document.getElementById('slide-counter').textContent = (current+1)+' / '+total;
+    document.getElementById('prev').disabled = current===0;
+    document.getElementById('next').disabled = current===total-1;
+  }
+  document.addEventListener('keydown', e => {
+    if (e.key==='ArrowRight'||e.key==='ArrowDown') changeSlide(1);
+    if (e.key==='ArrowLeft'||e.key==='ArrowUp') changeSlide(-1);
+  });
+</script>
+<div style=&quot;position:fixed; top:16px; left:50%; transform:translateX(-50%); z-index:9999;&quot;>
+  <button onclick=&quot;parent.closeOverlay()&quot; style=&quot;background:rgba(0,0,0,0.7); color:#fff; border:none; padding:7px 18px; font-size:11px; font-family:sans-serif; letter-spacing:0.1em; text-transform:uppercase; cursor:pointer; border-radius:20px;&quot;>&amp;#8592; Back</button>
+</div>
+</body>
+</html>"></iframe>
+</div>
+
+<div id="overlay-briefs" class="overlay">
+  <iframe srcdoc="<!DOCTYPE html>
+<html lang=&quot;en&quot;>
+<head>
+<meta charset=&quot;UTF-8&quot;>
+<meta name=&quot;viewport&quot; content=&quot;width=device-width, initial-scale=1.0&quot;>
+<title>Leapfrog Remedies — Klaviyo &amp; Content Briefs</title>
+<style>
+  @import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,600;0,700;1,400;1,600&amp;family=DM+Sans:wght@300;400;500;600;700&amp;display=swap');
+
+  :root {
+    --black: #1a1f1a;
+    --green: #2d5a3d;
+    --green-mid: #4a7c59;
+    --green-light: #e4ede7;
+    --cream: #f7f5f0;
+    --white: #ffffff;
+    --grey: #6b6b5f;
+    --grey-light: #e8e5de;
+    --rule: #d4d0c8;
+    --warn: #8b3a1a;
+    --warn-light: #faeae3;
+    --sidebar-w: 300px;
+  }
+
+  * { margin:0; padding:0; box-sizing:border-box; }
+  html { scroll-behavior:smooth; }
+
+  body {
+    font-family:'DM Sans', sans-serif;
+    background:var(--cream);
+    color:var(--black);
+    font-size:15px;
+    line-height:1.65;
+  }
+
+  h1,h2,h3,h4 { font-family:'Cormorant Garamond', serif; font-weight:700; color:var(--black); }
+  a { color:var(--green); text-decoration:none; }
+
+  /* ===== Sidebar ===== */
+  .sidebar {
+    position:fixed; top:0; left:0; bottom:0; width:var(--sidebar-w);
+    background:var(--green); color:var(--white);
+    overflow-y:auto; display:flex; flex-direction:column;
+  }
+  .sidebar-header {
+    padding:32px 28px 24px; border-bottom:1px solid rgba(255,255,255,0.14);
+    flex-shrink:0;
+  }
+  .sidebar-eyebrow {
+    font-size:0.65rem; letter-spacing:0.18em; text-transform:uppercase;
+    color:rgba(255,255,255,0.45); font-weight:700; margin-bottom:6px;
+  }
+  .sidebar-title {
+    font-family:'Cormorant Garamond', serif; font-size:1.55rem;
+    line-height:1.2; color:var(--white); font-weight:700;
+  }
+  .sidebar-meta {
+    font-size:0.72rem; color:rgba(255,255,255,0.45); margin-top:8px; line-height:1.5;
+  }
+  .sidebar nav { padding:20px 0 40px; }
+  .nav-group { margin-bottom:24px; }
+  .nav-group-label {
+    font-size:0.62rem; letter-spacing:0.18em; text-transform:uppercase;
+    color:rgba(255,255,255,0.38); font-weight:700;
+    padding:0 28px; margin-bottom:6px; display:block;
+  }
+  .nav-group a {
+    display:block; color:rgba(255,255,255,0.72); font-size:0.84rem;
+    padding:6px 28px 6px 28px; border-left:2px solid transparent;
+    line-height:1.45; transition:color 0.15s, border-color 0.15s, background 0.15s;
+  }
+  .nav-group a:hover { color:#fff; background:rgba(255,255,255,0.06); }
+  .nav-group a.active { color:#fff; font-weight:600; border-left-color:rgba(255,255,255,0.7); background:rgba(255,255,255,0.08); }
+  .nav-group a.sub {
+    font-size:0.78rem; padding-left:40px; color:rgba(255,255,255,0.55);
+  }
+  .nav-group a.sub:hover { color:rgba(255,255,255,0.85); }
+  .nav-divider {
+    height:1px; background:rgba(255,255,255,0.12);
+    margin:16px 28px 20px;
+  }
+
+  /* ===== Main ===== */
+  main { margin-left:var(--sidebar-w); }
+
+  /* ===== Hero ===== */
+  .hero {
+    background:var(--green); padding:52px 64px 44px;
+  }
+  .hero-eyebrow {
+    font-size:0.68rem; letter-spacing:0.2em; text-transform:uppercase;
+    color:rgba(255,255,255,0.5); font-weight:700; margin-bottom:14px;
+  }
+  .hero h1 { font-size:3rem; color:#fff; line-height:1.1; margin-bottom:14px; }
+  .hero-sub {
+    font-size:0.95rem; color:rgba(255,255,255,0.68); line-height:1.7;
+  }
+  .hero-sub strong { color:rgba(255,255,255,0.9); }
+  .hero-meta {
+    display:flex; gap:32px; margin-top:24px; padding-top:24px;
+    border-top:1px solid rgba(255,255,255,0.18); flex-wrap:wrap;
+  }
+  .hero-meta-item { font-size:0.8rem; color:rgba(255,255,255,0.55); }
+  .hero-meta-item strong { display:block; color:rgba(255,255,255,0.88); font-size:0.88rem; margin-bottom:2px; }
+
+  /* ===== Content area ===== */
+  .content { padding:40px 64px 100px; }
+
+  /* ===== Brief header ===== */
+  .brief-header {
+    display:flex; align-items:center; gap:18px;
+    margin:48px 0 32px; padding-bottom:16px;
+    border-bottom:2px solid var(--green);
+    scroll-margin-top:24px;
+  }
+  .brief-number {
+    font-family:'Cormorant Garamond', serif; font-size:4rem; font-weight:700;
+    color:var(--rule); line-height:1; flex-shrink:0;
+  }
+  .brief-header-text h2 { font-size:2.4rem; line-height:1.1; margin-bottom:4px; }
+  .brief-header-text .brief-tag {
+    font-size:0.64rem; font-weight:700; letter-spacing:0.16em; text-transform:uppercase;
+    color:var(--green-mid);
+  }
+  .brief-header:first-child { margin-top:0; }
+
+  /* ===== Section ===== */
+  .section {
+    margin-bottom:32px; scroll-margin-top:24px;
+  }
+  .section-header {
+    display:flex; align-items:baseline; gap:12px; margin-bottom:14px;
+  }
+  .section-num {
+    font-family:'Cormorant Garamond', serif; font-size:1.6rem;
+    color:var(--rule); font-weight:700; flex-shrink:0;
+  }
+  .section h3 {
+    font-size:1.5rem; color:var(--black);
+  }
+  .section p {
+    font-size:0.94rem; color:#3a3a32; line-height:1.7; margin-bottom:10px;
+  }
+  .section p:last-child { margin-bottom:0; }
+
+  /* ===== Sub-section ===== */
+  .subsection { margin:20px 0 14px; }
+  .subsection h4 {
+    font-family:'Cormorant Garamond', serif; font-size:1.2rem;
+    color:var(--green); margin-bottom:8px;
+  }
+
+  /* ===== Cards ===== */
+  .card {
+    background:var(--white); border:1px solid var(--rule);
+    border-radius:3px; padding:28px 32px; margin-bottom:20px;
+  }
+  .card.accent { border-top:4px solid var(--green-mid); }
+  .card.flow {
+    border-left:4px solid var(--green); padding:22px 26px;
+    background:var(--cream);
+  }
+  .card .card-label {
+    font-size:0.62rem; letter-spacing:0.16em; text-transform:uppercase;
+    color:var(--grey); font-weight:700; margin-bottom:10px;
+  }
+  .card h4 { font-size:1.25rem; margin-bottom:6px; }
+
+  /* ===== Flow card ===== */
+  .flow-card { margin-bottom:16px; }
+  .flow-title-row {
+    display:flex; align-items:baseline; gap:12px; margin-bottom:10px;
+  }
+  .flow-num {
+    font-family:'Cormorant Garamond', serif; font-size:2.2rem;
+    color:var(--rule); font-weight:700; line-height:1; flex-shrink:0;
+    width:36px;
+  }
+  .flow-name { font-size:1.2rem; color:var(--black); }
+  .flow-tag {
+    font-size:0.58rem; font-weight:700; letter-spacing:0.14em;
+    text-transform:uppercase; padding:3px 9px; border-radius:2px;
+    background:var(--green); color:#fff; white-space:nowrap;
+    align-self:center;
+  }
+  .flow-tag.warn { background:var(--warn); }
+  .flow-tag.secondary { background:var(--grey); }
+
+  /* ===== Meta grid ===== */
+  .meta-grid {
+    display:grid; grid-template-columns:repeat(4,1fr);
+    gap:1px; background:var(--rule);
+    border:1px solid var(--rule); margin-bottom:16px;
+  }
+  .meta-grid.cols3 { grid-template-columns:repeat(3,1fr); }
+  .meta-grid.cols2 { grid-template-columns:repeat(2,1fr); }
+  .meta-block { background:var(--grey-light); padding:12px 14px; }
+  .meta-block .ml { font-size:0.58rem; letter-spacing:0.12em; text-transform:uppercase; color:var(--grey); font-weight:700; margin-bottom:3px; }
+  .meta-block .mv { font-size:0.88rem; font-weight:600; color:var(--black); }
+
+  /* ===== Callouts ===== */
+  .callout {
+    background:var(--green-light); border-left:4px solid var(--green);
+    padding:14px 18px; border-radius:2px; margin:14px 0;
+  }
+  .callout.warn { background:var(--warn-light); border-left-color:var(--warn); }
+  .callout.neutral { background:var(--grey-light); border-left-color:var(--grey); }
+  .callout .cl {
+    font-size:0.6rem; letter-spacing:0.16em; text-transform:uppercase;
+    font-weight:700; margin-bottom:6px; color:var(--green);
+  }
+  .callout.warn .cl { color:var(--warn); }
+  .callout.neutral .cl { color:var(--grey); }
+  .callout p { margin:0; font-size:0.88rem; line-height:1.65; }
+  .callout p + p { margin-top:8px; }
+
+  /* ===== Tables ===== */
+  table { width:100%; border-collapse:collapse; margin:14px 0 20px; }
+  thead tr { background:var(--black); color:var(--white); }
+  thead th {
+    padding:9px 13px; text-align:left; font-size:0.6rem;
+    font-weight:700; letter-spacing:0.12em; text-transform:uppercase;
+    font-family:'DM Sans', sans-serif;
+  }
+  tbody tr { border-bottom:1px solid var(--rule); vertical-align:top; }
+  tbody tr:nth-child(even) { background:var(--grey-light); }
+  tbody tr:last-child { border-bottom:none; }
+  td { padding:10px 13px; font-size:0.85rem; line-height:1.55; color:var(--black); }
+  td:first-child { font-weight:600; }
+  td strong { color:var(--green); }
+  td em { color:var(--grey); font-style:normal; font-size:0.82rem; }
+
+  /* Gap table */
+  .gap-table td:first-child { color:var(--black); font-weight:400; }
+  .gap-table td:last-child { color:var(--grey); font-size:0.82rem; font-weight:400; }
+  .gap-tag {
+    display:inline-block; font-size:0.58rem; font-weight:700; letter-spacing:0.1em;
+    text-transform:uppercase; padding:2px 7px; border-radius:2px;
+    background:var(--warn-light); color:var(--warn); margin-left:6px;
+    vertical-align:middle; white-space:nowrap;
+  }
+
+  /* Sequence list */
+  .seq-list { list-style:none; margin:10px 0 0; }
+  .seq-list li {
+    display:flex; gap:14px; padding:8px 0;
+    border-bottom:1px solid var(--rule); font-size:0.88rem; line-height:1.5;
+  }
+  .seq-list li:last-child { border-bottom:none; }
+  .seq-day {
+    font-family:'Cormorant Garamond', serif; font-weight:700;
+    font-size:1.1rem; color:var(--green); flex-shrink:0; width:48px;
+    padding-top:1px;
+  }
+  .seq-content { flex:1; }
+  .seq-subject { font-weight:600; color:var(--black); display:block; margin-bottom:2px; }
+  .seq-body { color:var(--grey); font-size:0.83rem; }
+  .placeholder-flag {
+    display:inline-block; font-size:0.6rem; font-weight:700; letter-spacing:0.1em;
+    text-transform:uppercase; padding:1px 6px; border-radius:2px;
+    background:#fff3cd; color:#856404; margin-left:6px; vertical-align:middle;
+  }
+  .sms-flag {
+    display:inline-block; font-size:0.6rem; font-weight:700; letter-spacing:0.08em;
+    text-transform:uppercase; padding:1px 6px; border-radius:2px;
+    background:var(--warn-light); color:var(--warn); margin-left:6px; vertical-align:middle;
+  }
+
+  /* Bullet list */
+  .blist { list-style:none; margin:10px 0; }
+  .blist li {
+    padding:7px 0 7px 18px; border-bottom:1px solid var(--rule);
+    position:relative; font-size:0.9rem; color:#3a3a32; line-height:1.55;
+  }
+  .blist li:last-child { border-bottom:none; }
+  .blist li::before { content:'—'; position:absolute; left:0; color:var(--grey); }
+
+  /* Pillar card */
+  .pillar-grid { display:grid; grid-template-columns:1fr 1fr; gap:16px; margin:16px 0; }
+  .pillar-card {
+    background:var(--white); border:1px solid var(--rule); border-radius:3px;
+    padding:20px 22px; border-top:3px solid var(--green-mid);
+  }
+  .pillar-card .pnum {
+    font-family:'Cormorant Garamond', serif; font-size:2rem; font-weight:700;
+    color:var(--rule); line-height:1; margin-bottom:6px;
+  }
+  .pillar-card h4 { font-size:1.15rem; margin-bottom:6px; }
+  .pillar-card .rationale {
+    font-size:0.83rem; color:var(--grey); line-height:1.55; margin-top:6px;
+  }
+
+  /* Priority tag */
+  .ptag {
+    display:inline-block; font-size:0.58rem; font-weight:700; letter-spacing:0.12em;
+    text-transform:uppercase; padding:2px 8px; border-radius:2px;
+    background:var(--green); color:#fff; vertical-align:middle; margin-left:8px;
+  }
+
+  /* Responsive */
+  @media (max-width:960px) {
+    .sidebar { position:relative; width:100%; height:auto; }
+    main { margin-left:0; }
+    .hero { padding:36px 24px; }
+    .hero h1 { font-size:2.2rem; }
+    .content { padding:28px 24px 60px; }
+    .pillar-grid { grid-template-columns:1fr; }
+    .meta-grid { grid-template-columns:1fr 1fr; }
+  }
+</style>
+</head>
+<body>
+
+<nav class=&quot;sidebar&quot;>
+  <div class=&quot;sidebar-header&quot;>
+    <div class=&quot;sidebar-eyebrow&quot;>Leapfrog Remedies</div>
+    <div class=&quot;sidebar-title&quot;>Klaviyo &amp;amp; Content<br>Briefs</div>
+    <div class=&quot;sidebar-meta&quot;>Source: SOSTAC v29 · June 2026<br>Prepared by Personaify</div>
+  </div>
+  <nav>
+    <div class=&quot;nav-divider&quot;></div>
+
+    <div class=&quot;nav-group&quot;>
+      <span class=&quot;nav-group-label&quot;>Brief 1 — Klaviyo</span>
+      <a href=&quot;#kb-segments&quot;>1. Audience Segments</a>
+      <a href=&quot;#kb-flows&quot;>2. Flow Architecture</a>
+      <a href=&quot;#kb-flow1&quot; class=&quot;sub&quot;>Flow 1 — Subscriber Onboarding</a>
+      <a href=&quot;#kb-flow2&quot; class=&quot;sub&quot;>Flow 2 — Order 2–3 Churn Prevention</a>
+      <a href=&quot;#kb-flow3&quot; class=&quot;sub&quot;>Flow 3 — Win-Back OTP</a>
+      <a href=&quot;#kb-flow4&quot; class=&quot;sub&quot;>Flow 4 — Win-Back Cancelled Subs</a>
+      <a href=&quot;#kb-flow5&quot; class=&quot;sub&quot;>Flow 5 — Pre-Cancel Save</a>
+      <a href=&quot;#kb-flow6&quot; class=&quot;sub&quot;>Flow 6 — Dec 2025 Cohort</a>
+      <a href=&quot;#kb-flow7&quot; class=&quot;sub&quot;>Flow 7 — SMS</a>
+      <a href=&quot;#kb-segmentation&quot;>3. Segmentation Rules</a>
+      <a href=&quot;#kb-suppression&quot;>4. Suppression &amp;amp; Frequency</a>
+      <a href=&quot;#kb-tone&quot;>5. Tone &amp;amp; Messaging</a>
+      <a href=&quot;#kb-kpis&quot;>6. KPIs</a>
+    </div>
+
+    <div class=&quot;nav-divider&quot;></div>
+
+    <div class=&quot;nav-group&quot;>
+      <span class=&quot;nav-group-label&quot;>Brief 2 — Content</span>
+      <a href=&quot;#cb-pillars&quot;>1. Content Pillars</a>
+      <a href=&quot;#cb-formats&quot;>2. Formats by Pillar</a>
+      <a href=&quot;#cb-mapping&quot;>3. Audience-to-Content</a>
+      <a href=&quot;#cb-tov&quot;>4. Tone &amp;amp; Brand Constraints</a>
+      <a href=&quot;#cb-cadence&quot;>5. Cadence &amp;amp; Channels</a>
+      <a href=&quot;#cb-geo&quot;>6. SEO &amp;amp; GEO</a>
+    </div>
+
+    <div class=&quot;nav-divider&quot;></div>
+
+    <div class=&quot;nav-group&quot;>
+      <span class=&quot;nav-group-label&quot;>Reference</span>
+      <a href=&quot;#gaps&quot;>Gaps &amp;amp; Open Questions</a>
+    </div>
+  </nav>
+</nav>
+
+<main>
+
+  <header class=&quot;hero&quot;>
+    <div class=&quot;hero-eyebrow&quot;>Leapfrog Remedies · Personaify · June 2026</div>
+    <h1>Klaviyo &amp;amp; Content Briefs</h1>
+    <p class=&quot;hero-sub&quot;>Extracted and synthesised from SOSTAC v29. <strong>Do not invent or assume</strong> — where the document is silent, gaps are flagged. Where specific language or framing is used in the source, it is preserved.</p>
+    <div class=&quot;hero-meta&quot;>
+      <div class=&quot;hero-meta-item&quot;><strong>Source</strong>SOSTAC v29 — Working Draft, June 2026</div>
+      <div class=&quot;hero-meta-item&quot;><strong>Prepared by</strong>Personaify for Leapfrog Remedies</div>
+      <div class=&quot;hero-meta-item&quot;><strong>Scope</strong>Klaviyo flows, segmentation, tone, KPIs; content pillars, formats, GEO</div>
+      <div class=&quot;hero-meta-item&quot;><strong>Status</strong>For review — not for circulation</div>
+    </div>
+  </header>
+
+  <div class=&quot;content&quot;>
+
+    <!-- ═══════════════════════════════════════════════════════════
+         BRIEF 1 — KLAVIYO
+    ════════════════════════════════════════════════════════════════ -->
+
+    <div class=&quot;brief-header&quot; id=&quot;brief-klaviyo&quot;>
+      <div class=&quot;brief-number&quot;>1</div>
+      <div class=&quot;brief-header-text&quot;>
+        <div class=&quot;brief-tag&quot;>Brief One</div>
+        <h2>Klaviyo Brief</h2>
+      </div>
+    </div>
+
+    <!-- 1. Audience Segments -->
+    <div class=&quot;section&quot; id=&quot;kb-segments&quot;>
+      <div class=&quot;section-header&quot;>
+        <span class=&quot;section-num&quot;>1</span>
+        <h3>Audience Segments</h3>
+      </div>
+
+      <div class=&quot;callout&quot;>
+        <div class=&quot;cl&quot;>Primary rule</div>
+        <p><strong>Segment by product first.</strong> IMMUNE and SNOOZE subscribers retain at materially different rates (88% vs 74.5% at 90 days) and require different content. The document is explicit: do not apply a single onboarding flow to both.</p>
+      </div>
+
+      <table>
+        <thead>
+          <tr><th>Segment</th><th>Definition</th><th>Treatment</th></tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>IMMUNE subscribers</td>
+            <td>Active subscription, IMMUNE product line</td>
+            <td>Separate onboarding, churn prevention, and win-back content. 14-order average and 88% 90-day retention as proof points.</td>
+          </tr>
+          <tr>
+            <td>SNOOZE subscribers</td>
+            <td>Active subscription, SNOOZE product line</td>
+            <td>Higher education burden at a higher price point. Must acknowledge variable results honestly. Lactium mechanism foregrounded — not lactoferrin.</td>
+          </tr>
+          <tr>
+            <td>OTP buyers — IMMUNE</td>
+            <td>Purchased once, no reorder, no subscription</td>
+            <td>Win-back by variant: IMM-015 fires day 20; IMM-030/090 fires day 32.</td>
+          </tr>
+          <tr>
+            <td>OTP buyers — SNOOZE</td>
+            <td>Purchased once, no reorder, no subscription</td>
+            <td>Win-back fires day 32. Must address why the product may not have worked — do not apply generic win-back copy.</td>
+          </tr>
+          <tr>
+            <td>Bundle customers</td>
+            <td>THE TRIO or THE DUO first purchasers</td>
+            <td>60-day median to second order — double the 30-day IMMUNE/SNOOZE cadence. Trigger window: 55–65 days. Standard supply-cycle logic misfires on this group.</td>
+          </tr>
+          <tr>
+            <td>December 2025 cohort</td>
+            <td>652 subscribers, 9.8% M5 retention</td>
+            <td>Split into active (do not contact), paused, and cancelled before any outreach. Active subscribers must be suppressed from this flow entirely.</td>
+          </tr>
+          <tr>
+            <td>FOCUS cross-buyers</td>
+            <td>IMMUNE subscribers who have never purchased FOCUS</td>
+            <td>IMMUNE cross-sell email timed after order 3 or later. Frame FOCUS as &quot;the deliberate daytime complement to IMMUNE's resilience foundation.&quot;</td>
+          </tr>
+        </tbody>
+      </table>
+
+      <div class=&quot;subsection&quot;>
+        <h4>Customer Personas (from Loox review analysis)</h4>
+        <p style=&quot;font-size:0.82rem; color:var(--grey); margin-bottom:10px;&quot;>Source: 10–14 data points per persona; 0.6–0.8% dataset coverage. Behavioural signals, not demographic data.</p>
+        <table>
+          <thead><tr><th>Persona</th><th>Emotional profile</th><th>Messaging implication</th></tr></thead>
+          <tbody>
+            <tr>
+              <td>High-Stakes Investors</td>
+              <td>&quot;Conflicted Appreciation&quot; — convinced of efficacy, frustrated by cost. Prevented from unconditional advocacy by price friction.</td>
+              <td>Make the value case undeniable before price objection arises. Do not reduce price — fix the communication.</td>
+            </tr>
+            <tr>
+              <td>Proactive Planners</td>
+              <td>High trust and loyalty. Views health as planned, not reactive. Family prevention use case. Highest positive sentiment of the three.</td>
+              <td>&quot;Staying ahead&quot; framing. Family/multi-pack use case — currently absent from brand content.</td>
+            </tr>
+            <tr>
+              <td>First-Sign Believers</td>
+              <td>Reorder pattern tied to illness onset, not calendar frequency.</td>
+              <td>Subscription model may be the wrong frame. <span class=&quot;gap-tag&quot;>Gap — unresolved</span></td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+
+    <!-- 2. Flow Architecture -->
+    <div class=&quot;section&quot; id=&quot;kb-flows&quot;>
+      <div class=&quot;section-header&quot;>
+        <span class=&quot;section-num&quot;>2</span>
+        <h3>Flow Architecture</h3>
+      </div>
+
+      <div class=&quot;callout&quot;>
+        <div class=&quot;cl&quot;>Primary objective</div>
+        <p>Get subscribers to <strong>order 4</strong>. Across IMMUNE and SNOOZE, customers who reach their fourth order show materially higher long-term retention. Every flow is evaluated against this gate. The entire architecture replaces the existing structure — the current 90-day win-back trigger is outside the re-engagement window and must be paused before any new flows go live.</p>
+      </div>
+
+      <!-- Flow 1 -->
+      <div class=&quot;card flow flow-card&quot; id=&quot;kb-flow1&quot;>
+        <div class=&quot;flow-title-row&quot;>
+          <span class=&quot;flow-num&quot;>1</span>
+          <h4 class=&quot;flow-name&quot;>Subscriber Onboarding</h4>
+          <span class=&quot;flow-tag&quot;>5 emails + SMS test</span>
+        </div>
+        <div class=&quot;meta-grid&quot;>
+          <div class=&quot;meta-block&quot;><div class=&quot;ml&quot;>Trigger</div><div class=&quot;mv&quot;>First subscription order confirmed</div></div>
+          <div class=&quot;meta-block&quot;><div class=&quot;ml&quot;>Window</div><div class=&quot;mv&quot;>Days 1–28</div></div>
+          <div class=&quot;meta-block&quot;><div class=&quot;ml&quot;>Variants</div><div class=&quot;mv&quot;>IMMUNE / SNOOZE (separate content)</div></div>
+          <div class=&quot;meta-block&quot;><div class=&quot;ml&quot;>Goal</div><div class=&quot;mv&quot;>Habit formation before second box arrives</div></div>
+        </div>
+        <ul class=&quot;seq-list&quot;>
+          <li>
+            <span class=&quot;seq-day&quot;>Day 1</span>
+            <div class=&quot;seq-content&quot;>
+              <span class=&quot;seq-subject&quot;>Your first order is on its way</span>
+              <span class=&quot;seq-body&quot;>Warm confirmation. Ingredient science in plain language. IMMUNE: Emergency SOS vs Pulse Method framing — ask which applies so future emails can be tailored. SNOOZE: 1–2 tablets one hour before bed or during night wake-ups. No upsell, no discount.</span>
+            </div>
+          </li>
+          <li>
+            <span class=&quot;seq-day&quot;>Day 5</span>
+            <div class=&quot;seq-content&quot;>
+              <span class=&quot;seq-subject&quot;>How it works — the biology behind the product <span class=&quot;placeholder-flag&quot;>Approval needed</span></span>
+              <span class=&quot;seq-body&quot;>IMMUNE: lactoferrin mechanism, link to science page. SNOOZE: Lactium® mechanism. Set expectations explicitly — Lactium shows population-level effects, not universal response. Placeholder — Stephanie to approve specific efficacy claims before flow goes live.</span>
+            </div>
+          </li>
+          <li>
+            <span class=&quot;seq-day&quot;>Day 10</span>
+            <div class=&quot;seq-content&quot;>
+              <span class=&quot;seq-subject&quot;>What our subscribers told us after 30 days <span class=&quot;sms-flag&quot;>SMS test</span></span>
+              <span class=&quot;seq-body&quot;>Social proof. Best Loox reviews by product. IMMUNE: 14-order average. SNOOZE: sleep outcome data. Product-specific only — do not cross-use content.</span>
+            </div>
+          </li>
+          <li>
+            <span class=&quot;seq-day&quot;>Day 18</span>
+            <div class=&quot;seq-content&quot;>
+              <span class=&quot;seq-subject&quot;>Pre-renewal prompt</span>
+              <span class=&quot;seq-body&quot;>Appstle status check before send — confirm subscriber is still active. Do not send to paused or cancelled contacts.</span>
+            </div>
+          </li>
+          <li>
+            <span class=&quot;seq-day&quot;>Day 25</span>
+            <div class=&quot;seq-content&quot;>
+              <span class=&quot;seq-subject&quot;>Soft cross-sell</span>
+              <span class=&quot;seq-body&quot;>IMMUNE → DAILY. SNOOZE → IMMUNE or FOCUS. Not a hard push. Light brand content.</span>
+            </div>
+          </li>
+        </ul>
+      </div>
+
+      <!-- Flow 2 -->
+      <div class=&quot;card flow flow-card&quot; id=&quot;kb-flow2&quot;>
+        <div class=&quot;flow-title-row&quot;>
+          <span class=&quot;flow-num&quot;>2</span>
+          <h4 class=&quot;flow-name&quot;>Order 2–3 Churn Prevention</h4>
+          <span class=&quot;flow-tag&quot;>3 emails + SMS test</span>
+          <span class=&quot;flow-tag warn&quot;>Highest-leverage build</span>
+        </div>
+        <div class=&quot;meta-grid cols3&quot;>
+          <div class=&quot;meta-block&quot;><div class=&quot;ml&quot;>Triggers</div><div class=&quot;mv&quot;>Post-order 2 placed; pre-order 3</div></div>
+          <div class=&quot;meta-block&quot;><div class=&quot;ml&quot;>Variants</div><div class=&quot;mv&quot;>IMMUNE / SNOOZE</div></div>
+          <div class=&quot;meta-block&quot;><div class=&quot;ml&quot;>Goal</div><div class=&quot;mv&quot;>Bridge the highest-risk order window</div></div>
+        </div>
+        <ul class=&quot;seq-list&quot;>
+          <li>
+            <span class=&quot;seq-day&quot;>Post O2</span>
+            <div class=&quot;seq-content&quot;>
+              <span class=&quot;seq-subject&quot;>Acknowledge the commitment, reinforce the science <span class=&quot;placeholder-flag&quot;>Approval needed</span></span>
+              <span class=&quot;seq-body&quot;>Efficacy claims require Stephanie sign-off. Placeholder until approved.</span>
+            </div>
+          </li>
+          <li>
+            <span class=&quot;seq-day&quot;>Pre O3</span>
+            <div class=&quot;seq-content&quot;>
+              <span class=&quot;seq-subject&quot;>Social proof and outcome data <span class=&quot;sms-flag&quot;>SMS test</span></span>
+              <span class=&quot;seq-body&quot;>IMMUNE: 14-order average, 88% 90-day retention. SNOOZE: sleep outcome data. Product-specific content only.</span>
+            </div>
+          </li>
+          <li>
+            <span class=&quot;seq-day&quot;>Pre O3</span>
+            <div class=&quot;seq-content&quot;>
+              <span class=&quot;seq-subject&quot;>Pre-renewal prompt</span>
+              <span class=&quot;seq-body&quot;>Appstle status check required before each send. Do not contact paused or cancelled subscribers.</span>
+            </div>
+          </li>
+        </ul>
+      </div>
+
+      <!-- Flow 3 -->
+      <div class=&quot;card flow flow-card&quot; id=&quot;kb-flow3&quot;>
+        <div class=&quot;flow-title-row&quot;>
+          <span class=&quot;flow-num&quot;>3</span>
+          <h4 class=&quot;flow-name&quot;>Win-Back: Lapsed One-Time Buyers</h4>
+          <span class=&quot;flow-tag&quot;>3 emails</span>
+        </div>
+        <div class=&quot;meta-grid&quot;>
+          <div class=&quot;meta-block&quot;><div class=&quot;ml&quot;>IMMUNE trigger</div><div class=&quot;mv&quot;>IMM-015: day 20 · IMM-030/090: day 32</div></div>
+          <div class=&quot;meta-block&quot;><div class=&quot;ml&quot;>SNOOZE trigger</div><div class=&quot;mv&quot;>Day 32</div></div>
+          <div class=&quot;meta-block&quot;><div class=&quot;ml&quot;>Window</div><div class=&quot;mv&quot;>Days 20–45</div></div>
+          <div class=&quot;meta-block&quot;><div class=&quot;ml&quot;>Exit</div><div class=&quot;mv&quot;>Suppress 90 days after final send</div></div>
+        </div>
+        <ul class=&quot;seq-list&quot;>
+          <li>
+            <span class=&quot;seq-day&quot;>Day 20/32</span>
+            <div class=&quot;seq-content&quot;>
+              <span class=&quot;seq-subject&quot;>Education email <span class=&quot;sms-flag&quot;>SMS test</span></span>
+              <span class=&quot;seq-body&quot;>Ingredient science. What to expect over 30 days. No offer at this stage. SNOOZE variant must address why the product may not have worked — do not apply generic copy.</span>
+            </div>
+          </li>
+          <li>
+            <span class=&quot;seq-day&quot;>Day 28/40</span>
+            <div class=&quot;seq-content&quot;>
+              <span class=&quot;seq-subject&quot;>Social proof and outcome consequence</span>
+              <span class=&quot;seq-body&quot;>Reviews and subscriber outcome data by product. &quot;You were right at the point the data says things improve — don't lose that.&quot; Urgency through science, not scarcity.</span>
+            </div>
+          </li>
+          <li>
+            <span class=&quot;seq-day&quot;>Day 38/50</span>
+            <div class=&quot;seq-content&quot;>
+              <span class=&quot;seq-subject&quot;>Re-engagement — final email <span class=&quot;placeholder-flag&quot;>Discount decision pending</span></span>
+              <span class=&quot;seq-body&quot;>Whether a one-off incentive is added at email 3 is unconfirmed. Standard subscribe-and-save offer (20% off first three orders, then 10%, plus subscription gifts) already exceeds a one-off 10% discount — may not require additional incentive. Needs sign-off. Suppress 90 days after send.</span>
+            </div>
+          </li>
+        </ul>
+        <div class=&quot;callout warn&quot; style=&quot;margin-top:12px;&quot;>
+          <div class=&quot;cl&quot;>Prerequisite</div>
+          <p>Existing 90-day win-back flow must be <strong>paused</strong> before this flow goes live. Variant tags must be active on Klaviyo profiles (Shopify→Klaviyo sync confirmed).</p>
+        </div>
+      </div>
+
+      <!-- Flow 4 -->
+      <div class=&quot;card flow flow-card&quot; id=&quot;kb-flow4&quot;>
+        <div class=&quot;flow-title-row&quot;>
+          <span class=&quot;flow-num&quot;>4</span>
+          <h4 class=&quot;flow-name&quot;>Win-Back: Cancelled Subscribers</h4>
+          <span class=&quot;flow-tag&quot;>3 emails · 2 variants</span>
+        </div>
+        <div class=&quot;meta-grid cols3&quot;>
+          <div class=&quot;meta-block&quot;><div class=&quot;ml&quot;>Trigger</div><div class=&quot;mv&quot;>Appstle cancellation webhook</div></div>
+          <div class=&quot;meta-block&quot;><div class=&quot;ml&quot;>Variants</div><div class=&quot;mv&quot;>By cancel point (early vs later lifecycle)</div></div>
+          <div class=&quot;meta-block&quot;><div class=&quot;ml&quot;>Exit</div><div class=&quot;mv&quot;>Suppress after day-30 email send</div></div>
+        </div>
+        <ul class=&quot;seq-list&quot;>
+          <li><span class=&quot;seq-day&quot;>Day 0</span><div class=&quot;seq-content&quot;><span class=&quot;seq-subject&quot;>Cancel reason survey + soft re-engagement</span><span class=&quot;seq-body&quot;>Reason data feeds product and CRO intelligence — treat this as diagnostic, not purely commercial.</span></div></li>
+          <li><span class=&quot;seq-day&quot;>Day 14</span><div class=&quot;seq-content&quot;><span class=&quot;seq-subject&quot;>Outcome reinforcement</span><span class=&quot;seq-body&quot;>IMMUNE: lactoferrin replenishment logic. SNOOZE: cumulative Lactium benefit.</span></div></li>
+          <li><span class=&quot;seq-day&quot;>Day 30</span><div class=&quot;seq-content&quot;><span class=&quot;seq-subject&quot;>Final re-engagement</span><span class=&quot;seq-body&quot;>Suppress from win-back flows after this send.</span></div></li>
+        </ul>
+        <div class=&quot;callout warn&quot; style=&quot;margin-top:12px;&quot;>
+          <div class=&quot;cl&quot;>Prerequisite</div>
+          <p>Appstle cancellation webhook must be connected to Klaviyo before this flow can be built.</p>
+        </div>
+      </div>
+
+      <!-- Flow 5 -->
+      <div class=&quot;card flow flow-card&quot; id=&quot;kb-flow5&quot;>
+        <div class=&quot;flow-title-row&quot;>
+          <span class=&quot;flow-num&quot;>5</span>
+          <h4 class=&quot;flow-name&quot;>Pre-Cancel Save</h4>
+          <span class=&quot;flow-tag&quot;>Intercept</span>
+        </div>
+        <div class=&quot;meta-grid cols3&quot;>
+          <div class=&quot;meta-block&quot;><div class=&quot;ml&quot;>Trigger</div><div class=&quot;mv&quot;>Subscriber clicks 'Cancel subscription' in Appstle portal</div></div>
+          <div class=&quot;meta-block&quot;><div class=&quot;ml&quot;>Goal</div><div class=&quot;mv&quot;>Intercept churn before it becomes a cancellation</div></div>
+          <div class=&quot;meta-block&quot;><div class=&quot;ml&quot;>If cancel confirmed</div><div class=&quot;mv&quot;>Automatically trigger Flow 4</div></div>
+        </div>
+        <div class=&quot;callout warn&quot;>
+          <div class=&quot;cl&quot;>Prerequisite</div>
+          <p>Requires Appstle cancel intercept capability — confirm on current plan before briefing. Single SMS only alongside any email. Do not extend to a multi-message sequence.</p>
+        </div>
+      </div>
+
+      <!-- Flow 6 -->
+      <div class=&quot;card flow flow-card&quot; id=&quot;kb-flow6&quot;>
+        <div class=&quot;flow-title-row&quot;>
+          <span class=&quot;flow-num&quot;>6</span>
+          <h4 class=&quot;flow-name&quot;>December 2025 Cohort Re-engagement</h4>
+          <span class=&quot;flow-tag secondary&quot;>Campaign · Not automated</span>
+        </div>
+        <div class=&quot;meta-grid cols3&quot;>
+          <div class=&quot;meta-block&quot;><div class=&quot;ml&quot;>Audience</div><div class=&quot;mv&quot;>652 subscribers · 9.8% M5 retention</div></div>
+          <div class=&quot;meta-block&quot;><div class=&quot;ml&quot;>For paused</div><div class=&quot;mv&quot;>Single re-engagement email</div></div>
+          <div class=&quot;meta-block&quot;><div class=&quot;ml&quot;>For cancelled</div><div class=&quot;mv&quot;>2-email sequence: survey + soft re-engagement; time-limited offer if no response</div></div>
+        </div>
+        <div class=&quot;callout warn&quot;>
+          <div class=&quot;cl&quot;>Critical prerequisite</div>
+          <p>Pull Appstle subscription status for all 652 before sending anything. Segment into active (do not contact), paused (re-engagement appropriate), cancelled (win-back appropriate). <strong>Do not send win-back content to active subscribers under any circumstances.</strong></p>
+        </div>
+      </div>
+
+      <!-- Flow 7 -->
+      <div class=&quot;card flow flow-card&quot; id=&quot;kb-flow7&quot;>
+        <div class=&quot;flow-title-row&quot;>
+          <span class=&quot;flow-num&quot;>7</span>
+          <h4 class=&quot;flow-name&quot;>SMS as a Test Channel</h4>
+          <span class=&quot;flow-tag secondary&quot;>4 trigger points</span>
+        </div>
+        <ul class=&quot;blist&quot; style=&quot;margin-top:8px;&quot;>
+          <li><strong>Trigger 1:</strong> Order confirmation — alongside email. &quot;Your [product] is on its way — here's what to expect in the first week.&quot;</li>
+          <li><strong>Trigger 2:</strong> Mid-onboarding day 10 — alongside Flow 1 email.</li>
+          <li><strong>Trigger 3:</strong> Post-cancel save attempt — alongside Flow 5. Single message only.</li>
+          <li><strong>Trigger 4:</strong> Win-back day 20 — alongside Flow 3 email. Short, product-specific.</li>
+        </ul>
+        <div class=&quot;callout warn&quot; style=&quot;margin-top:12px;&quot;>
+          <div class=&quot;cl&quot;>Prerequisite</div>
+          <p>Audit SMS-consented profiles in Klaviyo first. If consented list is below ~500 active profiles, do not build SMS infrastructure — run a consent capture campaign (post-purchase, account creation) before launching any SMS flows.</p>
+        </div>
+      </div>
+
+    </div>
+
+    <!-- 3. Segmentation Rules -->
+    <div class=&quot;section&quot; id=&quot;kb-segmentation&quot;>
+      <div class=&quot;section-header&quot;>
+        <span class=&quot;section-num&quot;>3</span>
+        <h3>Segmentation Rules for Campaigns</h3>
+      </div>
+      <table>
+        <thead><tr><th>Rule</th><th>Logic</th></tr></thead>
+        <tbody>
+          <tr>
+            <td>Product-level split</td>
+            <td>IMMUNE and SNOOZE receive different content in all flows. 13-point retention differential makes blended content structurally incorrect.</td>
+          </tr>
+          <tr>
+            <td>Subscription status at send time</td>
+            <td>Must be live-checked at every send, not only at flow entry. An active subscriber receiving win-back content is a system error.</td>
+          </tr>
+          <tr>
+            <td>Variant tag — IMMUNE OTP</td>
+            <td>IMM-015: trigger day 20. IMM-030/090: trigger day 32. Tag must be on Klaviyo profile from Shopify sync — confirm sync is active before build.</td>
+          </tr>
+          <tr>
+            <td>Order count gate</td>
+            <td>Suppress from at-risk and churn-prevention flows once order 4 is reached — goal achieved.</td>
+          </tr>
+          <tr>
+            <td>Bundle cadence</td>
+            <td>THE TRIO/DUO customers: 55–65 day trigger window. Do not apply 30-day supply-cycle logic — it will misfire.</td>
+          </tr>
+          <tr>
+            <td>December 2025 cohort</td>
+            <td>Three-way split (active/paused/cancelled) before any outreach. Active contacts suppressed from the flow entirely.</td>
+          </tr>
+          <tr>
+            <td>FOCUS cross-sell</td>
+            <td>IMMUNE subscribers who have never purchased FOCUS. Timing: after order 3 or later. Current baseline: 49 FOCUS-only customers.</td>
+          </tr>
+          <tr>
+            <td>SNOOZE WTP survey</td>
+            <td>Two distinct Klaviyo segments: current SNOOZE subscribers and churned SNOOZE customers. Churned cohort is the more diagnostically valuable. Anchor Van Westendorp questions at SKU level before deployment.</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+
+    <!-- 4. Suppression -->
+    <div class=&quot;section&quot; id=&quot;kb-suppression&quot;>
+      <div class=&quot;section-header&quot;>
+        <span class=&quot;section-num&quot;>4</span>
+        <h3>Suppression and Send-Frequency Logic</h3>
+      </div>
+      <ul class=&quot;blist&quot;>
+        <li><strong>Post-win-back suppress:</strong> after final email in Flow 3 or 4, suppress from win-back flows for 90 days.</li>
+        <li><strong>Active subscribers never receive win-back content.</strong> Explicitly stated in the document. Failure to suppress is flagged as a system error risk.</li>
+        <li><strong>December 2025 cohort:</strong> active subscribers suppressed from the re-engagement flow entirely, regardless of cohort membership.</li>
+        <li><strong>Existing 90-day win-back flow:</strong> must be paused before day 20–45 flows are activated — duplicate outreach risk.</li>
+        <li><strong>Pre-cancel save (Flow 5):</strong> single SMS only alongside any email. Do not extend to a multi-message sequence.</li>
+        <li><strong>Klaviyo metrics:read API:</strong> must be live in Growth Room before the 27-flow audit can confirm which flows already exist. This is a stated build blocker.</li>
+      </ul>
+      <div class=&quot;callout warn&quot;>
+        <div class=&quot;cl&quot;>Gap</div>
+        <p>Campaign send-frequency cap and cross-flow fatigue logic are not specified in the document. No explicit rule governs contacts who are simultaneously eligible for multiple flows.</p>
+      </div>
+    </div>
+
+    <!-- 5. Tone -->
+    <div class=&quot;section&quot; id=&quot;kb-tone&quot;>
+      <div class=&quot;section-header&quot;>
+        <span class=&quot;section-num&quot;>5</span>
+        <h3>Tone and Messaging Principles</h3>
+      </div>
+
+      <div class=&quot;subsection&quot;>
+        <h4>Universal principles</h4>
+        <ul class=&quot;blist&quot;>
+          <li><strong>Science in plain language.</strong> Specified explicitly for onboarding and applies across all flows — not jargon-led, not promotional.</li>
+          <li><strong>Set expectations explicitly.</strong> &quot;Lactium's clinical trials show population-level effects, not universal response.&quot; This must be stated, not buried.</li>
+          <li><strong>Honest framing over overclaiming.</strong> &quot;Be explicit about who SNOOZE is for and what it can and cannot guarantee.&quot;</li>
+          <li><strong>Founder voice is a performance asset.</strong> The document states: &quot;structure it into creative, CRM sequences, and PR. It is not background brand texture.&quot;</li>
+          <li><strong>Science and social proof are the primary conversion tools — not discount-first.</strong> &quot;Never run out&quot; framing is being tested against &quot;20% off&quot; as the primary subscription hook.</li>
+          <li><strong>Urgency through science, not scarcity.</strong> Used in the win-back brief explicitly.</li>
+        </ul>
+      </div>
+
+      <div class=&quot;subsection&quot;>
+        <h4>By segment</h4>
+        <table>
+          <thead><tr><th>Segment</th><th>Messaging emphasis</th></tr></thead>
+          <tbody>
+            <tr>
+              <td>IMMUNE subscribers</td>
+              <td>Lactoferrin as continuous immune support — &quot;topping up, not reacting.&quot; 14-order average as social proof. Pulse Method framing for ongoing use.</td>
+            </tr>
+            <tr>
+              <td>SNOOZE subscribers</td>
+              <td>Lactium mechanism foregrounded (not lactoferrin). Honest about 2–4 week build. Variable results acknowledged. Must not imply guaranteed results.</td>
+            </tr>
+            <tr>
+              <td>High-Stakes Investors</td>
+              <td>Make the value case undeniable before price objection. Price friction is the barrier to advocacy, not efficacy doubt.</td>
+            </tr>
+            <tr>
+              <td>Proactive Planners</td>
+              <td>&quot;Staying ahead&quot; framing. Family use case — currently absent from brand content.</td>
+            </tr>
+            <tr>
+              <td>FOCUS buyers</td>
+              <td>Whole-day narrative: IMMUNE for resilience, FOCUS for the working day, SNOOZE for recovery. No dependency claim. Clean, deliberate cognitive maintenance.</td>
+            </tr>
+            <tr>
+              <td>Lapsed OTP buyers</td>
+              <td>&quot;You were right at the point the data says things improve — don't lose that.&quot; Outcome consequence framing. Science-led urgency.</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+
+      <div class=&quot;callout warn&quot;>
+        <div class=&quot;cl&quot;>Brand constraint — build blocker</div>
+        <p>All specific product efficacy claims in email copy require <strong>Stephanie sign-off</strong> before any flow goes live. Day-5 and Day-10 content in Flow 1, and the churn-prevention emails in Flow 2, are currently marked as placeholders pending approval.</p>
+      </div>
+    </div>
+
+    <!-- 6. KPIs -->
+    <div class=&quot;section&quot; id=&quot;kb-kpis&quot;>
+      <div class=&quot;section-header&quot;>
+        <span class=&quot;section-num&quot;>6</span>
+        <h3>KPIs</h3>
+      </div>
+      <table>
+        <thead><tr><th>KPI</th><th>Current baseline</th><th>Target</th><th>Timeframe</th></tr></thead>
+        <tbody>
+          <tr><td>Subscriber cohort M1 retention</td><td>22.1%</td><td>40%+</td><td>3 months</td></tr>
+          <tr><td>90-day churn rate</td><td>37.2%</td><td>Below 30%</td><td>6 months</td></tr>
+          <tr><td>Win-back conversion rate</td><td>Not established</td><td>5% of forward transactional flow</td><td>Ongoing</td></tr>
+          <tr><td>FOCUS subscription rate</td><td>24.8%</td><td>40%+</td><td>6 months</td></tr>
+          <tr><td>FOCUS-only customer count</td><td>49</td><td>100+</td><td>6 months</td></tr>
+          <tr><td>Flow 1 onboarding open rate</td><td>To be established via 27-flow Klaviyo audit</td><td>Baseline TBD post-audit</td><td>Post-audit</td></tr>
+          <tr><td>CRM reporting cadence</td><td>Not live</td><td>Weekly</td><td>Immediate</td></tr>
+        </tbody>
+      </table>
+      <div class=&quot;callout warn&quot;>
+        <div class=&quot;cl&quot;>Gap</div>
+        <p>Open rate, click-through rate, revenue-per-email, and unsubscribe rate benchmarks are not defined in the document. The 27-flow Klaviyo audit is the prerequisite for establishing baselines.</p>
+      </div>
+    </div>
+
+
+    <!-- ═══════════════════════════════════════════════════════════
+         BRIEF 2 — CONTENT
+    ════════════════════════════════════════════════════════════════ -->
+
+    <div class=&quot;brief-header&quot; id=&quot;brief-content&quot; style=&quot;margin-top:64px;&quot;>
+      <div class=&quot;brief-number&quot;>2</div>
+      <div class=&quot;brief-header-text&quot;>
+        <div class=&quot;brief-tag&quot;>Brief Two</div>
+        <h2>Content Brief</h2>
+      </div>
+    </div>
+
+    <!-- 1. Content Pillars -->
+    <div class=&quot;section&quot; id=&quot;cb-pillars&quot;>
+      <div class=&quot;section-header&quot;>
+        <span class=&quot;section-num&quot;>1</span>
+        <h3>Content Pillars</h3>
+      </div>
+
+      <div class=&quot;pillar-grid&quot;>
+        <div class=&quot;pillar-card&quot;>
+          <div class=&quot;pnum&quot;>1</div>
+          <h4>Lactoferrin Category Authority</h4>
+          <p class=&quot;rationale&quot;>No dominant UK lactoferrin brand exists. 32 competitor domains are currently cited in AI search on lactoferrin and colostrum queries instead of Leapfrog. The window to establish the position is open now — in 12–18 months, better-resourced brands will arrive. Category authority cannot be bought after the category consolidates. Asset: 20+ lactoferrin RCTs — a content moat no competitor can quickly replicate.</p>
+        </div>
+        <div class=&quot;pillar-card&quot;>
+          <div class=&quot;pnum&quot;>2</div>
+          <h4>Founder Authority</h4>
+          <p class=&quot;rationale&quot;>Stephanie Drax is positioned as &quot;the person who brought clinical lactoferrin to the UK consumer market.&quot; The document states: &quot;Founder voice is a performance asset — structure it into creative, CRM sequences, and PR. It is not background brand texture.&quot; Existing press coverage (Country &amp;amp; Town House, Vanity Fair, Daily Mail, Sheerluxe, Evening Standard) is underutilised — currently a logo bar, not an editorial programme.</p>
+        </div>
+        <div class=&quot;pillar-card&quot;>
+          <div class=&quot;pnum&quot;>3</div>
+          <h4>Ingredient Science (Product-level)</h4>
+          <p class=&quot;rationale&quot;>Claim Specificity scores 20/100 across all product pages. The science estate exists but is not structured for AI retrieval, consumer trust, or conversion at the premium price threshold. Sub-pillars: IMMUNE/DAILY (lactoferrin — 20+ RCTs); SNOOZE (Lactium® — 6 RCTs; lactoferrin brand logic does not transfer to sleep; Lactium must be foregrounded); FOCUS (L-Theanine + Lactium dual mechanism; morning cortisol framing).</p>
+        </div>
+        <div class=&quot;pillar-card&quot;>
+          <div class=&quot;pnum&quot;>4</div>
+          <h4>Category Intercept</h4>
+          <p class=&quot;rationale&quot;>Pages a category authority owns before the category consolidates. Currently owned by competitor domains in AI search. Named pages: 'What is lactoferrin?', 'Lactoferrin vs colostrum', 'Lactium vs Melatonin'. Top-of-funnel; feeds GEO citation; builds acquisition pipeline before category becomes crowded.</p>
+        </div>
+        <div class=&quot;pillar-card&quot;>
+          <div class=&quot;pnum&quot;>5</div>
+          <h4>Social Proof and Outcomes</h4>
+          <p class=&quot;rationale&quot;>903 reviews at 4.6/5 are not surfaced prominently on primary PDPs. Review volume signals product efficacy at scale and should be structured for GEO attribution. IMMUNE: 14-order average, 88% 90-day retention are the proof points. SNOOZE: sleep outcome data; must be honest about timeline (2–4 week build).</p>
+        </div>
+      </div>
+    </div>
+
+    <!-- 2. Formats -->
+    <div class=&quot;section&quot; id=&quot;cb-formats&quot;>
+      <div class=&quot;section-header&quot;>
+        <span class=&quot;section-num&quot;>2</span>
+        <h3>Priority Formats by Pillar</h3>
+      </div>
+      <table>
+        <thead><tr><th>Pillar</th><th>Format</th><th>Channel</th></tr></thead>
+        <tbody>
+          <tr>
+            <td>Lactoferrin Category Authority</td>
+            <td>Science hub — lay summaries, referenced claims, FAQ format</td>
+            <td>Website (science estate)</td>
+          </tr>
+          <tr>
+            <td>Lactoferrin Category Authority</td>
+            <td>'Lactoferrin vs Colostrum' comparison page</td>
+            <td>Website (SEO/GEO intercept)</td>
+          </tr>
+          <tr>
+            <td>Founder Authority</td>
+            <td>LinkedIn long-form on the science</td>
+            <td>LinkedIn</td>
+          </tr>
+          <tr>
+            <td>Founder Authority</td>
+            <td>Podcast appearances timed to the category moment</td>
+            <td>Podcast / PR</td>
+          </tr>
+          <tr>
+            <td>Founder Authority</td>
+            <td>Structured press/editorial page — pull quotes + article summaries</td>
+            <td>Website + press</td>
+          </tr>
+          <tr>
+            <td>Ingredient Science</td>
+            <td>Product page rewrites with numeric claims and inline RCT references</td>
+            <td>Website (PDPs + ingredient pages)</td>
+          </tr>
+          <tr>
+            <td>Ingredient Science</td>
+            <td>Long-form ingredient articles structured for search and AI citation</td>
+            <td>Website / journal</td>
+          </tr>
+          <tr>
+            <td>Ingredient Science</td>
+            <td>Email sequences (science in plain language, expectation-setting)</td>
+            <td>Klaviyo flows</td>
+          </tr>
+          <tr>
+            <td>Category Intercept</td>
+            <td>'Lactium vs Melatonin' comparison page</td>
+            <td>Website (SEO/GEO intercept)</td>
+          </tr>
+          <tr>
+            <td>Category Intercept</td>
+            <td>FAQPage schema on science/ingredient pages</td>
+            <td>Website (structured data)</td>
+          </tr>
+          <tr>
+            <td>Social Proof</td>
+            <td>Loox reviews surfaced above fold on primary PDPs</td>
+            <td>Website</td>
+          </tr>
+          <tr>
+            <td>Social Proof</td>
+            <td>Review structured data for GEO attribution</td>
+            <td>Website (schema)</td>
+          </tr>
+          <tr>
+            <td>DAILY Campaign</td>
+            <td>Disposable camera / film aesthetic — 25 customer advocates + 25 creators (50-kit seeding programme)</td>
+            <td>Organic social; paid amplification</td>
+          </tr>
+        </tbody>
+      </table>
+      <p style=&quot;font-size:0.85rem; color:var(--grey); margin-top:8px;&quot;><strong>Organic social channels identified:</strong> Instagram, TikTok, YouTube Shorts. Currently performing — sessions up 38%, revenue up 26%. Document states it &quot;deserves more resource.&quot; Content direction is Victoria's ownership.</p>
+    </div>
+
+    <!-- 3. Audience-to-Content -->
+    <div class=&quot;section&quot; id=&quot;cb-mapping&quot;>
+      <div class=&quot;section-header&quot;>
+        <span class=&quot;section-num&quot;>3</span>
+        <h3>Audience-to-Content Mapping</h3>
+      </div>
+      <table>
+        <thead><tr><th>Audience</th><th>Content they need</th><th>Why</th></tr></thead>
+        <tbody>
+          <tr>
+            <td>High-Stakes Investors</td>
+            <td>Value case content — undeniable benefit proof before price objection</td>
+            <td>Price is the barrier to advocacy, not efficacy doubt.</td>
+          </tr>
+          <tr>
+            <td>Proactive Planners</td>
+            <td>Family use case; multi-pack/bundle messaging; &quot;staying ahead&quot; framing</td>
+            <td>This use case is currently absent from site content, despite being a named persona.</td>
+          </tr>
+          <tr>
+            <td>First-Sign Believers</td>
+            <td>Emergency SOS dosing; rapid-response framing</td>
+            <td>Reorder pattern does not match standard subscription cadence. Content must reflect this.</td>
+          </tr>
+          <tr>
+            <td>SNOOZE buyers (acquisition)</td>
+            <td>Lactium science in consumer language; Lactium vs Melatonin comparison; explicit expectation-setting at point of purchase</td>
+            <td>Near-zero consumer awareness of Lactium. Premium price requires the science to carry the justification.</td>
+          </tr>
+          <tr>
+            <td>SNOOZE buyers (retention)</td>
+            <td>&quot;You are at the point where the data says things improve&quot; — honest 2–4 week framing</td>
+            <td>Prevents cancellation from unmet expectations. Higher education burden at this price point.</td>
+          </tr>
+          <tr>
+            <td>FOCUS buyers</td>
+            <td>Whole-day narrative: IMMUNE for resilience, FOCUS for the working day, SNOOZE for recovery</td>
+            <td>Shared ingredients (Lactoferrin, Lactium) require honest, coherent positioning that does not undercut either product.</td>
+          </tr>
+          <tr>
+            <td>IMMUNE subscribers — FOCUS cross-sell</td>
+            <td>&quot;The deliberate daytime complement to IMMUNE's resilience foundation&quot;</td>
+            <td>88.4% of FOCUS buyers are IMMUNE/SNOOZE cross-buyers. Timing: after order 3.</td>
+          </tr>
+          <tr>
+            <td>AI / search (GEO target)</td>
+            <td>Numeric claims, mechanism sentences, RCT references on every product and ingredient page</td>
+            <td>Claim Specificity 20/100. 0 of 5 AI query clusters currently citing Leapfrog.</td>
+          </tr>
+          <tr>
+            <td>Press / journalists</td>
+            <td>Structured editorial page; founder briefings; category market data (SPINS 203% YoY, Vital Proteins colostrum entry)</td>
+            <td>Existing editorial credibility (Vogue, Vanity Fair) needs converting into a repeatable press programme timed to the category moment.</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+
+    <!-- 4. Tone -->
+    <div class=&quot;section&quot; id=&quot;cb-tov&quot;>
+      <div class=&quot;section-header&quot;>
+        <span class=&quot;section-num&quot;>4</span>
+        <h3>Tone of Voice and Brand Constraints</h3>
+      </div>
+
+      <div class=&quot;subsection&quot;>
+        <h4>Stated principles</h4>
+        <ul class=&quot;blist&quot;>
+          <li><strong>Science-backed, consumer-accessible.</strong> &quot;Ingredient science in plain language&quot; — specified for email onboarding, applies equally to site content.</li>
+          <li><strong>Honest, not promotional.</strong> &quot;This framing is honest, coherent, and defensible&quot; (used about the FOCUS/SNOOZE product architecture). Defensibility is a stated criterion for all claims.</li>
+          <li><strong>Set expectations explicitly.</strong> Do not imply guaranteed results. SNOOZE copy must state that Lactium shows population-level effects, not universal response.</li>
+          <li><strong>Premium, founder-led, press-credentialed.</strong> Selfridges listing, press coverage, and Stephanie's scientific authority are brand credibility signals — must be present in communications at the premium price threshold.</li>
+          <li><strong>Messaging-first, not discount-first.</strong> The document argues against price reduction as a first intervention for both SNOOZE and FOCUS. Value case must be made before price is addressed.</li>
+        </ul>
+      </div>
+
+      <div class=&quot;subsection&quot;>
+        <h4>Constraints</h4>
+        <ul class=&quot;blist&quot;>
+          <li>All specific product efficacy claims require <strong>Stephanie sign-off</strong> before publication or email deployment. Build blocker.</li>
+          <li>Do not claim universal efficacy. Population-level framing is mandatory.</li>
+          <li>The lactoferrin brand logic does not automatically transfer to SNOOZE. Lactium must be foregrounded in all SNOOZE content — do not anchor SNOOZE on lactoferrin.</li>
+        </ul>
+      </div>
+
+      <div class=&quot;callout warn&quot;>
+        <div class=&quot;cl&quot;>Gap</div>
+        <p>A tone of voice document, brand voice guide, or content style guide is not referenced anywhere in the SOSTAC. No formal brand language system is documented.</p>
+      </div>
+    </div>
+
+    <!-- 5. Cadence -->
+    <div class=&quot;section&quot; id=&quot;cb-cadence&quot;>
+      <div class=&quot;section-header&quot;>
+        <span class=&quot;section-num&quot;>5</span>
+        <h3>Publishing Cadence and Channel Prioritisation</h3>
+      </div>
+
+      <div class=&quot;subsection&quot;>
+        <h4>Sequenced priorities as stated in the document</h4>
+        <table>
+          <thead><tr><th>Timing</th><th>Content action</th></tr></thead>
+          <tbody>
+            <tr><td><strong>Immediate</strong></td><td>Replace llms.txt store description ('SHOP NOW' → brand/ingredient/science descriptor, 2–3 sentences)</td></tr>
+            <tr><td><strong>Immediate</strong></td><td>Add Article + FAQPage schema to science/ingredient pages (lactoferrin, Lactium, L-Theanine)</td></tr>
+            <tr><td><strong>Immediate</strong></td><td>Add Product schema to all 4 product pages (name, description, ingredients, Loox aggregate, price)</td></tr>
+            <tr><td><strong>Immediate</strong></td><td>Rewrite meta descriptions — 14 ingredient and product pages (140–160 chars, ingredient + benefit + claim anchor)</td></tr>
+            <tr><td><strong>Immediate</strong></td><td>DAILY page: add numeric claim, mechanism sentence, one inline RCT reference. Then IMMUNE.</td></tr>
+            <tr><td><strong>Immediate</strong></td><td>Add publish and last-reviewed dates to all science pages + datePublished/dateModified to Article schema</td></tr>
+            <tr><td><strong>Before press outreach</strong></td><td>Dedicated press/editorial page — pull quotes + article summaries. Half-day build. No new content required.</td></tr>
+            <tr><td><strong>Before press outreach</strong></td><td>Science estate complete + PR/influencer resource in place</td></tr>
+            <tr><td><strong>Priority build</strong></td><td>'Lactoferrin vs Colostrum' comparison page</td></tr>
+            <tr><td><strong>Priority build</strong></td><td>'Lactium vs Melatonin' comparison page</td></tr>
+            <tr><td><strong>Ongoing</strong></td><td>Science hub — lay summaries, referenced claims, FAQ format</td></tr>
+            <tr><td><strong>Ongoing</strong></td><td>Founder authority programme — LinkedIn, podcast, press briefings</td></tr>
+          </tbody>
+        </table>
+      </div>
+
+      <div class=&quot;subsection&quot;>
+        <h4>Channel priority order (implied by strategic imperatives)</h4>
+        <ol style=&quot;margin-left:20px; font-size:0.92rem; line-height:2;&quot;>
+          <li><strong>Website</strong> — GEO/SEO infrastructure is the prerequisite for all other channels</li>
+          <li><strong>CRM / Klaviyo</strong> — highest near-term commercial return</li>
+          <li><strong>PR / founder programme</strong> — category moment is time-sensitive; window is open now</li>
+          <li><strong>Organic social</strong> — performing (sessions +38%, revenue +26%); deserves more resource</li>
+          <li><strong>Paid social</strong> — gated behind CAC model and new agency brief</li>
+        </ol>
+      </div>
+
+      <div class=&quot;callout warn&quot;>
+        <div class=&quot;cl&quot;>Gap</div>
+        <p>Specific publishing frequency — recurring editorial cadence for any channel — is not defined anywhere in the document.</p>
+      </div>
+    </div>
+
+    <!-- 6. SEO / GEO -->
+    <div class=&quot;section&quot; id=&quot;cb-geo&quot;>
+      <div class=&quot;section-header&quot;>
+        <span class=&quot;section-num&quot;>6</span>
+        <h3>SEO and GEO Requirements</h3>
+      </div>
+
+      <div class=&quot;meta-grid&quot;>
+        <div class=&quot;meta-block&quot;><div class=&quot;ml&quot;>GEO score overall</div><div class=&quot;mv&quot;>51 / 100</div></div>
+        <div class=&quot;meta-block&quot;><div class=&quot;ml&quot;>Products / Science / Journal</div><div class=&quot;mv&quot;>53 · 49 · 51</div></div>
+        <div class=&quot;meta-block&quot;><div class=&quot;ml&quot;>Claim Specificity</div><div class=&quot;mv&quot;>20 / 100 (all product pages)</div></div>
+        <div class=&quot;meta-block&quot;><div class=&quot;ml&quot;>AI query clusters cited</div><div class=&quot;mv&quot;>0 of 5 tracked</div></div>
+      </div>
+
+      <div class=&quot;callout&quot;>
+        <div class=&quot;cl&quot;>Diagnosis</div>
+        <p>Leapfrog is currently invisible in AI search. The fixes are structural, not creative — &quot;the science estate exists, it is simply not formatted for machine extraction.&quot; No schema on any page. llms.txt is auto-generated promotional copy. 32 competitor domains cited instead of Leapfrog on lactoferrin and colostrum queries.</p>
+      </div>
+
+      <table>
+        <thead><tr><th>Action</th><th>Priority</th></tr></thead>
+        <tbody>
+          <tr><td>Replace llms.txt (brand description, not 'SHOP NOW')</td><td><strong>Immediate</strong></td></tr>
+          <tr><td>Article + FAQPage schema — lactoferrin, Lactium, L-Theanine pages</td><td><strong>Immediate</strong></td></tr>
+          <tr><td>Product schema — all 4 product pages</td><td><strong>Immediate</strong></td></tr>
+          <tr><td>Meta description rewrites — 14 pages, 140–160 chars, ingredient + benefit + claim anchor</td><td><strong>Immediate</strong></td></tr>
+          <tr><td>Add numeric claims, mechanism sentence, one RCT reference inline — DAILY first (GEO score 40), then IMMUNE</td><td><strong>Immediate</strong></td></tr>
+          <tr><td>Add publish + last-reviewed dates to all science pages; datePublished/dateModified to Article schema</td><td><strong>Immediate</strong></td></tr>
+          <tr><td>Product-to-ingredient internal linking (both directions)</td><td>This month</td></tr>
+          <tr><td>'Lactoferrin vs Colostrum' comparison page</td><td>Priority build</td></tr>
+          <tr><td>'Lactium vs Melatonin' comparison page</td><td>Priority build</td></tr>
+          <tr><td>Science hub — lay summaries, referenced claims, FAQ format</td><td>Following</td></tr>
+        </tbody>
+      </table>
+
+      <p><strong>GEO target:</strong> Leapfrog cited as the primary source for lactoferrin and Lactium benefit claims in AI search. Current position: zero.</p>
+    </div>
+
+
+    <!-- ═══════════════════════════════════════════════════════════
+         GAPS
+    ════════════════════════════════════════════════════════════════ -->
+
+    <div class=&quot;brief-header&quot; id=&quot;gaps&quot; style=&quot;margin-top:64px; border-bottom-color:var(--warn);&quot;>
+      <div class=&quot;brief-number&quot; style=&quot;color:rgba(139,58,26,0.2);&quot;>!</div>
+      <div class=&quot;brief-header-text&quot;>
+        <div class=&quot;brief-tag&quot; style=&quot;color:var(--warn);&quot;>Reference</div>
+        <h2>Gaps and Open Questions</h2>
+      </div>
+    </div>
+
+    <div class=&quot;section&quot;>
+      <table class=&quot;gap-table&quot;>
+        <thead><tr><th>Gap</th><th>Brief</th></tr></thead>
+        <tbody>
+          <tr>
+            <td>Email send-frequency cap — no explicit logic for campaign send limits or fatigue suppression between flows</td>
+            <td>Klaviyo</td>
+          </tr>
+          <tr>
+            <td>Cross-flow suppression logic — no defined rule for contacts simultaneously eligible for multiple flows</td>
+            <td>Klaviyo</td>
+          </tr>
+          <tr>
+            <td>Win-back discount decision — whether a one-off incentive is added to the final OTP win-back email is unconfirmed and needs sign-off before build</td>
+            <td>Klaviyo</td>
+          </tr>
+          <tr>
+            <td>First-Sign Believers and subscription cadence — mismatch flagged in the document, no resolution stated</td>
+            <td>Klaviyo + Content</td>
+          </tr>
+          <tr>
+            <td>Email performance benchmarks — open rate, CTR, revenue-per-email, and unsubscribe rate targets not defined; dependent on 27-flow Klaviyo audit for baselines</td>
+            <td>Klaviyo</td>
+          </tr>
+          <tr>
+            <td>Loox review export — specific customer quotes required for Flows 1, 2, and 3 are not yet pulled and are stated as blockers</td>
+            <td>Klaviyo + Content</td>
+          </tr>
+          <tr>
+            <td>Tone of voice / brand style guide — not referenced anywhere in the document</td>
+            <td>Content</td>
+          </tr>
+          <tr>
+            <td>Publishing frequency — recurring editorial cadence for any channel is not defined</td>
+            <td>Content</td>
+          </tr>
+          <tr>
+            <td>DAILY commercial KPIs — subscriber acquisition target, CAC ceiling, and retention gate must be defined before paid amplification is activated</td>
+            <td>Content</td>
+          </tr>
+          <tr>
+            <td>Content programme ownership — science estate, PDPs, GEO content, and DAILY creative are running as separate workstreams with no single accountable owner stated in the document</td>
+            <td>Content</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+
+  </div>
+</main>
+
+<script>
+  const navLinks = Array.from(document.querySelectorAll('nav a[href^=&quot;#&quot;]'));
+  const targets = navLinks.map(a => document.querySelector(a.getAttribute('href'))).filter(Boolean);
+
+  const io = new IntersectionObserver(entries => {
+    entries.forEach(e => {
+      const id = '#' + e.target.id;
+      const link = navLinks.find(a => a.getAttribute('href') === id);
+      if (link &amp;&amp; e.isIntersecting) {
+        navLinks.forEach(a => a.classList.remove('active'));
+        link.classList.add('active');
+      }
+    });
+  }, { rootMargin:'-10% 0px -75% 0px', threshold:0 });
+
+  targets.forEach(t => io.observe(t));
+</script>
+
+<div style=&quot;position:fixed; top:16px; left:50%; transform:translateX(-50%); z-index:9999;&quot;>
+  <button onclick=&quot;parent.closeOverlay()&quot; style=&quot;background:rgba(0,0,0,0.7); color:#fff; border:none; padding:7px 18px; font-size:11px; font-family:sans-serif; letter-spacing:0.1em; text-transform:uppercase; cursor:pointer; border-radius:20px;&quot;>&amp;#8592; Back</button>
+</div>
+</body>
+</html>
+"></iframe>
+</div>
+
+<script>
+function openOverlay(id) {
+  document.querySelectorAll('.overlay').forEach(el => el.style.display = 'none');
+  document.getElementById(id).style.display = 'block';
+}
+function closeOverlay() {
+  document.querySelectorAll('.overlay').forEach(el => el.style.display = 'none');
+}
+document.addEventListener('keydown', e => { if (e.key === 'Escape') closeOverlay(); });
+</script>
+
+</body>
+</html>
